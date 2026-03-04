@@ -1,0 +1,50 @@
+'use client'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
+import { Product } from '@/lib/products'
+
+interface ProductCardProps {
+  product: Product
+}
+
+export default function ProductCard({ product }: ProductCardProps) {
+  const [aspectRatio, setAspectRatio] = useState<string | null>(null)
+
+  function handleImageLoad(result: any) {
+    const ratio = (result.naturalWidth / result.naturalHeight).toFixed(4)
+    setAspectRatio(ratio)
+  }
+
+  return (
+    <Link href={`/products/${product.slug}`} className="group block">
+      <div
+        className="relative overflow-hidden bg-gray-100"
+        style={aspectRatio ? { aspectRatio } : { aspectRatio: '0.75' }}
+      >
+        <Image
+          src={product.images[0]}
+          alt={product.name}
+          fill
+          className="object-contain transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 20vw"
+          onLoadingComplete={handleImageLoad}
+        />
+        {!product.available && (
+          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <span className="text-white text-sm font-bold tracking-widest uppercase">
+              Agotado
+            </span>
+          </div>
+        )}
+      </div>
+
+      <div className="mt-2 px-1">
+        <p className="text-xs text-gray-500 uppercase tracking-wider">{product.club}</p>
+        <h3 className="font-bold text-sm leading-tight mt-0.5">{product.name}</h3>
+        <p className="text-sm font-semibold mt-1">${product.price.toLocaleString('es-MX')}</p>
+      </div>
+    </Link>
+  )
+}
