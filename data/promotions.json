@@ -1,0 +1,8 @@
+{
+  "active": true,
+  "banner": "3 camisas $1,500 · 5 camisas $2,000",
+  "deals": [
+    { "quantity": 3, "total": 1500 },
+    { "quantity": 5, "total": 2000 }
+  ]
+}
