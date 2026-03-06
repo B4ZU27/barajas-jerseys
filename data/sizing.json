@@ -1,0 +1,92 @@
+{
+  "sizing_charts": {
+    "player_version": [
+      {
+        "size": "S",
+        "garment_length_cm": 70,
+        "circumference_cm": 92,
+        "recommended_height_cm": "160-170",
+        "recommended_weight_kg": "95-115"
+      },
+      {
+        "size": "M",
+        "garment_length_cm": 72,
+        "circumference_cm": 96,
+        "recommended_height_cm": "170-175",
+        "recommended_weight_kg": "115-130"
+      },
+      {
+        "size": "L",
+        "garment_length_cm": 74,
+        "circumference_cm": 100,
+        "recommended_height_cm": "175-180",
+        "recommended_weight_kg": "125-140"
+      },
+      {
+        "size": "XL",
+        "garment_length_cm": 76,
+        "circumference_cm": 104,
+        "recommended_height_cm": "180-185",
+        "recommended_weight_kg": "135-155"
+      },
+      {
+        "size": "2XL",
+        "garment_length_cm": 78,
+        "circumference_cm": 108,
+        "recommended_height_cm": "185+",
+        "recommended_weight_kg": "150-170"
+      }
+    ],
+    "fan_version": [
+      {
+        "size": "S",
+        "garment_length_cm": 70,
+        "circumference_cm": 100,
+        "recommended_height_cm": "160-170",
+        "recommended_weight_kg": "100-120"
+      },
+      {
+        "size": "M",
+        "garment_length_cm": 72,
+        "circumference_cm": 104,
+        "recommended_height_cm": "170-175",
+        "recommended_weight_kg": "120-140"
+      },
+      {
+        "size": "L",
+        "garment_length_cm": 74,
+        "circumference_cm": 108,
+        "recommended_height_cm": "175-185",
+        "recommended_weight_kg": "140-160"
+      },
+      {
+        "size": "XL",
+        "garment_length_cm": 76,
+        "circumference_cm": 112,
+        "recommended_height_cm": "180-190",
+        "recommended_weight_kg": "150-180"
+      },
+      {
+        "size": "2XL",
+        "garment_length_cm": 78,
+        "circumference_cm": 116,
+        "recommended_height_cm": "185-200",
+        "recommended_weight_kg": "160-200"
+      },
+      {
+        "size": "3XL",
+        "garment_length_cm": 80,
+        "circumference_cm": 118,
+        "recommended_height_cm": "195-210",
+        "recommended_weight_kg": "180-220"
+      },
+      {
+        "size": "4XL",
+        "garment_length_cm": 80,
+        "circumference_cm": 120,
+        "recommended_height_cm": "195-210",
+        "recommended_weight_kg": "180-220"
+      }
+    ]
+  }
+}

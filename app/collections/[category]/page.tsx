@@ -1,26 +1,14 @@
 import { notFound } from 'next/navigation'
-import { getProductsByCategory, type Category } from '@/lib/products'
+import { getProductsByCategory, getActiveCategories, CATEGORY_LABELS } from '@/lib/products'
 import ProductGrid from '@/components/ProductGrid'
 
-const categoryLabels: Record<string, string> = {
-  selecciones: 'Selecciones Nacionales',
-  'clubes-internacionales': 'Clubes Internacionales',
-  mexico:      'Clubes México',
-  retro:       'Retro',
-}
-
 export async function generateStaticParams() {
-  return [
-    { category: 'selecciones' },
-    { category: 'clubes-internacionales' },
-    { category: 'mexico' },
-    { category: 'retro' },
-  ]
+  return getActiveCategories().map((c) => ({ category: c.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params
-  const label = categoryLabels[category]
+  const label = CATEGORY_LABELS[category]
   return {
     title: label ? `${label} | Jerseys` : 'Colección | Jerseys',
   }
@@ -28,11 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 
 export default async function CollectionPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params
-  const label = categoryLabels[category]
+  const label = CATEGORY_LABELS[category]
 
   if (!label) notFound()
 
-  const products = getProductsByCategory(category as Category)
+  const products = getProductsByCategory(category)
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">

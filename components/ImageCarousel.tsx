@@ -8,14 +8,8 @@ interface ImageCarouselProps {
   alt: string
 }
 
-interface ImageDimensions {
-  width: number
-  height: number
-}
-
 export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   const [current, setCurrent] = useState(0)
-  const [dimensions, setDimensions] = useState<Record<number, ImageDimensions>>({})
 
   function prev() {
     setCurrent((i) => (i === 0 ? images.length - 1 : i - 1))
@@ -25,39 +19,19 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     setCurrent((i) => (i === images.length - 1 ? 0 : i + 1))
   }
 
-  function handleImageLoad(result: any) {
-    setDimensions((prev) => ({
-      ...prev,
-      [current]: {
-        width: result.naturalWidth,
-        height: result.naturalHeight,
-      },
-    }))
-  }
-
   if (images.length === 0) return null
-
-  const currentDimensions = dimensions[current]
-  const aspectRatio = currentDimensions
-    ? (currentDimensions.width / currentDimensions.height).toFixed(4)
-    : null
 
   return (
     <div className="w-full md:w-auto md:max-w-md mx-auto md:mx-0 overflow-hidden">
-      {/* Imagen principal */}
-      <div
-        className="relative overflow-hidden bg-gray-100"
-        style={aspectRatio ? { aspectRatio } : { aspectRatio: '0.75' }}
-      >
+      {/* Imagen principal — aspecto fijo 3:4, no salta al cambiar imagen */}
+      <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
         <Image
-          key={current}
           src={images[current]}
           alt={`${alt} ${current + 1}`}
           fill
           className="object-contain"
           sizes="(max-width: 768px) 90vw, (max-width: 1024px) 400px, 500px"
           priority
-          onLoadingComplete={handleImageLoad}
         />
 
         {/* Flechas — solo si hay más de una imagen */}

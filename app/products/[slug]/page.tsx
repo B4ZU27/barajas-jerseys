@@ -1,15 +1,9 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getProductBySlug, getAllSlugs, getPromotions, type Category } from '@/lib/products'
+import { getProductBySlug, getAllSlugs, getPromotions, CATEGORY_LABELS } from '@/lib/products'
 import ImageCarousel from '@/components/ImageCarousel'
 import ProductActions from '@/components/ProductActions'
-
-const categoryLabels: Record<Category, string> = {
-  selecciones: 'Selecciones Nacionales',
-  'clubes-internacionales': 'Clubes Internacionales',
-  mexico:      'Clubes México',
-  retro:       'Retro',
-}
+import SizeGuide from '@/components/SizeGuide'
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }))
@@ -30,7 +24,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!product) notFound()
 
   const promos = getPromotions()
-  const categoryLabel = categoryLabels[product.category]
+  const categoryLabel = CATEGORY_LABELS[product.category] ?? product.category
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
@@ -51,15 +45,22 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         {/* Columna derecha — info */}
         <div className="flex flex-col gap-6">
           <div>
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-1">{product.club}</p>
+            <div className="flex items-center gap-2 mb-1">
+              <p className="text-xs uppercase tracking-widest text-gray-400">{product.club}</p>
+              {product.tags?.includes('retro') && (
+                <span className="bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+                  RETRO
+                </span>
+              )}
+            </div>
             <h1 className="text-2xl font-black uppercase leading-tight">{product.name}</h1>
-            <p className="text-2xl font-semibold mt-2">${product.price.toLocaleString('es-MX')}</p>
           </div>
 
           {product.description && (
             <p className="text-sm text-gray-600 leading-relaxed">{product.description}</p>
           )}
 
+          <SizeGuide />
           <ProductActions product={product} />
 
           {/* Deals de promoción */}

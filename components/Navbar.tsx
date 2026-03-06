@@ -4,14 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const categories = [
-  { slug: 'selecciones', label: 'Selecciones Nacionales' },
-  { slug: 'clubes-internacionales', label: 'Clubes Internacionales' },
-  { slug: 'mexico',      label: 'Clubes México' },
-  { slug: 'retro',       label: 'Retro' },
-]
+interface NavbarProps {
+  categories: { slug: string; label: string }[]
+}
 
-export default function Navbar() {
+export default function Navbar({ categories }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const pathname = usePathname()

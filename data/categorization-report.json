@@ -1,0 +1,866 @@
+{
+  "summary": {
+    "total": 119,
+    "retro": 49,
+    "nonRetro": 70,
+    "identified": 104,
+    "unidentified": 15,
+    "byCategory": {
+      "selecciones": {
+        "total": 31,
+        "clubs": [
+          "italy",
+          "argentina",
+          "germany",
+          "colombia",
+          "japan",
+          "mexico",
+          "netherlands",
+          "spain",
+          "senegal",
+          "portugal",
+          "france"
+        ]
+      },
+      "la-liga": {
+        "total": 23,
+        "clubs": [
+          "real-madrid",
+          "real-betis",
+          "barcelona",
+          "atletico-madrid",
+          "valencia",
+          "celta-vigo"
+        ]
+      },
+      "premier-league": {
+        "total": 19,
+        "clubs": [
+          "liverpool",
+          "arsenal",
+          "leeds",
+          "tottenham",
+          "manchester-united",
+          "chelsea"
+        ]
+      },
+      "serie-a": {
+        "total": 21,
+        "clubs": [
+          "napoli",
+          "fiorentina",
+          "inter-milan",
+          "ac-milan",
+          "juventus",
+          "lazio",
+          "roma"
+        ]
+      },
+      "otros": {
+        "total": 17,
+        "clubs": [
+          "otros",
+          "porto",
+          "celtic"
+        ]
+      },
+      "bundesliga": {
+        "total": 4,
+        "clubs": [
+          "borussia-dortmund",
+          "bayern-munich"
+        ]
+      },
+      "ligue-1": {
+        "total": 4,
+        "clubs": [
+          "lyon",
+          "psg"
+        ]
+      }
+    }
+  },
+  "categories": {
+    "selecciones": {
+      "italy": [
+        {
+          "name": "1982 Season Italy Home",
+          "slug": "1982-season-italy-home-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1996 Season Italy Home",
+          "slug": "1996-season-italy-home-5a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "argentina": [
+        {
+          "name": "1986 Season Argentina Away",
+          "slug": "1986-season-argentina-away-0a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2010 Season Argentina HomeRetro",
+          "slug": "2010-season-argentina-homeretro-8a",
+          "tags": []
+        }
+      ],
+      "germany": [
+        {
+          "name": "1988 90 Season Germany Away",
+          "slug": "1988-90-season-germany-away-2b",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1994 Season Germany Away",
+          "slug": "1994-season-germany-away-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2008 Season Germany Home",
+          "slug": "2008-season-germany-home-5a",
+          "tags": []
+        }
+      ],
+      "colombia": [
+        {
+          "name": "1990 Season Colombia HomeRetro",
+          "slug": "1990-season-colombia-homeretro-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1990 Season Colombia wayRetro",
+          "slug": "1990-season-colombia-wayretro-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1994 Season Colombia HomeRetro",
+          "slug": "1994-season-colombia-homeretro-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2001 Season colombia HomeRetro",
+          "slug": "2001-season-colombia-homeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "2003 05 Season Colombia HomeRetro",
+          "slug": "2003-05-season-colombia-homeretro-8a",
+          "tags": []
+        }
+      ],
+      "japan": [
+        {
+          "name": "1994 95 Season Japan Home5 A",
+          "slug": "1994-95-season-japan-home5-a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2006 07 Season Japan AwayWhite8 A",
+          "slug": "2006-07-season-japan-awaywhite8-a",
+          "tags": []
+        },
+        {
+          "name": "2006 07 Season Japan Home8 A",
+          "slug": "2006-07-season-japan-home8-a",
+          "tags": []
+        }
+      ],
+      "mexico": [
+        {
+          "name": "1995 Season Mexico AwayRetro",
+          "slug": "1995-season-mexico-awayretro-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1995 Season Mexico Home",
+          "slug": "1995-season-mexico-home-5a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "netherlands": [
+        {
+          "name": "1996 Season Netherlands Home",
+          "slug": "1996-season-netherlands-home-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1998 Season Netherlands Home",
+          "slug": "1998-season-netherlands-home-5a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "spain": [
+        {
+          "name": "1998 Season España HomeRetro",
+          "slug": "1998-season-espaa-homeretro-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2006 Season Spain AwayWhiteRetro",
+          "slug": "2006-season-spain-awaywhiteretro-8a",
+          "tags": []
+        },
+        {
+          "name": "2008 Season Spain HomeRetro",
+          "slug": "2008-season-spain-homeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "2011 12S Season SpainAwayWhiteRetro",
+          "slug": "2011-12s-season-spainawaywhiteretro-8a",
+          "tags": []
+        }
+      ],
+      "senegal": [
+        {
+          "name": "2002 Season Senegal AwayRetro",
+          "slug": "2002-season-senegal-awayretro-5a",
+          "tags": []
+        },
+        {
+          "name": "2002 Season Senegal HomeWhiteRetro",
+          "slug": "2002-season-senegal-homewhiteretro-5a",
+          "tags": []
+        }
+      ],
+      "portugal": [
+        {
+          "name": "2010 Season PortugalHomeRetro8 A",
+          "slug": "2010-season-portugalhomeretro8-a",
+          "tags": []
+        },
+        {
+          "name": "2018 Season PortugalHomeRetro",
+          "slug": "2018-season-portugalhomeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2016 Season PortugalHomeRetro",
+          "slug": "long-sleeve-2016-season-portugalhomeretro-3b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2018 Season PortugalHomeRetro",
+          "slug": "long-sleeve-2018-season-portugalhomeretro-3b",
+          "tags": []
+        }
+      ],
+      "france": [
+        {
+          "name": "2018 Season FranceAway8 A",
+          "slug": "2018-season-franceaway8-a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2018 Season FranceHomeRetro",
+          "slug": "long-sleeve-2018-season-francehomeretro-3b",
+          "tags": []
+        }
+      ]
+    },
+    "la-liga": {
+      "real-madrid": [
+        {
+          "name": "1984 85 Season Real MadridHome8 A",
+          "slug": "1984-85-season-real-madridhome8-a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1988 90 Season Real MadridHomeRetro",
+          "slug": "1988-90-season-real-madridhomeretro-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2002 03 Season Real MadridHome",
+          "slug": "2002-03-season-real-madridhome",
+          "tags": []
+        },
+        {
+          "name": "2003 04 Season Real MadridAway",
+          "slug": "2003-04-season-real-madridaway-5a",
+          "tags": []
+        },
+        {
+          "name": "2007 08 Season Real MadridHome",
+          "slug": "2007-08-season-real-madridhome-8a",
+          "tags": []
+        },
+        {
+          "name": "2010 11 Season Real MadridHome8 A",
+          "slug": "2010-11-season-real-madridhome8-a",
+          "tags": []
+        },
+        {
+          "name": "2013 14 Real MadridAway 2O range",
+          "slug": "2013-14-real-madridaway-2o-range-8a",
+          "tags": []
+        },
+        {
+          "name": "2019 20 Season Real MadridAway",
+          "slug": "2019-20-season-real-madridaway-5a",
+          "tags": []
+        },
+        {
+          "name": "2020 21 Season Real MadridHomeRetro",
+          "slug": "2020-21-season-real-madridhomeretro-5a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2013 14 Season Real MadridAway 2O range",
+          "slug": "long-sleeve-2013-14-season-real-madridaway-2o-range-3b",
+          "tags": []
+        }
+      ],
+      "real-betis": [
+        {
+          "name": "1995 97 Season Real Betis Away",
+          "slug": "1995-97-season-real-betis-away-5a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "barcelona": [
+        {
+          "name": "1998 99 Season BarcelonaHome",
+          "slug": "1998-99-season-barcelonahome",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2000 01 Season BarcelonaHomeRetro",
+          "slug": "2000-01-season-barcelonahomeretro-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2018 19 Season BarcelonaHome",
+          "slug": "2018-19-season-barcelonahome-5a",
+          "tags": []
+        },
+        {
+          "name": "2020 21 Season BarcelonaAway",
+          "slug": "2020-21-season-barcelonaaway-5a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2005 06 Season BarcelonaHome League Edition",
+          "slug": "long-sleeve-2005-06-season-barcelonahome-league-edition-3b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2005 06 Season BarcelonaHomeUCL",
+          "slug": "long-sleeve-2005-06-season-barcelonahomeucl-3b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2008 09 Season BarcelonaHome",
+          "slug": "long-sleeve-2008-09-season-barcelonahome-3b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2010 11 Season BarcelonaHomeLeague Edition",
+          "slug": "long-sleeve-2010-11-season-barcelonahomeleague-edition-3b",
+          "tags": []
+        }
+      ],
+      "atletico-madrid": [
+        {
+          "name": "1999 00 Season Atletico Home8 A",
+          "slug": "1999-00-season-atletico-home8-a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "valencia": [
+        {
+          "name": "2000 01 Season Valencia Home",
+          "slug": "2000-01-season-valencia-home-8a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "celta-vigo": [
+        {
+          "name": "2001 02 Season Celta Away",
+          "slug": "2001-02-season-celta-away",
+          "tags": []
+        },
+        {
+          "name": "2001 02 Season Celta Home",
+          "slug": "2001-02-season-celta-home",
+          "tags": []
+        }
+      ]
+    },
+    "premier-league": {
+      "liverpool": [
+        {
+          "name": "1985 86 Season LiverpoolAway 2Y ellow",
+          "slug": "1985-86-season-liverpoolaway-2y-ellow-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1994 96 Season LiverpoolAway 2Y ellow",
+          "slug": "1994-96-season-liverpoolaway-2y-ellow-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1998 Season LiverpoolAwayWhite",
+          "slug": "1998-season-liverpoolawaywhite-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2013 14 LiverpoolHomeRetro",
+          "slug": "2013-14-liverpoolhomeretro-5a",
+          "tags": []
+        },
+        {
+          "name": "2019 20 Season LiverpoolHomeRetro",
+          "slug": "2019-20-season-liverpoolhomeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 1998 Season LiverpoolAwayWhite",
+          "slug": "long-sleeve-1998-season-liverpoolawaywhite-3b",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "Long Sleeve 2010 11 Season LiverpoolHomeRetroJersey",
+          "slug": "long-sleeve-2010-11-season-liverpoolhomeretrojersey-3b",
+          "tags": []
+        }
+      ],
+      "arsenal": [
+        {
+          "name": "1992 94 Season ArsenalAway",
+          "slug": "1992-94-season-arsenalaway-0b",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2008 10 Season ArsenalHome",
+          "slug": "2008-10-season-arsenalhome-5a",
+          "tags": []
+        },
+        {
+          "name": "2011 12 Season ArsenalAway",
+          "slug": "2011-12-season-arsenalaway-0b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2006 076 Season ArsenalHome",
+          "slug": "long-sleeve-2006-076-season-arsenalhome-3b",
+          "tags": []
+        }
+      ],
+      "leeds": [
+        {
+          "name": "1995 96 Season Leeds United HomeWhite",
+          "slug": "1995-96-season-leeds-united-homewhite-8a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "tottenham": [
+        {
+          "name": "1995 97 Season Tottenham Away",
+          "slug": "1995-97-season-tottenham-away-8a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "manchester-united": [
+        {
+          "name": "2007 08 Season Manchester United",
+          "slug": "2007-08-season-manchester-united-5a",
+          "tags": []
+        },
+        {
+          "name": "2019 20 Season Manchester UnitedAway 2",
+          "slug": "2019-20-season-manchester-unitedaway-2-5a",
+          "tags": []
+        },
+        {
+          "name": "2019 20 Season Manchester UnitedHome",
+          "slug": "2019-20-season-manchester-unitedhome-5a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 1998 99 Season Manchester UnitedWhite",
+          "slug": "long-sleeve-1998-99-season-manchester-unitedwhite-3b",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "chelsea": [
+        {
+          "name": "2010 11 Season Chelsea Away",
+          "slug": "2010-11-season-chelsea-away-5a",
+          "tags": []
+        },
+        {
+          "name": "2012 13 Chelsea Away 2",
+          "slug": "2012-13-chelsea-away-2-8a",
+          "tags": []
+        }
+      ]
+    },
+    "serie-a": {
+      "napoli": [
+        {
+          "name": "1991 93 Season NapoliHome",
+          "slug": "1991-93-season-napolihome-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "Long Sleeve 1987 88 Season NapoliHome",
+          "slug": "long-sleeve-1987-88-season-napolihome-3b",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "fiorentina": [
+        {
+          "name": "1992 93 Fiorentina AwayRetro5 A",
+          "slug": "1992-93-fiorentina-awayretro5-a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1992 93 Fiorentina HomeRetro5 A",
+          "slug": "1992-93-fiorentina-homeretro5-a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "inter-milan": [
+        {
+          "name": "1994 95 Season Inter de milan AwayWhite",
+          "slug": "1994-95-season-inter-de-milan-awaywhite-8a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "ac-milan": [
+        {
+          "name": "1996 97 Season AC Milan Milan MilanAwayWhite8 A",
+          "slug": "1996-97-season-ac-milan-milan-milanawaywhite8-a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1996 97 Season AC Milan Milan MilanHome 5 A",
+          "slug": "1996-97-season-ac-milan-milan-milanhome-5-a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1997 98 Season AC Milan Milan Milan",
+          "slug": "1997-98-season-ac-milan-milan-milan",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1999 00 Season AC Milan Milan Milan",
+          "slug": "1999-00-season-ac-milan-milan-milan",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2010 11 Season AC Milan Milan MilanHome",
+          "slug": "2010-11-season-ac-milan-milan-milanhome-8a",
+          "tags": []
+        },
+        {
+          "name": "2011 12 Season AC Milan Milan MilanHome",
+          "slug": "2011-12-season-ac-milan-milan-milanhome-8a",
+          "tags": []
+        },
+        {
+          "name": "2012 13 AC Milan Milan MilanHome",
+          "slug": "2012-13-ac-milan-milan-milanhome-0b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2008 09 Season AC Milan Milan MilanHome Jacquard",
+          "slug": "long-sleeve-2008-09-season-ac-milan-milan-milanhome-jacquard-3b",
+          "tags": []
+        }
+      ],
+      "juventus": [
+        {
+          "name": "1999 00 Season Juventus Away",
+          "slug": "1999-00-season-juventus-away-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2012 13 Juventus Away",
+          "slug": "2012-13-juventus-away-5a",
+          "tags": []
+        },
+        {
+          "name": "2014 Season Juventus HomeRetro",
+          "slug": "2014-season-juventus-homeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "2018 19 Season Juventus HomeRetro",
+          "slug": "2018-19-season-juventus-homeretro-5a",
+          "tags": []
+        }
+      ],
+      "lazio": [
+        {
+          "name": "1999 00 Season LazioHome",
+          "slug": "1999-00-season-laziohome-0b",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "roma": [
+        {
+          "name": "2000 01 Season Roma HomeRetro",
+          "slug": "2000-01-season-roma-homeretro-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2014 15 Season Roma HomeRetro",
+          "slug": "2014-15-season-roma-homeretro-5a",
+          "tags": []
+        },
+        {
+          "name": "2017 18 Season Roma HomeRetro5 A",
+          "slug": "2017-18-season-roma-homeretro5-a",
+          "tags": []
+        }
+      ]
+    },
+    "otros": {
+      "otros": [
+        {
+          "name": "1994 95 Season Noruega HomeRetro2 B",
+          "slug": "1994-95-season-noruega-homeretro2-b",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1995 96 Season Botafogo AwayRetro",
+          "slug": "1995-96-season-botafogo-awayretro-3b",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1998 99 Season Chelsey Away Black",
+          "slug": "1998-99-season-chelsey-away-black",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1998 99 Season Chelsey White",
+          "slug": "1998-99-season-chelsey-white-8a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "1999 00 Season Sporting de Lisboa HomeRetro",
+          "slug": "1999-00-season-sporting-de-lisboa-homeretro-5a",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2010 Season Spanish Goalkeeper GreenRetro",
+          "slug": "2010-season-spanish-goalkeeper-greenretro-8a",
+          "tags": []
+        },
+        {
+          "name": "2015 16 Season Away 2",
+          "slug": "2015-16-season-away-2-5a",
+          "tags": []
+        },
+        {
+          "name": "2016 17 Season Chelsey Home",
+          "slug": "2016-17-season-chelsey-home-5a",
+          "tags": []
+        },
+        {
+          "name": "2018 Season HomeRetro",
+          "slug": "2018-season-homeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "Adidas x Oasis Firebird Tour Black Jacket x Jersey",
+          "slug": "adidas-x-oasis-firebird-tour-black-jacket-x-jersey",
+          "tags": []
+        },
+        {
+          "name": "Adidas x Oasis Firebird Tour Black Jersey x",
+          "slug": "adidas-x-oasis-firebird-tour-black-jersey-x",
+          "tags": []
+        },
+        {
+          "name": "Adidas x Oasis Firebird Tour Blue Jacket x Jersey",
+          "slug": "adidas-x-oasis-firebird-tour-blue-jacket-x-jersey",
+          "tags": []
+        },
+        {
+          "name": "Adidas x Oasis Firebird Tour Blue Jacket x 运动Jersey 湖",
+          "slug": "adidas-x-oasis-firebird-tour-blue-jacket-x-jersey",
+          "tags": []
+        },
+        {
+          "name": "Adidas x Oasis Firebird Tour Red Jacket x Jersey",
+          "slug": "adidas-x-oasis-firebird-tour-red-jacket-x-jersey",
+          "tags": []
+        },
+        {
+          "name": "Club AméricaAnniversary EditionHomeRetro Yellow",
+          "slug": "club-amricaanniversary-editionhomeretro-yellow-5a",
+          "tags": []
+        }
+      ],
+      "porto": [
+        {
+          "name": "2013 14 Season Porto HomeRetro",
+          "slug": "2013-14-season-porto-homeretro-8a",
+          "tags": []
+        }
+      ],
+      "celtic": [
+        {
+          "name": "Long Sleeve CelticHome1 38A nniversary Edition",
+          "slug": "long-sleeve-celtichome1-38a-nniversary-edition-3b",
+          "tags": []
+        }
+      ]
+    },
+    "bundesliga": {
+      "borussia-dortmund": [
+        {
+          "name": "1995 96 Season Dortmund Home",
+          "slug": "1995-96-season-dortmund-home-5a",
+          "tags": [
+            "retro"
+          ]
+        }
+      ],
+      "bayern-munich": [
+        {
+          "name": "2001 02 Season Bayern MunichHomeRetro",
+          "slug": "2001-02-season-bayern-munichhomeretro-8a",
+          "tags": []
+        },
+        {
+          "name": "2007 08 Season Bayern MunichHomeRetro",
+          "slug": "2007-08-season-bayern-munichhomeretro-0b",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 1997 99 Season Bayern MunichHome",
+          "slug": "long-sleeve-1997-99-season-bayern-munichhome-3b",
+          "tags": [
+            "retro"
+          ]
+        }
+      ]
+    },
+    "ligue-1": {
+      "lyon": [
+        {
+          "name": "1995 96 Season Olympique de Lyon HomeRetro2 B",
+          "slug": "1995-96-season-olympique-de-lyon-homeretro2-b",
+          "tags": [
+            "retro"
+          ]
+        },
+        {
+          "name": "2008 09 Season Olympique de Lyon HomeRetro",
+          "slug": "2008-09-season-olympique-de-lyon-homeretro-2b",
+          "tags": []
+        }
+      ],
+      "psg": [
+        {
+          "name": "2004 05 Season Paris Saint-GermainHome8 A",
+          "slug": "2004-05-season-paris-saintgermainhome8-a",
+          "tags": []
+        },
+        {
+          "name": "Long Sleeve 2001 02 Season Paris Saint-GermainHome",
+          "slug": "long-sleeve-2001-02-season-paris-saintgermainhome-3b",
+          "tags": []
+        }
+      ]
+    }
+  }
+}

@@ -4,8 +4,8 @@
     "slug": "1982-season-italy-home-5a",
     "name": "1982 Season Italy Home",
     "price": 1144,
-    "category": "retro",
-    "club": "1982",
+    "category": "selecciones",
+    "club": "italy",
     "sizes": [
       "S",
       "M",
@@ -24,6 +24,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611724/jerseys/retro/1982-season-italy-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611725/jerseys/retro/1982-season-italy-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611726/jerseys/retro/1982-season-italy-home-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -31,8 +34,8 @@
     "slug": "1984-85-season-real-madridhome8-a",
     "name": "1984 85 Season Real MadridHome8 A",
     "price": 1186,
-    "category": "retro",
-    "club": "1984",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -51,6 +54,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611730/jerseys/retro/1984-85-season-real-madridhome8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611731/jerseys/retro/1984-85-season-real-madridhome8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611732/jerseys/retro/1984-85-season-real-madridhome8-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -58,8 +64,8 @@
     "slug": "1985-86-season-liverpoolaway-2y-ellow-5a",
     "name": "1985 86 Season LiverpoolAway 2Y ellow",
     "price": 1138,
-    "category": "retro",
-    "club": "1985",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -78,6 +84,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611737/jerseys/retro/1985-86-season-liverpoolaway-2y-ellow-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611737/jerseys/retro/1985-86-season-liverpoolaway-2y-ellow-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611738/jerseys/retro/1985-86-season-liverpoolaway-2y-ellow-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -85,8 +94,8 @@
     "slug": "1986-season-argentina-away-0a",
     "name": "1986 Season Argentina Away",
     "price": 1088,
-    "category": "retro",
-    "club": "1986",
+    "category": "selecciones",
+    "club": "argentina",
     "sizes": [
       "S",
       "M",
@@ -105,6 +114,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611743/jerseys/retro/1986-season-argentina-away-0a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611744/jerseys/retro/1986-season-argentina-away-0a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611745/jerseys/retro/1986-season-argentina-away-0a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -112,8 +124,8 @@
     "slug": "1988-90-season-germany-away-2b",
     "name": "1988 90 Season Germany Away",
     "price": 1183,
-    "category": "retro",
-    "club": "1988",
+    "category": "selecciones",
+    "club": "germany",
     "sizes": [
       "S",
       "M",
@@ -132,6 +144,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611749/jerseys/retro/1988-90-season-germany-away-2b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611750/jerseys/retro/1988-90-season-germany-away-2b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611751/jerseys/retro/1988-90-season-germany-away-2b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -139,8 +154,8 @@
     "slug": "1988-90-season-real-madridhomeretro-8a",
     "name": "1988 90 Season Real MadridHomeRetro",
     "price": 1087,
-    "category": "retro",
-    "club": "1988",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -159,6 +174,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611755/jerseys/retro/1988-90-season-real-madridhomeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611756/jerseys/retro/1988-90-season-real-madridhomeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611757/jerseys/retro/1988-90-season-real-madridhomeretro-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -166,8 +184,8 @@
     "slug": "1990-season-colombia-homeretro-5a",
     "name": "1990 Season Colombia HomeRetro",
     "price": 1124,
-    "category": "retro",
-    "club": "1990",
+    "category": "selecciones",
+    "club": "colombia",
     "sizes": [
       "S",
       "M",
@@ -186,6 +204,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611761/jerseys/retro/1990-season-colombia-homeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611762/jerseys/retro/1990-season-colombia-homeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611763/jerseys/retro/1990-season-colombia-homeretro-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -193,8 +214,8 @@
     "slug": "1990-season-colombia-wayretro-5a",
     "name": "1990 Season Colombia wayRetro",
     "price": 1170,
-    "category": "retro",
-    "club": "1990",
+    "category": "selecciones",
+    "club": "colombia",
     "sizes": [
       "S",
       "M",
@@ -213,6 +234,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611768/jerseys/retro/1990-season-colombia-wayretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611768/jerseys/retro/1990-season-colombia-wayretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611769/jerseys/retro/1990-season-colombia-wayretro-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -220,8 +244,8 @@
     "slug": "1991-93-season-napolihome-5a",
     "name": "1991 93 Season NapoliHome",
     "price": 1212,
-    "category": "retro",
-    "club": "1991",
+    "category": "serie-a",
+    "club": "napoli",
     "sizes": [
       "S",
       "M",
@@ -240,6 +264,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611774/jerseys/retro/1991-93-season-napolihome-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611775/jerseys/retro/1991-93-season-napolihome-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611775/jerseys/retro/1991-93-season-napolihome-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -247,8 +274,8 @@
     "slug": "1992-93-fiorentina-awayretro5-a",
     "name": "1992 93 Fiorentina AwayRetro5 A",
     "price": 1135,
-    "category": "retro",
-    "club": "1992",
+    "category": "serie-a",
+    "club": "fiorentina",
     "sizes": [
       "S",
       "M",
@@ -267,6 +294,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611779/jerseys/retro/1992-93-fiorentina-awayretro5-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611780/jerseys/retro/1992-93-fiorentina-awayretro5-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611780/jerseys/retro/1992-93-fiorentina-awayretro5-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -274,8 +304,8 @@
     "slug": "1992-93-fiorentina-homeretro5-a",
     "name": "1992 93 Fiorentina HomeRetro5 A",
     "price": 1066,
-    "category": "retro",
-    "club": "1992",
+    "category": "serie-a",
+    "club": "fiorentina",
     "sizes": [
       "S",
       "M",
@@ -294,6 +324,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611784/jerseys/retro/1992-93-fiorentina-homeretro5-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611785/jerseys/retro/1992-93-fiorentina-homeretro5-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611786/jerseys/retro/1992-93-fiorentina-homeretro5-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -301,8 +334,8 @@
     "slug": "1992-94-season-arsenalaway-0b",
     "name": "1992 94 Season ArsenalAway",
     "price": 1152,
-    "category": "retro",
-    "club": "1992",
+    "category": "premier-league",
+    "club": "arsenal",
     "sizes": [
       "S",
       "M",
@@ -321,6 +354,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611790/jerseys/retro/1992-94-season-arsenalaway-0b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611791/jerseys/retro/1992-94-season-arsenalaway-0b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611791/jerseys/retro/1992-94-season-arsenalaway-0b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -328,8 +364,8 @@
     "slug": "1994-95-season-inter-de-milan-awaywhite-8a",
     "name": "1994 95 Season Inter de milan AwayWhite",
     "price": 1130,
-    "category": "retro",
-    "club": "1994",
+    "category": "serie-a",
+    "club": "inter-milan",
     "sizes": [
       "S",
       "M",
@@ -348,6 +384,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611796/jerseys/retro/1994-95-season-inter-de-milan-awaywhite-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611796/jerseys/retro/1994-95-season-inter-de-milan-awaywhite-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611797/jerseys/retro/1994-95-season-inter-de-milan-awaywhite-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -355,8 +394,8 @@
     "slug": "1994-95-season-japan-home5-a",
     "name": "1994 95 Season Japan Home5 A",
     "price": 1161,
-    "category": "retro",
-    "club": "1994",
+    "category": "selecciones",
+    "club": "japan",
     "sizes": [
       "S",
       "M",
@@ -375,6 +414,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611802/jerseys/retro/1994-95-season-japan-home5-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611803/jerseys/retro/1994-95-season-japan-home5-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611803/jerseys/retro/1994-95-season-japan-home5-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -382,8 +424,8 @@
     "slug": "1994-95-season-noruega-homeretro2-b",
     "name": "1994 95 Season Noruega HomeRetro2 B",
     "price": 1161,
-    "category": "retro",
-    "club": "1994",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -402,6 +444,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611808/jerseys/retro/1994-95-season-noruega-homeretro2-b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611809/jerseys/retro/1994-95-season-noruega-homeretro2-b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611810/jerseys/retro/1994-95-season-noruega-homeretro2-b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -409,8 +454,8 @@
     "slug": "1994-96-season-liverpoolaway-2y-ellow-5a",
     "name": "1994 96 Season LiverpoolAway 2Y ellow",
     "price": 1119,
-    "category": "retro",
-    "club": "1994",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -429,6 +474,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611814/jerseys/retro/1994-96-season-liverpoolaway-2y-ellow-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611815/jerseys/retro/1994-96-season-liverpoolaway-2y-ellow-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611816/jerseys/retro/1994-96-season-liverpoolaway-2y-ellow-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -436,8 +484,8 @@
     "slug": "1994-season-colombia-homeretro-8a",
     "name": "1994 Season Colombia HomeRetro",
     "price": 1151,
-    "category": "retro",
-    "club": "1994",
+    "category": "selecciones",
+    "club": "colombia",
     "sizes": [
       "S",
       "M",
@@ -456,6 +504,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611821/jerseys/retro/1994-season-colombia-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611822/jerseys/retro/1994-season-colombia-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611823/jerseys/retro/1994-season-colombia-homeretro-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -463,8 +514,8 @@
     "slug": "1994-season-germany-away-5a",
     "name": "1994 Season Germany Away",
     "price": 1233,
-    "category": "retro",
-    "club": "1994",
+    "category": "selecciones",
+    "club": "germany",
     "sizes": [
       "S",
       "M",
@@ -483,6 +534,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611831/jerseys/retro/1994-season-germany-away-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611832/jerseys/retro/1994-season-germany-away-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611833/jerseys/retro/1994-season-germany-away-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -490,8 +544,8 @@
     "slug": "1995-96-season-botafogo-awayretro-3b",
     "name": "1995 96 Season Botafogo AwayRetro",
     "price": 1107,
-    "category": "retro",
-    "club": "1995",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -510,6 +564,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611837/jerseys/retro/1995-96-season-botafogo-awayretro-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611838/jerseys/retro/1995-96-season-botafogo-awayretro-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611838/jerseys/retro/1995-96-season-botafogo-awayretro-3b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -517,8 +574,8 @@
     "slug": "1995-96-season-dortmund-home-5a",
     "name": "1995 96 Season Dortmund Home",
     "price": 1076,
-    "category": "retro",
-    "club": "1995",
+    "category": "bundesliga",
+    "club": "borussia-dortmund",
     "sizes": [
       "S",
       "M",
@@ -537,6 +594,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611843/jerseys/retro/1995-96-season-dortmund-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611844/jerseys/retro/1995-96-season-dortmund-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611844/jerseys/retro/1995-96-season-dortmund-home-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -544,8 +604,8 @@
     "slug": "1995-96-season-leeds-united-homewhite-8a",
     "name": "1995 96 Season Leeds United HomeWhite",
     "price": 1248,
-    "category": "retro",
-    "club": "1995",
+    "category": "premier-league",
+    "club": "leeds",
     "sizes": [
       "S",
       "M",
@@ -564,6 +624,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611849/jerseys/retro/1995-96-season-leeds-united-homewhite-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611849/jerseys/retro/1995-96-season-leeds-united-homewhite-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611850/jerseys/retro/1995-96-season-leeds-united-homewhite-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -571,8 +634,8 @@
     "slug": "1995-96-season-olympique-de-lyon-homeretro2-b",
     "name": "1995 96 Season Olympique de Lyon HomeRetro2 B",
     "price": 1123,
-    "category": "retro",
-    "club": "1995",
+    "category": "ligue-1",
+    "club": "lyon",
     "sizes": [
       "S",
       "M",
@@ -591,6 +654,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611854/jerseys/retro/1995-96-season-olympique-de-lyon-homeretro2-b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611855/jerseys/retro/1995-96-season-olympique-de-lyon-homeretro2-b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611856/jerseys/retro/1995-96-season-olympique-de-lyon-homeretro2-b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -598,8 +664,8 @@
     "slug": "1995-97-season-real-betis-away-5a",
     "name": "1995 97 Season Real Betis Away",
     "price": 1079,
-    "category": "retro",
-    "club": "1995",
+    "category": "la-liga",
+    "club": "real-betis",
     "sizes": [
       "S",
       "M",
@@ -618,6 +684,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611860/jerseys/retro/1995-97-season-real-betis-away-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611861/jerseys/retro/1995-97-season-real-betis-away-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611862/jerseys/retro/1995-97-season-real-betis-away-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -625,8 +694,8 @@
     "slug": "1995-97-season-tottenham-away-8a",
     "name": "1995 97 Season Tottenham Away",
     "price": 1243,
-    "category": "retro",
-    "club": "1995",
+    "category": "premier-league",
+    "club": "tottenham",
     "sizes": [
       "S",
       "M",
@@ -645,6 +714,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611866/jerseys/retro/1995-97-season-tottenham-away-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611866/jerseys/retro/1995-97-season-tottenham-away-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611867/jerseys/retro/1995-97-season-tottenham-away-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -652,8 +724,8 @@
     "slug": "1995-season-mexico-awayretro-5a",
     "name": "1995 Season Mexico AwayRetro",
     "price": 1080,
-    "category": "retro",
-    "club": "1995",
+    "category": "selecciones",
+    "club": "mexico",
     "sizes": [
       "S",
       "M",
@@ -672,6 +744,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611872/jerseys/retro/1995-season-mexico-awayretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611872/jerseys/retro/1995-season-mexico-awayretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611873/jerseys/retro/1995-season-mexico-awayretro-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -679,8 +754,8 @@
     "slug": "1995-season-mexico-home-5a",
     "name": "1995 Season Mexico Home",
     "price": 1199,
-    "category": "retro",
-    "club": "1995",
+    "category": "selecciones",
+    "club": "mexico",
     "sizes": [
       "S",
       "M",
@@ -699,6 +774,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611878/jerseys/retro/1995-season-mexico-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611879/jerseys/retro/1995-season-mexico-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611880/jerseys/retro/1995-season-mexico-home-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -706,8 +784,8 @@
     "slug": "1996-97-season-ac-milan-milan-milanawaywhite8-a",
     "name": "1996 97 Season AC Milan Milan MilanAwayWhite8 A",
     "price": 1078,
-    "category": "retro",
-    "club": "1996",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -726,6 +804,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611884/jerseys/retro/1996-97-season-ac-milan-milan-milanawaywhite8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611885/jerseys/retro/1996-97-season-ac-milan-milan-milanawaywhite8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611886/jerseys/retro/1996-97-season-ac-milan-milan-milanawaywhite8-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -733,8 +814,8 @@
     "slug": "1996-97-season-ac-milan-milan-milanhome-5-a",
     "name": "1996 97 Season AC Milan Milan MilanHome 5 A",
     "price": 1140,
-    "category": "retro",
-    "club": "1996",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -753,6 +834,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611890/jerseys/retro/1996-97-season-ac-milan-milan-milanhome-5-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611891/jerseys/retro/1996-97-season-ac-milan-milan-milanhome-5-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611891/jerseys/retro/1996-97-season-ac-milan-milan-milanhome-5-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -760,8 +844,8 @@
     "slug": "1996-season-italy-home-5a",
     "name": "1996 Season Italy Home",
     "price": 1050,
-    "category": "retro",
-    "club": "1996",
+    "category": "selecciones",
+    "club": "italy",
     "sizes": [
       "S",
       "M",
@@ -780,6 +864,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611897/jerseys/retro/1996-season-italy-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611897/jerseys/retro/1996-season-italy-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611898/jerseys/retro/1996-season-italy-home-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -787,8 +874,8 @@
     "slug": "1996-season-netherlands-home-5a",
     "name": "1996 Season Netherlands Home",
     "price": 1070,
-    "category": "retro",
-    "club": "1996",
+    "category": "selecciones",
+    "club": "netherlands",
     "sizes": [
       "S",
       "M",
@@ -807,6 +894,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611903/jerseys/retro/1996-season-netherlands-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611903/jerseys/retro/1996-season-netherlands-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611904/jerseys/retro/1996-season-netherlands-home-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -814,8 +904,8 @@
     "slug": "1997-98-season-ac-milan-milan-milan",
     "name": "1997 98 Season AC Milan Milan Milan",
     "price": 1178,
-    "category": "retro",
-    "club": "1997",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -834,6 +924,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611908/jerseys/retro/1997-98-season-ac-milan-milan-milan/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611909/jerseys/retro/1997-98-season-ac-milan-milan-milan/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611911/jerseys/retro/1997-98-season-ac-milan-milan-milan/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -841,8 +934,8 @@
     "slug": "1998-99-season-barcelonahome",
     "name": "1998 99 Season BarcelonaHome",
     "price": 1244,
-    "category": "retro",
-    "club": "1998",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -861,6 +954,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611915/jerseys/retro/1998-99-season-barcelonahome/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611916/jerseys/retro/1998-99-season-barcelonahome/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611916/jerseys/retro/1998-99-season-barcelonahome/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -868,8 +964,8 @@
     "slug": "1998-99-season-chelsey-away-black",
     "name": "1998 99 Season Chelsey Away Black",
     "price": 1193,
-    "category": "retro",
-    "club": "1998",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -888,6 +984,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611920/jerseys/retro/1998-99-season-chelsey-away-black/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611921/jerseys/retro/1998-99-season-chelsey-away-black/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611922/jerseys/retro/1998-99-season-chelsey-away-black/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -895,8 +994,8 @@
     "slug": "1998-99-season-chelsey-white-8a",
     "name": "1998 99 Season Chelsey White",
     "price": 1165,
-    "category": "retro",
-    "club": "1998",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -915,6 +1014,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611926/jerseys/retro/1998-99-season-chelsey-white-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611926/jerseys/retro/1998-99-season-chelsey-white-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611927/jerseys/retro/1998-99-season-chelsey-white-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -922,8 +1024,8 @@
     "slug": "1998-season-espaa-homeretro-8a",
     "name": "1998 Season España HomeRetro",
     "price": 1169,
-    "category": "retro",
-    "club": "1998",
+    "category": "selecciones",
+    "club": "spain",
     "sizes": [
       "S",
       "M",
@@ -942,6 +1044,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611932/jerseys/retro/1998-season-espaa-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611932/jerseys/retro/1998-season-espaa-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611933/jerseys/retro/1998-season-espaa-homeretro-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -949,8 +1054,8 @@
     "slug": "1998-season-liverpoolawaywhite-8a",
     "name": "1998 Season LiverpoolAwayWhite",
     "price": 1143,
-    "category": "retro",
-    "club": "1998",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -969,6 +1074,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611938/jerseys/retro/1998-season-liverpoolawaywhite-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611939/jerseys/retro/1998-season-liverpoolawaywhite-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611940/jerseys/retro/1998-season-liverpoolawaywhite-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -976,8 +1084,8 @@
     "slug": "1998-season-netherlands-home-5a",
     "name": "1998 Season Netherlands Home",
     "price": 1222,
-    "category": "retro",
-    "club": "1998",
+    "category": "selecciones",
+    "club": "netherlands",
     "sizes": [
       "S",
       "M",
@@ -996,6 +1104,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611944/jerseys/retro/1998-season-netherlands-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611945/jerseys/retro/1998-season-netherlands-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611945/jerseys/retro/1998-season-netherlands-home-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1003,8 +1114,8 @@
     "slug": "1999-00-season-ac-milan-milan-milan",
     "name": "1999 00 Season AC Milan Milan Milan",
     "price": 1157,
-    "category": "retro",
-    "club": "1999",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -1023,6 +1134,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611949/jerseys/retro/1999-00-season-ac-milan-milan-milan/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611950/jerseys/retro/1999-00-season-ac-milan-milan-milan/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611951/jerseys/retro/1999-00-season-ac-milan-milan-milan/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1030,8 +1144,8 @@
     "slug": "1999-00-season-atletico-home8-a",
     "name": "1999 00 Season Atletico Home8 A",
     "price": 1198,
-    "category": "retro",
-    "club": "1999",
+    "category": "la-liga",
+    "club": "atletico-madrid",
     "sizes": [
       "S",
       "M",
@@ -1050,6 +1164,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611955/jerseys/retro/1999-00-season-atletico-home8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611955/jerseys/retro/1999-00-season-atletico-home8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611956/jerseys/retro/1999-00-season-atletico-home8-a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1057,8 +1174,8 @@
     "slug": "1999-00-season-juventus-away-8a",
     "name": "1999 00 Season Juventus Away",
     "price": 1222,
-    "category": "retro",
-    "club": "1999",
+    "category": "serie-a",
+    "club": "juventus",
     "sizes": [
       "S",
       "M",
@@ -1077,6 +1194,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611960/jerseys/retro/1999-00-season-juventus-away-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611961/jerseys/retro/1999-00-season-juventus-away-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611962/jerseys/retro/1999-00-season-juventus-away-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1084,8 +1204,8 @@
     "slug": "1999-00-season-laziohome-0b",
     "name": "1999 00 Season LazioHome",
     "price": 1246,
-    "category": "retro",
-    "club": "1999",
+    "category": "serie-a",
+    "club": "lazio",
     "sizes": [
       "S",
       "M",
@@ -1104,6 +1224,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611966/jerseys/retro/1999-00-season-laziohome-0b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611967/jerseys/retro/1999-00-season-laziohome-0b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611968/jerseys/retro/1999-00-season-laziohome-0b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1111,8 +1234,8 @@
     "slug": "1999-00-season-sporting-de-lisboa-homeretro-5a",
     "name": "1999 00 Season Sporting de Lisboa HomeRetro",
     "price": 1151,
-    "category": "retro",
-    "club": "1999",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -1131,6 +1254,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611973/jerseys/retro/1999-00-season-sporting-de-lisboa-homeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611973/jerseys/retro/1999-00-season-sporting-de-lisboa-homeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611974/jerseys/retro/1999-00-season-sporting-de-lisboa-homeretro-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1138,8 +1264,8 @@
     "slug": "2000-01-season-barcelonahomeretro-5a",
     "name": "2000 01 Season BarcelonaHomeRetro",
     "price": 1076,
-    "category": "retro",
-    "club": "2000",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -1158,6 +1284,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611981/jerseys/retro/2000-01-season-barcelonahomeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611982/jerseys/retro/2000-01-season-barcelonahomeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611983/jerseys/retro/2000-01-season-barcelonahomeretro-5a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1165,8 +1294,8 @@
     "slug": "2000-01-season-roma-homeretro-8a",
     "name": "2000 01 Season Roma HomeRetro",
     "price": 1231,
-    "category": "retro",
-    "club": "2000",
+    "category": "serie-a",
+    "club": "roma",
     "sizes": [
       "S",
       "M",
@@ -1185,6 +1314,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611987/jerseys/retro/2000-01-season-roma-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611988/jerseys/retro/2000-01-season-roma-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611988/jerseys/retro/2000-01-season-roma-homeretro-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1192,8 +1324,8 @@
     "slug": "2000-01-season-valencia-home-8a",
     "name": "2000 01 Season Valencia Home",
     "price": 1212,
-    "category": "retro",
-    "club": "2000",
+    "category": "la-liga",
+    "club": "valencia",
     "sizes": [
       "S",
       "M",
@@ -1212,6 +1344,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611992/jerseys/retro/2000-01-season-valencia-home-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611993/jerseys/retro/2000-01-season-valencia-home-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611994/jerseys/retro/2000-01-season-valencia-home-8a/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -1219,8 +1354,8 @@
     "slug": "2001-02-season-bayern-munichhomeretro-8a",
     "name": "2001 02 Season Bayern MunichHomeRetro",
     "price": 1060,
-    "category": "retro",
-    "club": "2001",
+    "category": "bundesliga",
+    "club": "bayern-munich",
     "sizes": [
       "S",
       "M",
@@ -1239,15 +1374,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772611999/jerseys/retro/2001-02-season-bayern-munichhomeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612000/jerseys/retro/2001-02-season-bayern-munichhomeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612001/jerseys/retro/2001-02-season-bayern-munichhomeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "47",
     "slug": "2001-02-season-celta-away",
     "name": "2001 02 Season Celta Away",
     "price": 1089,
-    "category": "retro",
-    "club": "2001",
+    "category": "la-liga",
+    "club": "celta-vigo",
     "sizes": [
       "S",
       "M",
@@ -1266,15 +1402,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612005/jerseys/retro/2001-02-season-celta-away/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612006/jerseys/retro/2001-02-season-celta-away/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612006/jerseys/retro/2001-02-season-celta-away/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "48",
     "slug": "2001-02-season-celta-home",
     "name": "2001 02 Season Celta Home",
     "price": 1132,
-    "category": "retro",
-    "club": "2001",
+    "category": "la-liga",
+    "club": "celta-vigo",
     "sizes": [
       "S",
       "M",
@@ -1293,15 +1430,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612011/jerseys/retro/2001-02-season-celta-home/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612011/jerseys/retro/2001-02-season-celta-home/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612012/jerseys/retro/2001-02-season-celta-home/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "49",
     "slug": "2001-season-colombia-homeretro-8a",
     "name": "2001 Season colombia HomeRetro",
     "price": 1088,
-    "category": "retro",
-    "club": "2001",
+    "category": "selecciones",
+    "club": "colombia",
     "sizes": [
       "S",
       "M",
@@ -1320,15 +1458,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612016/jerseys/retro/2001-season-colombia-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612017/jerseys/retro/2001-season-colombia-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612018/jerseys/retro/2001-season-colombia-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "50",
     "slug": "2002-03-season-real-madridhome",
     "name": "2002 03 Season Real MadridHome",
     "price": 1198,
-    "category": "retro",
-    "club": "2002",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -1347,15 +1486,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612022/jerseys/retro/2002-03-season-real-madridhome/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612023/jerseys/retro/2002-03-season-real-madridhome/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612023/jerseys/retro/2002-03-season-real-madridhome/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "51",
     "slug": "2002-season-senegal-awayretro-5a",
     "name": "2002 Season Senegal AwayRetro",
     "price": 1088,
-    "category": "retro",
-    "club": "2002",
+    "category": "selecciones",
+    "club": "senegal",
     "sizes": [
       "S",
       "M",
@@ -1374,15 +1514,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612028/jerseys/retro/2002-season-senegal-awayretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612028/jerseys/retro/2002-season-senegal-awayretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612029/jerseys/retro/2002-season-senegal-awayretro-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "52",
     "slug": "2002-season-senegal-homewhiteretro-5a",
     "name": "2002 Season Senegal HomeWhiteRetro",
     "price": 1159,
-    "category": "retro",
-    "club": "2002",
+    "category": "selecciones",
+    "club": "senegal",
     "sizes": [
       "S",
       "M",
@@ -1401,15 +1542,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612034/jerseys/retro/2002-season-senegal-homewhiteretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612034/jerseys/retro/2002-season-senegal-homewhiteretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612035/jerseys/retro/2002-season-senegal-homewhiteretro-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "53",
     "slug": "2003-04-season-real-madridaway-5a",
     "name": "2003 04 Season Real MadridAway",
     "price": 1207,
-    "category": "retro",
-    "club": "2003",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -1428,15 +1570,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612039/jerseys/retro/2003-04-season-real-madridaway-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612040/jerseys/retro/2003-04-season-real-madridaway-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612041/jerseys/retro/2003-04-season-real-madridaway-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "54",
     "slug": "2003-05-season-colombia-homeretro-8a",
     "name": "2003 05 Season Colombia HomeRetro",
     "price": 1145,
-    "category": "retro",
-    "club": "2003",
+    "category": "selecciones",
+    "club": "colombia",
     "sizes": [
       "S",
       "M",
@@ -1455,15 +1598,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612047/jerseys/retro/2003-05-season-colombia-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612051/jerseys/retro/2003-05-season-colombia-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612052/jerseys/retro/2003-05-season-colombia-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "55",
     "slug": "2004-05-season-paris-saintgermainhome8-a",
     "name": "2004 05 Season Paris Saint-GermainHome8 A",
     "price": 1152,
-    "category": "retro",
-    "club": "2004",
+    "category": "ligue-1",
+    "club": "psg",
     "sizes": [
       "S",
       "M",
@@ -1482,15 +1626,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612057/jerseys/retro/2004-05-season-paris-saintgermainhome8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612058/jerseys/retro/2004-05-season-paris-saintgermainhome8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612058/jerseys/retro/2004-05-season-paris-saintgermainhome8-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "56",
     "slug": "2006-07-season-japan-awaywhite8-a",
     "name": "2006 07 Season Japan AwayWhite8 A",
     "price": 1206,
-    "category": "retro",
-    "club": "2006",
+    "category": "selecciones",
+    "club": "japan",
     "sizes": [
       "S",
       "M",
@@ -1509,15 +1654,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612062/jerseys/retro/2006-07-season-japan-awaywhite8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612063/jerseys/retro/2006-07-season-japan-awaywhite8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612063/jerseys/retro/2006-07-season-japan-awaywhite8-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "57",
     "slug": "2006-07-season-japan-home8-a",
     "name": "2006 07 Season Japan Home8 A",
     "price": 1101,
-    "category": "retro",
-    "club": "2006",
+    "category": "selecciones",
+    "club": "japan",
     "sizes": [
       "S",
       "M",
@@ -1536,15 +1682,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612068/jerseys/retro/2006-07-season-japan-home8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612068/jerseys/retro/2006-07-season-japan-home8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612069/jerseys/retro/2006-07-season-japan-home8-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "58",
     "slug": "2006-season-spain-awaywhiteretro-8a",
     "name": "2006 Season Spain AwayWhiteRetro",
     "price": 1114,
-    "category": "retro",
-    "club": "2006",
+    "category": "selecciones",
+    "club": "spain",
     "sizes": [
       "S",
       "M",
@@ -1563,15 +1710,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612073/jerseys/retro/2006-season-spain-awaywhiteretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612074/jerseys/retro/2006-season-spain-awaywhiteretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612074/jerseys/retro/2006-season-spain-awaywhiteretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "59",
     "slug": "2007-08-season-bayern-munichhomeretro-0b",
     "name": "2007 08 Season Bayern MunichHomeRetro",
     "price": 1174,
-    "category": "retro",
-    "club": "2007",
+    "category": "bundesliga",
+    "club": "bayern-munich",
     "sizes": [
       "S",
       "M",
@@ -1590,15 +1738,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612078/jerseys/retro/2007-08-season-bayern-munichhomeretro-0b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612079/jerseys/retro/2007-08-season-bayern-munichhomeretro-0b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612079/jerseys/retro/2007-08-season-bayern-munichhomeretro-0b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "60",
     "slug": "2007-08-season-manchester-united-5a",
     "name": "2007 08 Season Manchester United",
     "price": 1118,
-    "category": "retro",
-    "club": "2007",
+    "category": "premier-league",
+    "club": "manchester-united",
     "sizes": [
       "S",
       "M",
@@ -1617,15 +1766,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612084/jerseys/retro/2007-08-season-manchester-united-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612085/jerseys/retro/2007-08-season-manchester-united-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612085/jerseys/retro/2007-08-season-manchester-united-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "61",
     "slug": "2007-08-season-real-madridhome-8a",
     "name": "2007 08 Season Real MadridHome",
     "price": 1141,
-    "category": "retro",
-    "club": "2007",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -1644,15 +1794,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612089/jerseys/retro/2007-08-season-real-madridhome-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612090/jerseys/retro/2007-08-season-real-madridhome-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612091/jerseys/retro/2007-08-season-real-madridhome-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "62",
     "slug": "2008-09-season-olympique-de-lyon-homeretro-2b",
     "name": "2008 09 Season Olympique de Lyon HomeRetro",
     "price": 1148,
-    "category": "retro",
-    "club": "2008",
+    "category": "ligue-1",
+    "club": "lyon",
     "sizes": [
       "S",
       "M",
@@ -1671,15 +1822,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612095/jerseys/retro/2008-09-season-olympique-de-lyon-homeretro-2b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612095/jerseys/retro/2008-09-season-olympique-de-lyon-homeretro-2b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612096/jerseys/retro/2008-09-season-olympique-de-lyon-homeretro-2b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "63",
     "slug": "2008-10-season-arsenalhome-5a",
     "name": "2008 10 Season ArsenalHome",
     "price": 1229,
-    "category": "retro",
-    "club": "2008",
+    "category": "premier-league",
+    "club": "arsenal",
     "sizes": [
       "S",
       "M",
@@ -1698,15 +1850,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612100/jerseys/retro/2008-10-season-arsenalhome-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612101/jerseys/retro/2008-10-season-arsenalhome-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612101/jerseys/retro/2008-10-season-arsenalhome-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "64",
     "slug": "2008-season-germany-home-5a",
     "name": "2008 Season Germany Home",
     "price": 1188,
-    "category": "retro",
-    "club": "2008",
+    "category": "selecciones",
+    "club": "germany",
     "sizes": [
       "S",
       "M",
@@ -1725,15 +1878,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612106/jerseys/retro/2008-season-germany-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612106/jerseys/retro/2008-season-germany-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612107/jerseys/retro/2008-season-germany-home-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "65",
     "slug": "2008-season-spain-homeretro-8a",
     "name": "2008 Season Spain HomeRetro",
     "price": 1165,
-    "category": "retro",
-    "club": "2008",
+    "category": "selecciones",
+    "club": "spain",
     "sizes": [
       "S",
       "M",
@@ -1752,15 +1906,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612112/jerseys/retro/2008-season-spain-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612112/jerseys/retro/2008-season-spain-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612113/jerseys/retro/2008-season-spain-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "66",
     "slug": "2010-11-season-ac-milan-milan-milanhome-8a",
     "name": "2010 11 Season AC Milan Milan MilanHome",
     "price": 1121,
-    "category": "retro",
-    "club": "2010",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -1779,15 +1934,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612117/jerseys/retro/2010-11-season-ac-milan-milan-milanhome-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612117/jerseys/retro/2010-11-season-ac-milan-milan-milanhome-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612118/jerseys/retro/2010-11-season-ac-milan-milan-milanhome-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "67",
     "slug": "2010-11-season-chelsea-away-5a",
     "name": "2010 11 Season Chelsea Away",
     "price": 1236,
-    "category": "retro",
-    "club": "2010",
+    "category": "premier-league",
+    "club": "chelsea",
     "sizes": [
       "S",
       "M",
@@ -1806,15 +1962,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612122/jerseys/retro/2010-11-season-chelsea-away-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612123/jerseys/retro/2010-11-season-chelsea-away-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612124/jerseys/retro/2010-11-season-chelsea-away-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "68",
     "slug": "2010-11-season-real-madridhome8-a",
     "name": "2010 11 Season Real MadridHome8 A",
     "price": 1201,
-    "category": "retro",
-    "club": "2010",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -1833,15 +1990,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612128/jerseys/retro/2010-11-season-real-madridhome8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612129/jerseys/retro/2010-11-season-real-madridhome8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612129/jerseys/retro/2010-11-season-real-madridhome8-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "69",
     "slug": "2010-season-argentina-homeretro-8a",
     "name": "2010 Season Argentina HomeRetro",
     "price": 1061,
-    "category": "retro",
-    "club": "2010",
+    "category": "selecciones",
+    "club": "argentina",
     "sizes": [
       "S",
       "M",
@@ -1860,15 +2018,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612134/jerseys/retro/2010-season-argentina-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612135/jerseys/retro/2010-season-argentina-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612135/jerseys/retro/2010-season-argentina-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "70",
     "slug": "2010-season-portugalhomeretro8-a",
     "name": "2010 Season PortugalHomeRetro8 A",
     "price": 1148,
-    "category": "retro",
-    "club": "2010",
+    "category": "selecciones",
+    "club": "portugal",
     "sizes": [
       "S",
       "M",
@@ -1887,15 +2046,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612140/jerseys/retro/2010-season-portugalhomeretro8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612141/jerseys/retro/2010-season-portugalhomeretro8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612142/jerseys/retro/2010-season-portugalhomeretro8-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "71",
     "slug": "2010-season-spanish-goalkeeper-greenretro-8a",
     "name": "2010 Season Spanish Goalkeeper GreenRetro",
     "price": 1229,
-    "category": "retro",
-    "club": "2010",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -1914,15 +2074,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612146/jerseys/retro/2010-season-spanish-goalkeeper-greenretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612147/jerseys/retro/2010-season-spanish-goalkeeper-greenretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612147/jerseys/retro/2010-season-spanish-goalkeeper-greenretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "72",
     "slug": "2011-12-season-ac-milan-milan-milanhome-8a",
     "name": "2011 12 Season AC Milan Milan MilanHome",
     "price": 1118,
-    "category": "retro",
-    "club": "2011",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -1941,15 +2102,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612152/jerseys/retro/2011-12-season-ac-milan-milan-milanhome-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612153/jerseys/retro/2011-12-season-ac-milan-milan-milanhome-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612153/jerseys/retro/2011-12-season-ac-milan-milan-milanhome-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "73",
     "slug": "2011-12-season-arsenalaway-0b",
     "name": "2011 12 Season ArsenalAway",
     "price": 1098,
-    "category": "retro",
-    "club": "2011",
+    "category": "premier-league",
+    "club": "arsenal",
     "sizes": [
       "S",
       "M",
@@ -1968,15 +2130,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612158/jerseys/retro/2011-12-season-arsenalaway-0b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612159/jerseys/retro/2011-12-season-arsenalaway-0b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612159/jerseys/retro/2011-12-season-arsenalaway-0b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "74",
     "slug": "2011-12s-season-spainawaywhiteretro-8a",
     "name": "2011 12S Season SpainAwayWhiteRetro",
     "price": 1234,
-    "category": "retro",
-    "club": "2011",
+    "category": "selecciones",
+    "club": "spain",
     "sizes": [
       "S",
       "M",
@@ -1995,15 +2158,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612163/jerseys/retro/2011-12s-season-spainawaywhiteretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612164/jerseys/retro/2011-12s-season-spainawaywhiteretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612165/jerseys/retro/2011-12s-season-spainawaywhiteretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "75",
     "slug": "2012-13-ac-milan-milan-milanhome-0b",
     "name": "2012 13 AC Milan Milan MilanHome",
     "price": 1126,
-    "category": "retro",
-    "club": "2012",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -2022,15 +2186,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612169/jerseys/retro/2012-13-ac-milan-milan-milanhome-0b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612170/jerseys/retro/2012-13-ac-milan-milan-milanhome-0b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612170/jerseys/retro/2012-13-ac-milan-milan-milanhome-0b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "76",
     "slug": "2012-13-chelsea-away-2-8a",
     "name": "2012 13 Chelsea Away 2",
     "price": 1180,
-    "category": "retro",
-    "club": "2012",
+    "category": "premier-league",
+    "club": "chelsea",
     "sizes": [
       "S",
       "M",
@@ -2049,15 +2214,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612175/jerseys/retro/2012-13-chelsea-away-2-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612176/jerseys/retro/2012-13-chelsea-away-2-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612177/jerseys/retro/2012-13-chelsea-away-2-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "77",
     "slug": "2012-13-juventus-away-5a",
     "name": "2012 13 Juventus Away",
     "price": 1150,
-    "category": "retro",
-    "club": "2012",
+    "category": "serie-a",
+    "club": "juventus",
     "sizes": [
       "S",
       "M",
@@ -2076,15 +2242,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612182/jerseys/retro/2012-13-juventus-away-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612183/jerseys/retro/2012-13-juventus-away-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612184/jerseys/retro/2012-13-juventus-away-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "78",
     "slug": "2013-14-liverpoolhomeretro-5a",
     "name": "2013 14 LiverpoolHomeRetro",
     "price": 1163,
-    "category": "retro",
-    "club": "2013",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -2103,15 +2270,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612188/jerseys/retro/2013-14-liverpoolhomeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612189/jerseys/retro/2013-14-liverpoolhomeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612189/jerseys/retro/2013-14-liverpoolhomeretro-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "79",
     "slug": "2013-14-real-madridaway-2o-range-8a",
     "name": "2013 14 Real MadridAway 2O range",
     "price": 1051,
-    "category": "retro",
-    "club": "2013",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -2130,15 +2298,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612194/jerseys/retro/2013-14-real-madridaway-2o-range-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612194/jerseys/retro/2013-14-real-madridaway-2o-range-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612195/jerseys/retro/2013-14-real-madridaway-2o-range-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "80",
     "slug": "2013-14-season-porto-homeretro-8a",
     "name": "2013 14 Season Porto HomeRetro",
     "price": 1221,
-    "category": "retro",
-    "club": "2013",
+    "category": "otros",
+    "club": "porto",
     "sizes": [
       "S",
       "M",
@@ -2157,15 +2326,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612199/jerseys/retro/2013-14-season-porto-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612200/jerseys/retro/2013-14-season-porto-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612201/jerseys/retro/2013-14-season-porto-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "81",
     "slug": "2014-15-season-roma-homeretro-5a",
     "name": "2014 15 Season Roma HomeRetro",
     "price": 1080,
-    "category": "retro",
-    "club": "2014",
+    "category": "serie-a",
+    "club": "roma",
     "sizes": [
       "S",
       "M",
@@ -2184,15 +2354,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612205/jerseys/retro/2014-15-season-roma-homeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612206/jerseys/retro/2014-15-season-roma-homeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612207/jerseys/retro/2014-15-season-roma-homeretro-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "82",
     "slug": "2014-season-juventus-homeretro-8a",
     "name": "2014 Season Juventus HomeRetro",
     "price": 1110,
-    "category": "retro",
-    "club": "2014",
+    "category": "serie-a",
+    "club": "juventus",
     "sizes": [
       "S",
       "M",
@@ -2211,15 +2382,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612211/jerseys/retro/2014-season-juventus-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612212/jerseys/retro/2014-season-juventus-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612213/jerseys/retro/2014-season-juventus-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "83",
     "slug": "2015-16-season-away-2-5a",
     "name": "2015 16 Season Away 2",
     "price": 1095,
-    "category": "retro",
-    "club": "2015",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2238,15 +2410,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612217/jerseys/retro/2015-16-season-away-2-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612218/jerseys/retro/2015-16-season-away-2-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612218/jerseys/retro/2015-16-season-away-2-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "84",
     "slug": "2016-17-season-chelsey-home-5a",
     "name": "2016 17 Season Chelsey Home",
     "price": 1120,
-    "category": "retro",
-    "club": "2016",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2265,15 +2438,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612223/jerseys/retro/2016-17-season-chelsey-home-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612224/jerseys/retro/2016-17-season-chelsey-home-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612225/jerseys/retro/2016-17-season-chelsey-home-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "85",
     "slug": "2017-18-season-roma-homeretro5-a",
     "name": "2017 18 Season Roma HomeRetro5 A",
     "price": 1241,
-    "category": "retro",
-    "club": "2017",
+    "category": "serie-a",
+    "club": "roma",
     "sizes": [
       "S",
       "M",
@@ -2292,15 +2466,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612230/jerseys/retro/2017-18-season-roma-homeretro5-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612231/jerseys/retro/2017-18-season-roma-homeretro5-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612231/jerseys/retro/2017-18-season-roma-homeretro5-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "86",
     "slug": "2018-19-season-barcelonahome-5a",
     "name": "2018 19 Season BarcelonaHome",
     "price": 1107,
-    "category": "retro",
-    "club": "2018",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -2319,15 +2494,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612237/jerseys/retro/2018-19-season-barcelonahome-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612238/jerseys/retro/2018-19-season-barcelonahome-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612239/jerseys/retro/2018-19-season-barcelonahome-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "87",
     "slug": "2018-19-season-juventus-homeretro-5a",
     "name": "2018 19 Season Juventus HomeRetro",
     "price": 1139,
-    "category": "retro",
-    "club": "2018",
+    "category": "serie-a",
+    "club": "juventus",
     "sizes": [
       "S",
       "M",
@@ -2346,15 +2522,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612244/jerseys/retro/2018-19-season-juventus-homeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612244/jerseys/retro/2018-19-season-juventus-homeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612245/jerseys/retro/2018-19-season-juventus-homeretro-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "88",
     "slug": "2018-season-franceaway8-a",
     "name": "2018 Season FranceAway8 A",
     "price": 1197,
-    "category": "retro",
-    "club": "2018",
+    "category": "selecciones",
+    "club": "france",
     "sizes": [
       "S",
       "M",
@@ -2373,15 +2550,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612249/jerseys/retro/2018-season-franceaway8-a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612250/jerseys/retro/2018-season-franceaway8-a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612250/jerseys/retro/2018-season-franceaway8-a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "89",
     "slug": "2018-season-homeretro-8a",
     "name": "2018 Season HomeRetro",
     "price": 1225,
-    "category": "retro",
-    "club": "2018",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2400,15 +2578,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612254/jerseys/retro/2018-season-homeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612255/jerseys/retro/2018-season-homeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612256/jerseys/retro/2018-season-homeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "90",
     "slug": "2018-season-portugalhomeretro-8a",
     "name": "2018 Season PortugalHomeRetro",
     "price": 1161,
-    "category": "retro",
-    "club": "2018",
+    "category": "selecciones",
+    "club": "portugal",
     "sizes": [
       "S",
       "M",
@@ -2427,15 +2606,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612261/jerseys/retro/2018-season-portugalhomeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612261/jerseys/retro/2018-season-portugalhomeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612262/jerseys/retro/2018-season-portugalhomeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "91",
     "slug": "2019-20-season-liverpoolhomeretro-8a",
     "name": "2019 20 Season LiverpoolHomeRetro",
     "price": 1218,
-    "category": "retro",
-    "club": "2019",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -2454,15 +2634,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612266/jerseys/retro/2019-20-season-liverpoolhomeretro-8a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612267/jerseys/retro/2019-20-season-liverpoolhomeretro-8a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612268/jerseys/retro/2019-20-season-liverpoolhomeretro-8a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "92",
     "slug": "2019-20-season-manchester-unitedaway-2-5a",
     "name": "2019 20 Season Manchester UnitedAway 2",
     "price": 1173,
-    "category": "retro",
-    "club": "2019",
+    "category": "premier-league",
+    "club": "manchester-united",
     "sizes": [
       "S",
       "M",
@@ -2481,15 +2662,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612272/jerseys/retro/2019-20-season-manchester-unitedaway-2-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612273/jerseys/retro/2019-20-season-manchester-unitedaway-2-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612274/jerseys/retro/2019-20-season-manchester-unitedaway-2-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "93",
     "slug": "2019-20-season-manchester-unitedhome-5a",
     "name": "2019 20 Season Manchester UnitedHome",
     "price": 1168,
-    "category": "retro",
-    "club": "2019",
+    "category": "premier-league",
+    "club": "manchester-united",
     "sizes": [
       "S",
       "M",
@@ -2508,15 +2690,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612279/jerseys/retro/2019-20-season-manchester-unitedhome-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612280/jerseys/retro/2019-20-season-manchester-unitedhome-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612280/jerseys/retro/2019-20-season-manchester-unitedhome-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "94",
     "slug": "2019-20-season-real-madridaway-5a",
     "name": "2019 20 Season Real MadridAway",
     "price": 1055,
-    "category": "retro",
-    "club": "2019",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -2535,15 +2718,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612286/jerseys/retro/2019-20-season-real-madridaway-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612287/jerseys/retro/2019-20-season-real-madridaway-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612287/jerseys/retro/2019-20-season-real-madridaway-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "95",
     "slug": "2020-21-season-barcelonaaway-5a",
     "name": "2020 21 Season BarcelonaAway",
     "price": 1240,
-    "category": "retro",
-    "club": "2020",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -2562,15 +2746,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612291/jerseys/retro/2020-21-season-barcelonaaway-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612292/jerseys/retro/2020-21-season-barcelonaaway-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612292/jerseys/retro/2020-21-season-barcelonaaway-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "96",
     "slug": "2020-21-season-real-madridhomeretro-5a",
     "name": "2020 21 Season Real MadridHomeRetro",
     "price": 1056,
-    "category": "retro",
-    "club": "2020",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -2589,15 +2774,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612296/jerseys/retro/2020-21-season-real-madridhomeretro-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612297/jerseys/retro/2020-21-season-real-madridhomeretro-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612297/jerseys/retro/2020-21-season-real-madridhomeretro-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "97",
     "slug": "adidas-x-oasis-firebird-tour-black-jacket-x-jersey",
     "name": "Adidas x Oasis Firebird Tour Black Jacket x Jersey",
     "price": 1176,
-    "category": "retro",
-    "club": "adidas",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2616,15 +2802,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612301/jerseys/retro/adidas-x-oasis-firebird-tour-black-jacket-x-jersey/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612302/jerseys/retro/adidas-x-oasis-firebird-tour-black-jacket-x-jersey/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612303/jerseys/retro/adidas-x-oasis-firebird-tour-black-jacket-x-jersey/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "98",
     "slug": "adidas-x-oasis-firebird-tour-black-jersey-x",
     "name": "Adidas x Oasis Firebird Tour Black Jersey x",
     "price": 1211,
-    "category": "retro",
-    "club": "adidas",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2643,15 +2830,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612306/jerseys/retro/adidas-x-oasis-firebird-tour-black-jersey-x/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612307/jerseys/retro/adidas-x-oasis-firebird-tour-black-jersey-x/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612308/jerseys/retro/adidas-x-oasis-firebird-tour-black-jersey-x/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "99",
     "slug": "adidas-x-oasis-firebird-tour-blue-jacket-x-jersey",
     "name": "Adidas x Oasis Firebird Tour Blue Jacket x Jersey",
     "price": 1157,
-    "category": "retro",
-    "club": "adidas",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2670,15 +2858,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612311/jerseys/retro/adidas-x-oasis-firebird-tour-blue-jacket-x-jersey/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612312/jerseys/retro/adidas-x-oasis-firebird-tour-blue-jacket-x-jersey/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612313/jerseys/retro/adidas-x-oasis-firebird-tour-blue-jacket-x-jersey/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "100",
     "slug": "adidas-x-oasis-firebird-tour-blue-jacket-x-jersey",
     "name": "Adidas x Oasis Firebird Tour Blue Jacket x 运动Jersey 湖",
     "price": 1124,
-    "category": "retro",
-    "club": "adidas",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2697,15 +2886,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612311/jerseys/retro/adidas-x-oasis-firebird-tour-blue-jacket-x-jersey/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612312/jerseys/retro/adidas-x-oasis-firebird-tour-blue-jacket-x-jersey/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612313/jerseys/retro/adidas-x-oasis-firebird-tour-blue-jacket-x-jersey/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "101",
     "slug": "adidas-x-oasis-firebird-tour-red-jacket-x-jersey",
     "name": "Adidas x Oasis Firebird Tour Red Jacket x Jersey",
     "price": 1210,
-    "category": "retro",
-    "club": "adidas",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2724,15 +2914,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612320/jerseys/retro/adidas-x-oasis-firebird-tour-red-jacket-x-jersey/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612320/jerseys/retro/adidas-x-oasis-firebird-tour-red-jacket-x-jersey/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612321/jerseys/retro/adidas-x-oasis-firebird-tour-red-jacket-x-jersey/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "102",
     "slug": "club-amricaanniversary-editionhomeretro-yellow-5a",
     "name": "Club AméricaAnniversary EditionHomeRetro Yellow",
     "price": 1099,
-    "category": "retro",
-    "club": "club",
+    "category": "otros",
+    "club": "otros",
     "sizes": [
       "S",
       "M",
@@ -2751,15 +2942,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612325/jerseys/retro/club-amricaanniversary-editionhomeretro-yellow-5a/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612326/jerseys/retro/club-amricaanniversary-editionhomeretro-yellow-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612327/jerseys/retro/club-amricaanniversary-editionhomeretro-yellow-5a/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "103",
     "slug": "long-sleeve-1987-88-season-napolihome-3b",
     "name": "Long Sleeve 1987 88 Season NapoliHome",
     "price": 1110,
-    "category": "retro",
-    "club": "long",
+    "category": "serie-a",
+    "club": "napoli",
     "sizes": [
       "S",
       "M",
@@ -2778,6 +2970,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612333/jerseys/retro/long-sleeve-1987-88-season-napolihome-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612334/jerseys/retro/long-sleeve-1987-88-season-napolihome-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612335/jerseys/retro/long-sleeve-1987-88-season-napolihome-3b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -2785,8 +2980,8 @@
     "slug": "long-sleeve-1997-99-season-bayern-munichhome-3b",
     "name": "Long Sleeve 1997 99 Season Bayern MunichHome",
     "price": 1064,
-    "category": "retro",
-    "club": "long",
+    "category": "bundesliga",
+    "club": "bayern-munich",
     "sizes": [
       "S",
       "M",
@@ -2805,6 +3000,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612339/jerseys/retro/long-sleeve-1997-99-season-bayern-munichhome-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612340/jerseys/retro/long-sleeve-1997-99-season-bayern-munichhome-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612340/jerseys/retro/long-sleeve-1997-99-season-bayern-munichhome-3b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -2812,8 +3010,8 @@
     "slug": "long-sleeve-1998-99-season-manchester-unitedwhite-3b",
     "name": "Long Sleeve 1998 99 Season Manchester UnitedWhite",
     "price": 1203,
-    "category": "retro",
-    "club": "long",
+    "category": "premier-league",
+    "club": "manchester-united",
     "sizes": [
       "S",
       "M",
@@ -2832,6 +3030,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612344/jerseys/retro/long-sleeve-1998-99-season-manchester-unitedwhite-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612346/jerseys/retro/long-sleeve-1998-99-season-manchester-unitedwhite-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612347/jerseys/retro/long-sleeve-1998-99-season-manchester-unitedwhite-3b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -2839,8 +3040,8 @@
     "slug": "long-sleeve-1998-season-liverpoolawaywhite-3b",
     "name": "Long Sleeve 1998 Season LiverpoolAwayWhite",
     "price": 1208,
-    "category": "retro",
-    "club": "long",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -2859,6 +3060,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612351/jerseys/retro/long-sleeve-1998-season-liverpoolawaywhite-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612352/jerseys/retro/long-sleeve-1998-season-liverpoolawaywhite-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612353/jerseys/retro/long-sleeve-1998-season-liverpoolawaywhite-3b/007.jpg"
+    ],
+    "tags": [
+      "retro"
     ]
   },
   {
@@ -2866,8 +3070,8 @@
     "slug": "long-sleeve-2001-02-season-paris-saintgermainhome-3b",
     "name": "Long Sleeve 2001 02 Season Paris Saint-GermainHome",
     "price": 1211,
-    "category": "retro",
-    "club": "long",
+    "category": "ligue-1",
+    "club": "psg",
     "sizes": [
       "S",
       "M",
@@ -2886,15 +3090,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612358/jerseys/retro/long-sleeve-2001-02-season-paris-saintgermainhome-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612359/jerseys/retro/long-sleeve-2001-02-season-paris-saintgermainhome-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612360/jerseys/retro/long-sleeve-2001-02-season-paris-saintgermainhome-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "108",
     "slug": "long-sleeve-2005-06-season-barcelonahome-league-edition-3b",
     "name": "Long Sleeve 2005 06 Season BarcelonaHome League Edition",
     "price": 1117,
-    "category": "retro",
-    "club": "long",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -2913,15 +3118,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612365/jerseys/retro/long-sleeve-2005-06-season-barcelonahome-league-edition-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612365/jerseys/retro/long-sleeve-2005-06-season-barcelonahome-league-edition-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612366/jerseys/retro/long-sleeve-2005-06-season-barcelonahome-league-edition-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "109",
     "slug": "long-sleeve-2005-06-season-barcelonahomeucl-3b",
     "name": "Long Sleeve 2005 06 Season BarcelonaHomeUCL",
     "price": 1183,
-    "category": "retro",
-    "club": "long",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -2940,15 +3146,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612370/jerseys/retro/long-sleeve-2005-06-season-barcelonahomeucl-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612371/jerseys/retro/long-sleeve-2005-06-season-barcelonahomeucl-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612372/jerseys/retro/long-sleeve-2005-06-season-barcelonahomeucl-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "110",
     "slug": "long-sleeve-2006-076-season-arsenalhome-3b",
     "name": "Long Sleeve 2006 076 Season ArsenalHome",
     "price": 1212,
-    "category": "retro",
-    "club": "long",
+    "category": "premier-league",
+    "club": "arsenal",
     "sizes": [
       "S",
       "M",
@@ -2967,15 +3174,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612376/jerseys/retro/long-sleeve-2006-076-season-arsenalhome-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612377/jerseys/retro/long-sleeve-2006-076-season-arsenalhome-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612378/jerseys/retro/long-sleeve-2006-076-season-arsenalhome-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "111",
     "slug": "long-sleeve-2008-09-season-ac-milan-milan-milanhome-jacquard-3b",
     "name": "Long Sleeve 2008 09 Season AC Milan Milan MilanHome Jacquard",
     "price": 1172,
-    "category": "retro",
-    "club": "long",
+    "category": "serie-a",
+    "club": "ac-milan",
     "sizes": [
       "S",
       "M",
@@ -2994,15 +3202,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612382/jerseys/retro/long-sleeve-2008-09-season-ac-milan-milan-milanhome-jacquard-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612383/jerseys/retro/long-sleeve-2008-09-season-ac-milan-milan-milanhome-jacquard-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612384/jerseys/retro/long-sleeve-2008-09-season-ac-milan-milan-milanhome-jacquard-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "112",
     "slug": "long-sleeve-2008-09-season-barcelonahome-3b",
     "name": "Long Sleeve 2008 09 Season BarcelonaHome",
     "price": 1128,
-    "category": "retro",
-    "club": "long",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -3021,15 +3230,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612389/jerseys/retro/long-sleeve-2008-09-season-barcelonahome-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612389/jerseys/retro/long-sleeve-2008-09-season-barcelonahome-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612390/jerseys/retro/long-sleeve-2008-09-season-barcelonahome-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "113",
     "slug": "long-sleeve-2010-11-season-barcelonahomeleague-edition-3b",
     "name": "Long Sleeve 2010 11 Season BarcelonaHomeLeague Edition",
     "price": 1050,
-    "category": "retro",
-    "club": "long",
+    "category": "la-liga",
+    "club": "barcelona",
     "sizes": [
       "S",
       "M",
@@ -3048,15 +3258,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612394/jerseys/retro/long-sleeve-2010-11-season-barcelonahomeleague-edition-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612395/jerseys/retro/long-sleeve-2010-11-season-barcelonahomeleague-edition-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612396/jerseys/retro/long-sleeve-2010-11-season-barcelonahomeleague-edition-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "114",
     "slug": "long-sleeve-2010-11-season-liverpoolhomeretrojersey-3b",
     "name": "Long Sleeve 2010 11 Season LiverpoolHomeRetroJersey",
     "price": 1168,
-    "category": "retro",
-    "club": "long",
+    "category": "premier-league",
+    "club": "liverpool",
     "sizes": [
       "S",
       "M",
@@ -3075,15 +3286,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612400/jerseys/retro/long-sleeve-2010-11-season-liverpoolhomeretrojersey-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612401/jerseys/retro/long-sleeve-2010-11-season-liverpoolhomeretrojersey-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612402/jerseys/retro/long-sleeve-2010-11-season-liverpoolhomeretrojersey-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "115",
     "slug": "long-sleeve-2013-14-season-real-madridaway-2o-range-3b",
     "name": "Long Sleeve 2013 14 Season Real MadridAway 2O range",
     "price": 1182,
-    "category": "retro",
-    "club": "long",
+    "category": "la-liga",
+    "club": "real-madrid",
     "sizes": [
       "S",
       "M",
@@ -3102,15 +3314,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612407/jerseys/retro/long-sleeve-2013-14-season-real-madridaway-2o-range-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612407/jerseys/retro/long-sleeve-2013-14-season-real-madridaway-2o-range-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612408/jerseys/retro/long-sleeve-2013-14-season-real-madridaway-2o-range-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "116",
     "slug": "long-sleeve-2016-season-portugalhomeretro-3b",
     "name": "Long Sleeve 2016 Season PortugalHomeRetro",
     "price": 1214,
-    "category": "retro",
-    "club": "long",
+    "category": "selecciones",
+    "club": "portugal",
     "sizes": [
       "S",
       "M",
@@ -3129,15 +3342,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612414/jerseys/retro/long-sleeve-2016-season-portugalhomeretro-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612415/jerseys/retro/long-sleeve-2016-season-portugalhomeretro-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612416/jerseys/retro/long-sleeve-2016-season-portugalhomeretro-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "117",
     "slug": "long-sleeve-2018-season-francehomeretro-3b",
     "name": "Long Sleeve 2018 Season FranceHomeRetro",
     "price": 1085,
-    "category": "retro",
-    "club": "long",
+    "category": "selecciones",
+    "club": "france",
     "sizes": [
       "S",
       "M",
@@ -3156,15 +3370,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612420/jerseys/retro/long-sleeve-2018-season-francehomeretro-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612421/jerseys/retro/long-sleeve-2018-season-francehomeretro-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612421/jerseys/retro/long-sleeve-2018-season-francehomeretro-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "118",
     "slug": "long-sleeve-2018-season-portugalhomeretro-3b",
     "name": "Long Sleeve 2018 Season PortugalHomeRetro",
     "price": 1189,
-    "category": "retro",
-    "club": "long",
+    "category": "selecciones",
+    "club": "portugal",
     "sizes": [
       "S",
       "M",
@@ -3183,15 +3398,16 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612427/jerseys/retro/long-sleeve-2018-season-portugalhomeretro-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612428/jerseys/retro/long-sleeve-2018-season-portugalhomeretro-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612428/jerseys/retro/long-sleeve-2018-season-portugalhomeretro-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   },
   {
     "id": "119",
     "slug": "long-sleeve-celtichome1-38a-nniversary-edition-3b",
     "name": "Long Sleeve CelticHome1 38A nniversary Edition",
     "price": 1127,
-    "category": "retro",
-    "club": "long",
+    "category": "otros",
+    "club": "celtic",
     "sizes": [
       "S",
       "M",
@@ -3210,6 +3426,7 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612433/jerseys/retro/long-sleeve-celtichome1-38a-nniversary-edition-3b/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612434/jerseys/retro/long-sleeve-celtichome1-38a-nniversary-edition-3b/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612435/jerseys/retro/long-sleeve-celtichome1-38a-nniversary-edition-3b/007.jpg"
-    ]
+    ],
+    "tags": []
   }
 ]

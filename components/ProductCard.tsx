@@ -31,6 +31,11 @@ export default function ProductCard({ product }: ProductCardProps) {
           sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 20vw"
           onLoadingComplete={handleImageLoad}
         />
+        {product.tags?.includes('retro') && (
+          <span className="absolute top-2 left-2 z-10 bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+            RETRO
+          </span>
+        )}
         {!product.available && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <span className="text-white text-sm font-bold tracking-widest uppercase">
@@ -43,7 +48,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="mt-2 px-1">
         <p className="text-xs text-gray-500 uppercase tracking-wider">{product.club}</p>
         <h3 className="font-bold text-sm leading-tight mt-0.5">{product.name}</h3>
-        <p className="text-sm font-semibold mt-1">${product.price.toLocaleString('es-MX')}</p>
       </div>
     </Link>
   )

@@ -1,16 +1,10 @@
 import Link from 'next/link'
 import CollectionCard from '@/components/CollectionCard'
 import ProductCard from '@/components/ProductCard'
-import { getAllProducts } from '@/lib/products'
-
-const collections = [
-  { slug: 'selecciones', label: 'Selecciones',  image: '/images/collections/selecciones.jpg' },
-  { slug: 'clubes-internacionales', label: 'Clubes Internacionales', image: '/images/collections/clubes-internacionales.jpg' },
-  { slug: 'mexico',      label: 'México',        image: '/images/collections/mexico.jpg' },
-  { slug: 'retro',       label: 'Retro',         image: '/images/collections/retro.jpg' },
-]
+import { getAllProducts, getActiveCategories } from '@/lib/products'
 
 export default function HomePage() {
+  const collections = getActiveCategories()
   const featured = getAllProducts().slice(0, 8)
 
   return (
@@ -39,9 +33,8 @@ export default function HomePage() {
           {collections.map((col) => (
             <CollectionCard
               key={col.slug}
-              category={col.slug as any}
+              category={col.slug}
               label={col.label}
-              image={col.image}
             />
           ))}
         </div>

@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import SizeSelector from '@/components/SizeSelector'
 import { Product } from '@/lib/products'
+import contact from '@/data/contact.json'
 
-const WHATSAPP_NUMBER = '521XXXXXXXXXX' // ← reemplaza con tu número real
+const WHATSAPP_NUMBER = contact.whatsapp
 
 interface ProductActionsProps {
   product: Product

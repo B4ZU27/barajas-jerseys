@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
-import { getPromotions } from '@/lib/products'
+import { getPromotions, getActiveCategories } from '@/lib/products'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] })
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const promos = getPromotions()
+  const categories = getActiveCategories()
 
   return (
     <html lang="es">
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {promos.banner}
           </div>
         )}
-        <Navbar />
+        <Navbar categories={categories} />
         <main className="min-h-screen">{children}</main>
       </body>
     </html>

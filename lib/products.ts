@@ -3,19 +3,29 @@ import promotionsData from '@/data/promotions.json'
 
 // ─── Tipos ────────────────────────────────────────────────────────────────────
 
-export type Category = 'selecciones' | 'clubes-internacionales' | 'mexico' | 'retro'
+export type Category =
+  | 'selecciones'
+  | 'premier-league'
+  | 'la-liga'
+  | 'serie-a'
+  | 'bundesliga'
+  | 'ligue-1'
+  | 'mls'
+  | 'liga-mx'
+  | 'otros'
 
 export interface Product {
   id: string
   slug: string
   name: string
   price: number
-  category: Category
+  category: string
   club: string
   sizes: string[]
   available: boolean
   description: string
   images: string[]
+  tags: string[]
 }
 
 export interface Deal {
@@ -27,6 +37,20 @@ export interface Promotions {
   active: boolean
   banner: string
   deals: Deal[]
+}
+
+// ─── Etiquetas de categorías — fuente de verdad para orden y nombres ──────────
+
+export const CATEGORY_LABELS: Record<string, string> = {
+  'selecciones':    'Selecciones',
+  'premier-league': 'Premier League',
+  'la-liga':        'La Liga',
+  'serie-a':        'Serie A',
+  'bundesliga':     'Bundesliga',
+  'ligue-1':        'Ligue 1',
+  'mls':            'MLS',
+  'liga-mx':        'Liga MX',
+  'otros':          'Otros',
 }
 
 // ─── Productos ────────────────────────────────────────────────────────────────
@@ -44,7 +68,7 @@ export function getProductBySlug(slug: string): Product | undefined {
 }
 
 /** Devuelve todos los productos de una categoría */
-export function getProductsByCategory(category: Category): Product[] {
+export function getProductsByCategory(category: string): Product[] {
   return products.filter((p) => p.category === category)
 }
 
@@ -53,17 +77,25 @@ export function getAllSlugs(): string[] {
   return products.map((p) => p.slug)
 }
 
-/** Devuelve todas las categorías únicas presentes en el JSON */
-export function getAllCategories(): Category[] {
-  const set = new Set(products.map((p) => p.category))
-  return Array.from(set)
+/**
+ * Devuelve solo las categorías que tienen al menos un producto,
+ * respetando el orden definido en CATEGORY_LABELS.
+ */
+export function getActiveCategories(): { slug: string; label: string }[] {
+  const present = new Set(products.map((p) => p.category))
+  return Object.entries(CATEGORY_LABELS)
+    .filter(([slug]) => present.has(slug))
+    .map(([slug, label]) => ({ slug, label }))
 }
 
 // ─── Promociones ──────────────────────────────────────────────────────────────
 
-const promotions: Promotions = promotionsData as Promotions
-
-/** Devuelve las promociones activas */
+/** Devuelve las promociones activas. Si promotions.json está vacío ({}) devuelve todo inactivo. */
 export function getPromotions(): Promotions {
-  return promotions
+  const p = promotionsData as Partial<Promotions>
+  return {
+    active: p.active ?? false,
+    banner: p.banner ?? '',
+    deals: p.deals ?? [],
+  }
 }
