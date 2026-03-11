@@ -1,22 +1,25 @@
 import Link from 'next/link'
 import CollectionCard from '@/components/CollectionCard'
 import ProductCard from '@/components/ProductCard'
-import { getAllProducts, getActiveCategories } from '@/lib/products'
+import { getActiveCategories, getProductsByClubAndTag, getAllProducts } from '@/lib/products'
 
 export default function HomePage() {
   const collections = getActiveCategories()
-  const featured = getAllProducts().slice(0, 8)
+  const mexicoMundialistas = getProductsByClubAndTag('mexico', 'mundialista')
+  const featured = mexicoMundialistas.length >= 4
+    ? mexicoMundialistas.slice(0, 8)
+    : getAllProducts().slice(0, 8)
 
   return (
     <div>
       {/* Hero */}
       <section className="bg-black text-white px-4 py-20 text-center">
         <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Nueva colección</p>
-        <h1 className="text-5xl md:text-7xl font-black uppercase leading-none mb-6">
-          Camisas<br />de Fútbol
+        <h1 className="text-6xl md:text-8xl uppercase leading-none mb-6 [font-family:var(--font-bebas)]">
+          Jerseys<br />Mundialistas
         </h1>
         <p className="text-gray-400 mb-8 max-w-sm mx-auto text-sm">
-          Selecciones, clubes europeos, mexicanos, sudamericanos y retro.
+          Selecciones, clubes de todo el mundo y especialidades en jerseys retro.
         </p>
         <Link
           href="/collections/selecciones"
@@ -28,13 +31,14 @@ export default function HomePage() {
 
       {/* Colecciones */}
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-6">Colecciones</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          {collections.map((col) => (
+        <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-2">Colecciones</h2>
+        <div className="flex flex-col">
+          {collections.map((col, i) => (
             <CollectionCard
               key={col.slug}
               category={col.slug}
               label={col.label}
+              index={i}
             />
           ))}
         </div>

@@ -23,17 +23,24 @@ export default function ProductCard({ product }: ProductCardProps) {
         className="relative overflow-hidden bg-gray-100"
         style={aspectRatio ? { aspectRatio } : { aspectRatio: '0.75' }}
       >
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          fill
-          className="object-contain transition-transform duration-300 group-hover:scale-105"
-          sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 20vw"
-          onLoadingComplete={handleImageLoad}
-        />
+        {product.images[0] && (
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 20vw"
+            onLoad={handleImageLoad}
+          />
+        )}
         {product.tags?.includes('retro') && (
           <span className="absolute top-2 left-2 z-10 bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
             RETRO
+          </span>
+        )}
+        {product.tags?.includes('mundialista') && (
+          <span className="absolute top-2 left-2 z-10 bg-green-500 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+            MUNDIAL
           </span>
         )}
         {!product.available && (

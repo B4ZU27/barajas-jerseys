@@ -23,7 +23,7 @@ export default function Navbar({ categories }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
 
         {/* Logo */}
-        <Link href="/" onClick={closeAll} className="font-black text-lg tracking-tight uppercase">
+        <Link href="/" onClick={closeAll} className="text-2xl tracking-tight uppercase [font-family:var(--font-bebas)]">
           Barajas Jerseys
         </Link>
 
@@ -42,7 +42,7 @@ export default function Navbar({ categories }: NavbarProps) {
               onClick={() => setDropdownOpen((v) => !v)}
               className="flex items-center gap-1 hover:opacity-60 transition-opacity"
             >
-              Camisas
+              Colecciones
               <svg
                 width="12" height="12" viewBox="0 0 12 12" fill="none"
                 className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
@@ -100,7 +100,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
           {/* Categorías directo, sin dropdown en mobile */}
           <div className="border-b border-gray-100">
-            <p className="px-4 py-3 text-xs font-black uppercase tracking-widest text-gray-400">Camisas</p>
+            <p className="px-4 py-3 text-xs font-black uppercase tracking-widest text-gray-400">Colecciones</p>
             {categories.map((cat) => (
               <Link
                 key={cat.slug}

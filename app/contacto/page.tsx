@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Contacto | Jerseys',
 }
 
-const WHATSAPP_NUMBER = '521XXXXXXXXXX' // ← reemplaza con tu número real
+const WHATSAPP_NUMBER = '523329562401'
 const INSTAGRAM_USER  = 'tu_usuario'    // ← reemplaza con tu usuario de IG
 const EMAIL           = 'tu@email.com'  // ← reemplaza con tu email
 
@@ -34,6 +34,7 @@ export default function ContactoPage() {
         {/* Instagram */}
         <a
           href={`https://instagram.com/${INSTAGRAM_USER}`}
+          hidden
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-4 border border-gray-200 p-5 hover:border-black transition-colors group"
@@ -52,6 +53,7 @@ export default function ContactoPage() {
         {/* Email */}
         <a
           href={`mailto:${EMAIL}`}
+          hidden
           className="flex items-center gap-4 border border-gray-200 p-5 hover:border-black transition-colors group"
         >
           <div className="w-10 h-10 bg-black text-white flex items-center justify-center flex-shrink-0">
