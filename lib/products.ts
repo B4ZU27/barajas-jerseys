@@ -77,6 +77,11 @@ export function getProductsByClubAndTag(club: string, tag: string): Product[] {
   return products.filter((p) => p.club === club && p.tags?.includes(tag))
 }
 
+/** Devuelve todos los productos que tienen un tag específico */
+export function getProductsByTag(tag: string): Product[] {
+  return products.filter((p) => p.tags?.includes(tag))
+}
+
 /** Devuelve todos los slugs — necesario para generateStaticParams en Next.js */
 export function getAllSlugs(): string[] {
   return products.map((p) => p.slug)

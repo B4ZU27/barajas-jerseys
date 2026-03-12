@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import CollectionCard from '@/components/CollectionCard'
 import ProductCard from '@/components/ProductCard'
-import { getActiveCategories, getProductsByClubAndTag, getAllProducts } from '@/lib/products'
+import { getActiveCategories, getProductsByTag, getAllProducts } from '@/lib/products'
 
 export default function HomePage() {
   const collections = getActiveCategories()
-  const mexicoMundialistas = getProductsByClubAndTag('mexico', 'mundialista')
-  const featured = mexicoMundialistas.length >= 4
-    ? mexicoMundialistas.slice(0, 8)
+  const destacados = getProductsByTag('destacado')
+  const featured = destacados.length >= 4
+    ? destacados.slice(0, 8)
     : getAllProducts().slice(0, 8)
 
   return (
