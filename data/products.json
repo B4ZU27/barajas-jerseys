@@ -3463,35 +3463,6 @@
     ]
   },
   {
-    "id": "121",
-    "slug": "argentina-22-23-players-argentina-home",
-    "name": "22 23 Players Argentina Home",
-    "price": 800,
-    "category": "selecciones",
-    "club": "argentina",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "2XL"
-    ],
-    "available": true,
-    "description": "",
-    "images": [
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258722/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/grid_001.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258723/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/grid_003.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258723/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/grid_004.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258724/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/grid_005.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258725/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/grid_006.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258726/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/grid_007.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773258727/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home/hero_001.jpg"
-    ],
-    "tags": [
-      "mundialista"
-    ]
-  },
-  {
     "id": "122",
     "slug": "argentina-24-25-players-argentina-50th-anniversary-edition",
     "name": "24 25 Players Argentina 50th Anniversary Edition",
@@ -11489,7 +11460,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298140/jerseys/liga-mx/america/america-club-america-1995-away-retro-jersey-s-xxl/005.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298141/jerseys/liga-mx/america/america-club-america-1995-away-retro-jersey-s-xxl/006.jpg"
     ],
-    "tags": []
+    "tags": [
+      "retro"
+    ]
   },
   {
     "id": "371",
@@ -11942,30 +11915,6 @@
     "tags": []
   },
   {
-    "id": "387",
-    "slug": "tigres-tigres-uanl-2025-26-away-jersey-s-4xl",
-    "name": "Tigres UANL 2025 26 Away Jersey S 4XL",
-    "price": 1050,
-    "category": "liga-mx",
-    "club": "tigres",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "2XL"
-    ],
-    "available": true,
-    "description": "",
-    "images": [
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298237/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/placeholder.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298238/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/001.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298238/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/002.jpg",
-      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298239/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/003.jpg"
-    ],
-    "tags": []
-  },
-  {
     "id": "388",
     "slug": "toluca-men-s-deportivo-toluca-fc-2025-26-third-jersey-s-4xlok",
     "name": "Men S Deportivo Toluca FC 2025 26 Third Jersey S 4XLok",
@@ -12020,6 +11969,1101 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298253/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterey-second-away-jersey-s-4xl/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298257/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterey-second-away-jersey-s-4xl/007.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298258/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterey-second-away-jersey-s-4xl/008.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "390",
+    "slug": "argentina-22-23-players-argentina-home-8",
+    "name": "22 23 Players Argentina Home 8",
+    "price": 1050,
+    "category": "selecciones",
+    "club": "argentina",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627020/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627021/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/001.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627022/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/002.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627023/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/003.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627023/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/004.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627024/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/005.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627025/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/006.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627026/jerseys/selecciones/argentina/argentina-22-23-players-argentina-home-8/007.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "391",
+    "slug": "sin-identificar-1998-99-season-chelsea-away-black",
+    "name": "1998 99 Season Chelsea Away Black",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627026/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627028/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/001.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627028/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/002.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627029/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/003.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627030/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/004.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627031/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/005.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627031/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/006.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627032/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/007.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627032/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/008.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627033/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-away-black/009.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "392",
+    "slug": "sin-identificar-1998-99-season-chelsea-white-8a",
+    "name": "1998 99 Season Chelsea White 8A",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627034/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627035/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/001.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627035/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/002.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627036/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/003.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627036/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/004.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627037/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/005.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627038/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/006.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627039/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/007.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627039/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/008.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627040/jerseys/otros/sin-identificar/sin-identificar-1998-99-season-chelsea-white-8a/009.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "393",
+    "slug": "sin-identificar-2016-17-season-chelsea-home-5a",
+    "name": "2016 17 Season Chelsea Home 5A",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627040/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627041/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/001.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627042/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/002.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627043/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/003.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627044/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/004.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627045/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/005.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627045/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/006.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627046/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/007.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627047/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/008.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627048/jerseys/otros/sin-identificar/sin-identificar-2016-17-season-chelsea-home-5a/009.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "394",
+    "slug": "sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl",
+    "name": "25 26 CF Monterrey Second Away Jersey S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627048/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627049/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/001.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627050/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/002.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627050/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/003.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627051/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/004.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627052/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/005.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627052/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/006.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627053/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/007.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627054/jerseys/otros/sin-identificar/sin-identificar-25-26-cf-monterrey-second-away-jersey-s-4xl/008.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "395",
+    "slug": "america-2526-america-goalkeeper-gray-player-short-sleeve-s-4xl",
+    "name": "2526 America Goalkeeper Gray Player Short Sleeve S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "america",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627746/jerseys/liga-mx/america/america-2526-america-goalkeeper-gray-player-short-sleeve-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627748/jerseys/liga-mx/america/america-2526-america-goalkeeper-gray-player-short-sleeve-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "396",
+    "slug": "america-2526-america-goalkeeper-green-player-long-sleeve-s-4xl",
+    "name": "2526 America Goalkeeper Green Player Long Sleeve S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "america",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627748/jerseys/liga-mx/america/america-2526-america-goalkeeper-green-player-long-sleeve-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627749/jerseys/liga-mx/america/america-2526-america-goalkeeper-green-player-long-sleeve-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "397",
+    "slug": "america-2526-america-second-guest-player-short-sleeve-s-4xl",
+    "name": "2526 America Second Guest Player Short Sleeve S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "america",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627750/jerseys/liga-mx/america/america-2526-america-second-guest-player-short-sleeve-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627751/jerseys/liga-mx/america/america-2526-america-second-guest-player-short-sleeve-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "398",
+    "slug": "america-2526-americas-pregame-server-fans-s-4xl",
+    "name": "2526 Americas Pregame Server Fans S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "america",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627751/jerseys/liga-mx/america/america-2526-americas-pregame-server-fans-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627752/jerseys/liga-mx/america/america-2526-americas-pregame-server-fans-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "399",
+    "slug": "america-2526-blue-american-vintage-sweatshirt-s-4xl",
+    "name": "2526 Blue American Vintage Sweatshirt S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "america",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627753/jerseys/liga-mx/america/america-2526-blue-american-vintage-sweatshirt-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627754/jerseys/liga-mx/america/america-2526-blue-american-vintage-sweatshirt-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "400",
+    "slug": "america-2526-yellow-america-retro-commemorative-edition-s-4xl",
+    "name": "2526 Yellow America Retro Commemorative Edition S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "america",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627754/jerseys/liga-mx/america/america-2526-yellow-america-retro-commemorative-edition-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627758/jerseys/liga-mx/america/america-2526-yellow-america-retro-commemorative-edition-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "401",
+    "slug": "atlas-2526-atlas-away-player-s-4xl",
+    "name": "2526 Atlas Away Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "atlas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627759/jerseys/liga-mx/atlas/atlas-2526-atlas-away-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627759/jerseys/liga-mx/atlas/atlas-2526-atlas-away-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "402",
+    "slug": "atlas-2526-atlas-erke-player-s-4xl",
+    "name": "2526 Atlas Erke Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "atlas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627760/jerseys/liga-mx/atlas/atlas-2526-atlas-erke-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627761/jerseys/liga-mx/atlas/atlas-2526-atlas-erke-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "403",
+    "slug": "atlas-2526-atlas-home-player-s-4xl",
+    "name": "2526 Atlas Home Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "atlas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627762/jerseys/liga-mx/atlas/atlas-2526-atlas-home-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627763/jerseys/liga-mx/atlas/atlas-2526-atlas-home-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "404",
+    "slug": "atlas-2526-atlas-home-womens-s-2xl",
+    "name": "2526 Atlas Home Women's S 2XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "atlas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627764/jerseys/liga-mx/atlas/atlas-2526-atlas-home-womens-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627764/jerseys/liga-mx/atlas/atlas-2526-atlas-home-womens-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "405",
+    "slug": "chivas-2526-blue-chivas-regal-2k-women-s-2xl",
+    "name": "2526 Blue Chivas Regal 2K Women S 2XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "chivas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627765/jerseys/liga-mx/chivas/chivas-2526-blue-chivas-regal-2k-women-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627766/jerseys/liga-mx/chivas/chivas-2526-blue-chivas-regal-2k-women-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "406",
+    "slug": "chivas-2526-chivas-special-edition-players-long-sleeve-s-4xl",
+    "name": "2526 Chivas Special Edition Players Long Sleeve S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "chivas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627769/jerseys/liga-mx/chivas/chivas-2526-chivas-special-edition-players-long-sleeve-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627769/jerseys/liga-mx/chivas/chivas-2526-chivas-special-edition-players-long-sleeve-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "407",
+    "slug": "chivas-2526-white-chivas-away-womens-s-2xl",
+    "name": "2526 White Chivas Away Women's S 2XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "chivas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627770/jerseys/liga-mx/chivas/chivas-2526-white-chivas-away-womens-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627770/jerseys/liga-mx/chivas/chivas-2526-white-chivas-away-womens-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "408",
+    "slug": "chivas-2526-white-chivas-regal-away-childrens-clothing-16-28",
+    "name": "2526 White Chivas Regal Away Children's Clothing 16 28",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "chivas",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627771/jerseys/liga-mx/chivas/chivas-2526-white-chivas-regal-away-childrens-clothing-16-28/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627772/jerseys/liga-mx/chivas/chivas-2526-white-chivas-regal-away-childrens-clothing-16-28/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "409",
+    "slug": "cruz-azul-2526-black-cruz-azul-second-guest-player-s-4xl",
+    "name": "2526 Black Cruz Azul Second Guest Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "cruz-azul",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627772/jerseys/liga-mx/cruz-azul/cruz-azul-2526-black-cruz-azul-second-guest-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627773/jerseys/liga-mx/cruz-azul/cruz-azul-2526-black-cruz-azul-second-guest-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "410",
+    "slug": "cruz-azul-2526-black-cruz-azul-womens-s-2xl",
+    "name": "2526 Black Cruz Azul Women's S 2XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "cruz-azul",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627774/jerseys/liga-mx/cruz-azul/cruz-azul-2526-black-cruz-azul-womens-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627775/jerseys/liga-mx/cruz-azul/cruz-azul-2526-black-cruz-azul-womens-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "411",
+    "slug": "cruz-azul-2526-white-cruz-azul-special-edition-player-s-4xl",
+    "name": "2526 White Cruz Azul Special Edition Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "cruz-azul",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627775/jerseys/liga-mx/cruz-azul/cruz-azul-2526-white-cruz-azul-special-edition-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627777/jerseys/liga-mx/cruz-azul/cruz-azul-2526-white-cruz-azul-special-edition-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "412",
+    "slug": "necaxa-2526-necaxa-special-edition-s-4xl",
+    "name": "2526 Necaxa Special Edition S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "necaxa",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627777/jerseys/liga-mx/necaxa/necaxa-2526-necaxa-special-edition-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627778/jerseys/liga-mx/necaxa/necaxa-2526-necaxa-special-edition-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "413",
+    "slug": "pachuca-2526-pachuca-home-player-s-4xl",
+    "name": "2526 Pachuca Home Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "pachuca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627779/jerseys/liga-mx/pachuca/pachuca-2526-pachuca-home-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627780/jerseys/liga-mx/pachuca/pachuca-2526-pachuca-home-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "414",
+    "slug": "pachuca-2526pachuca-away-player-s-4xl",
+    "name": "2526Pachuca Away Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "pachuca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627781/jerseys/liga-mx/pachuca/pachuca-2526pachuca-away-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627782/jerseys/liga-mx/pachuca/pachuca-2526pachuca-away-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "415",
+    "slug": "pachuca-2627-pachuca-second-guest-player-s-4xl",
+    "name": "2627 Pachuca Second Guest Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "pachuca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627782/jerseys/liga-mx/pachuca/pachuca-2627-pachuca-second-guest-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627783/jerseys/liga-mx/pachuca/pachuca-2627-pachuca-second-guest-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "416",
+    "slug": "tigres-tigres-uanl-2025-26-away-jersey-s-4xl",
+    "name": "Tigres UANL 2025 26 Away Jersey S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "tigres",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298239/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/003.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298237/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298238/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/001.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773298238/jerseys/liga-mx/tigres/tigres-tigres-uanl-2025-26-away-jersey-s-4xl/002.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "417",
+    "slug": "toluca-2526-toluca-second-guest-player-s-4xl",
+    "name": "2526 Toluca Second Guest Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "toluca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627784/jerseys/liga-mx/toluca/toluca-2526-toluca-second-guest-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627785/jerseys/liga-mx/toluca/toluca-2526-toluca-second-guest-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "418",
+    "slug": "toluca-2526-toluca-special-edition-lake-blue-player-s-4xl",
+    "name": "2526 Toluca Special Edition Lake Blue Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "toluca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627786/jerseys/liga-mx/toluca/toluca-2526-toluca-special-edition-lake-blue-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627786/jerseys/liga-mx/toluca/toluca-2526-toluca-special-edition-lake-blue-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "419",
+    "slug": "toluca-2526-toluca-special-edition-light-gray-player-s-4xl",
+    "name": "2526 Toluca Special Edition Light Gray Player S 4XL",
+    "price": 1050,
+    "category": "liga-mx",
+    "club": "toluca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627787/jerseys/liga-mx/toluca/toluca-2526-toluca-special-edition-light-gray-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627788/jerseys/liga-mx/toluca/toluca-2526-toluca-special-edition-light-gray-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "420",
+    "slug": "sin-identificar-2526-black-cougar-goalkeeper-player-s-4xl",
+    "name": "2526 Black Cougar Goalkeeper Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627789/jerseys/otros/sin-identificar/sin-identificar-2526-black-cougar-goalkeeper-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627789/jerseys/otros/sin-identificar/sin-identificar-2526-black-cougar-goalkeeper-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "421",
+    "slug": "sin-identificar-2526-blue-cross-special-edition-player-s-4xl",
+    "name": "2526 Blue Cross Special Edition Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627790/jerseys/otros/sin-identificar/sin-identificar-2526-blue-cross-special-edition-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627791/jerseys/otros/sin-identificar/sin-identificar-2526-blue-cross-special-edition-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "422",
+    "slug": "sin-identificar-2526-cross-goalkeeper-black-player-s-4xl",
+    "name": "2526 Cross Goalkeeper Black Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627792/jerseys/otros/sin-identificar/sin-identificar-2526-cross-goalkeeper-black-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627792/jerseys/otros/sin-identificar/sin-identificar-2526-cross-goalkeeper-black-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "423",
+    "slug": "sin-identificar-2526-cross-goalkeeper-red-player-s-4xl",
+    "name": "2526 Cross Goalkeeper Red Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627793/jerseys/otros/sin-identificar/sin-identificar-2526-cross-goalkeeper-red-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627793/jerseys/otros/sin-identificar/sin-identificar-2526-cross-goalkeeper-red-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "424",
+    "slug": "sin-identificar-2526-leon-erke-player-s-4xl",
+    "name": "2526 Leon Erke Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627794/jerseys/otros/sin-identificar/sin-identificar-2526-leon-erke-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627795/jerseys/otros/sin-identificar/sin-identificar-2526-leon-erke-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "425",
+    "slug": "sin-identificar-2526-monterey-erke-womens-s-2xl",
+    "name": "2526 Monterey Erke Women's S 2XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627796/jerseys/otros/sin-identificar/sin-identificar-2526-monterey-erke-womens-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627796/jerseys/otros/sin-identificar/sin-identificar-2526-monterey-erke-womens-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "426",
+    "slug": "sin-identificar-2526-puma-second-guest-player-s-4xl",
+    "name": "2526 Puma Second Guest Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627797/jerseys/otros/sin-identificar/sin-identificar-2526-puma-second-guest-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627798/jerseys/otros/sin-identificar/sin-identificar-2526-puma-second-guest-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "427",
+    "slug": "sin-identificar-2526-santos-second-guest-player-s-4xl",
+    "name": "2526 Santos Second Guest Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627800/jerseys/otros/sin-identificar/sin-identificar-2526-santos-second-guest-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627800/jerseys/otros/sin-identificar/sin-identificar-2526-santos-second-guest-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "428",
+    "slug": "sin-identificar-2526-tiger-erke-womens-s-2xl",
+    "name": "2526 Tiger Erke Women's S 2XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627801/jerseys/otros/sin-identificar/sin-identificar-2526-tiger-erke-womens-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627802/jerseys/otros/sin-identificar/sin-identificar-2526-tiger-erke-womens-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "429",
+    "slug": "sin-identificar-2526-tiger-retro-sweatshirt-s-4xl",
+    "name": "2526 Tiger Retro Sweatshirt S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627803/jerseys/otros/sin-identificar/sin-identificar-2526-tiger-retro-sweatshirt-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627804/jerseys/otros/sin-identificar/sin-identificar-2526-tiger-retro-sweatshirt-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "430",
+    "slug": "sin-identificar-2526-tiger-second-guest-player-s-4xl",
+    "name": "2526 Tiger Second Guest Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627804/jerseys/otros/sin-identificar/sin-identificar-2526-tiger-second-guest-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627805/jerseys/otros/sin-identificar/sin-identificar-2526-tiger-second-guest-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "431",
+    "slug": "sin-identificar-2526-yellow-tiger-retro-commemorative-edition-womens-player-s-2xl",
+    "name": "2526 Yellow Tiger Retro Commemorative Edition Women's Player S 2XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627806/jerseys/otros/sin-identificar/sin-identificar-2526-yellow-tiger-retro-commemorative-edition-womens-player-s-2xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627807/jerseys/otros/sin-identificar/sin-identificar-2526-yellow-tiger-retro-commemorative-edition-womens-player-s-2xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "432",
+    "slug": "sin-identificar-2526la-los-angeles-players-s-4xl",
+    "name": "2526LA Los Angeles Players S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627807/jerseys/otros/sin-identificar/sin-identificar-2526la-los-angeles-players-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627808/jerseys/otros/sin-identificar/sin-identificar-2526la-los-angeles-players-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "433",
+    "slug": "sin-identificar-2526monterey-away-player-s-4xl",
+    "name": "2526Monterey Away Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627809/jerseys/otros/sin-identificar/sin-identificar-2526monterey-away-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627809/jerseys/otros/sin-identificar/sin-identificar-2526monterey-away-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "434",
+    "slug": "sin-identificar-2526monterey-goalkeeper-green-player-s-4xl",
+    "name": "2526Monterey Goalkeeper Green Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627810/jerseys/otros/sin-identificar/sin-identificar-2526monterey-goalkeeper-green-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627811/jerseys/otros/sin-identificar/sin-identificar-2526monterey-goalkeeper-green-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "435",
+    "slug": "sin-identificar-2526monterey-home-player-s-4xl",
+    "name": "2526Monterey Home Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627811/jerseys/otros/sin-identificar/sin-identificar-2526monterey-home-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627812/jerseys/otros/sin-identificar/sin-identificar-2526monterey-home-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "436",
+    "slug": "sin-identificar-2526puebla-player-s-4xl",
+    "name": "2526Puebla Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627812/jerseys/otros/sin-identificar/sin-identificar-2526puebla-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627813/jerseys/otros/sin-identificar/sin-identificar-2526puebla-player-s-4xl/001.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "id": "437",
+    "slug": "sin-identificar-2627-yellow-tiger-unsponsored-player-s-4xl",
+    "name": "2627 Yellow Tiger Unsponsored Player S 4XL",
+    "price": 1050,
+    "category": "otros",
+    "club": "sin-identificar",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627818/jerseys/otros/sin-identificar/sin-identificar-2627-yellow-tiger-unsponsored-player-s-4xl/placeholder.jpg",
+      "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627819/jerseys/otros/sin-identificar/sin-identificar-2627-yellow-tiger-unsponsored-player-s-4xl/001.jpg"
     ],
     "tags": []
   }

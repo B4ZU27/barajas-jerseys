@@ -39,6 +39,14 @@ export interface Promotions {
   deals: Deal[]
 }
 
+// ─── Etiquetas de tags ────────────────────────────────────────────────────────
+
+export const TAG_LABELS: Record<string, string> = {
+  'retro':       'Retro',
+  'mundialista': 'Mundialistas',
+  'destacado':   'Destacados',
+}
+
 // ─── Etiquetas de categorías — fuente de verdad para orden y nombres ──────────
 
 export const CATEGORY_LABELS: Record<string, string> = {
@@ -94,6 +102,14 @@ export function getAllSlugs(): string[] {
 export function getActiveCategories(): { slug: string; label: string }[] {
   const present = new Set(products.map((p) => p.category))
   return Object.entries(CATEGORY_LABELS)
+    .filter(([slug]) => present.has(slug))
+    .map(([slug, label]) => ({ slug, label }))
+}
+
+/** Devuelve los tags activos (que tienen al menos un producto) */
+export function getActiveTags(): { slug: string; label: string }[] {
+  const present = new Set(products.flatMap((p) => p.tags ?? []))
+  return Object.entries(TAG_LABELS)
     .filter(([slug]) => present.has(slug))
     .map(([slug, label]) => ({ slug, label }))
 }

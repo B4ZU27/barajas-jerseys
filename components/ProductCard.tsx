@@ -20,7 +20,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/products/${product.slug}`} className="group block">
       <div
-        className="relative overflow-hidden bg-gray-100"
+        className="relative overflow-hidden bg-white"
         style={aspectRatio ? { aspectRatio } : { aspectRatio: '0.75' }}
       >
         {product.images[0] && (

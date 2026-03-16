@@ -1,6 +1,46 @@
 @import "tailwindcss";
 
+:root {
+  --blue-deep: #0c1f6e;
+  --blue-primary: #1433b8;
+  --blue-accent: #3b5ce8;
+}
+
 body {
   background: #ffffff;
   color: #171717;
+}
+
+/* Ticker marquee */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 55s linear infinite;
+  width: max-content;
+}
+
+/* Grainy gradient — bottom decoration */
+.grainy-bottom {
+  height: 150px;
+  filter: contrast(210%) brightness(850%);
+  background:
+    linear-gradient(0deg, rgba(20, 51, 184, 1), rgba(0, 0, 0, 0)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 294 294' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='6.03' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: cover, 294px 294px;
+}
+
+/* Noise texture overlay — retro grain effect */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 248 248' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 248px 248px;
 }

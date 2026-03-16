@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { getProductBySlug, getAllSlugs, getPromotions, CATEGORY_LABELS } from '@/lib/products'
 import ImageCarousel from '@/components/ImageCarousel'
 import ProductActions from '@/components/ProductActions'
-import SizeGuide from '@/components/SizeGuide'
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }))
@@ -60,7 +59,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <p className="text-sm text-gray-600 leading-relaxed">{product.description}</p>
           )}
 
-          <SizeGuide />
+          <Link
+            href="/tallas"
+            className="text-xs uppercase tracking-widest underline underline-offset-4 text-gray-400 hover:text-black transition-colors"
+          >
+            Ver guía de tallas →
+          </Link>
           <ProductActions product={product} />
 
           {/* Deals de promoción */}

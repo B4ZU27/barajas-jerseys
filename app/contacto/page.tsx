@@ -1,8 +1,10 @@
+import contact from '@/data/contact.json'
+
 export const metadata = {
   title: 'Contacto | Jerseys',
 }
 
-const WHATSAPP_NUMBER = '523329562401'
+const WHATSAPP_NUMBER = contact.whatsapp
 const INSTAGRAM_USER  = 'tu_usuario'    // ← reemplaza con tu usuario de IG
 const EMAIL           = 'tu@email.com'  // ← reemplaza con tu email
 
