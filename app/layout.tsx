@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 const bebasNeue = Bebas_Neue({ variable: '--font-bebas', subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'Grada Sur | Camisas de Fútbol',
+  title: 'Archivo de Cancha | Camisas de Fútbol',
   description: 'Catálogo de camisas de fútbol — Selecciones, Europa, México, Sudamérica y Retro.',
 }
 

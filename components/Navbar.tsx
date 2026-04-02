@@ -27,7 +27,7 @@ export default function Navbar({ categories, tags }: NavbarProps) {
 
         {/* Logo */}
         <Link href="/" onClick={closeAll} className="text-2xl tracking-tight uppercase [font-family:var(--font-bebas)]">
-          Grada Sur
+          Archivo de Cancha
         </Link>
 
         {/* Links desktop */}

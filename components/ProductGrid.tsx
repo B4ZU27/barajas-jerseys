@@ -8,7 +8,7 @@ interface ProductGridProps {
   products: Product[]
 }
 
-const PAGE_SIZE = 12
+const PAGE_SIZE = 20
 
 function toLabel(str: string) {
   return str
