@@ -32,11 +32,11 @@ export default function Navbar({ categories, tags }: NavbarProps) {
 
         {/* Links desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wider">
-          <Link
-            href="/"
-            className={pathname === '/' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}
-          >
+          <Link href="/" className={pathname === '/' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Home
+          </Link>
+          <Link href="/camisas" className={pathname === '/camisas' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
+            Camisas
           </Link>
 
           {/* Dropdown de camisas */}
@@ -73,39 +73,6 @@ export default function Navbar({ categories, tags }: NavbarProps) {
             )}
           </div>
 
-          {/* Dropdown de tags */}
-          <div className="relative">
-            <button
-              onClick={() => { setTagsOpen((v) => !v); setDropdownOpen(false) }}
-              className="flex items-center gap-1 hover:opacity-70 transition-opacity"
-            >
-              Tipo
-              <svg
-                width="12" height="12" viewBox="0 0 12 12" fill="none"
-                className={`transition-transform duration-200 ${tagsOpen ? 'rotate-180' : ''}`}
-              >
-                <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-
-            {tagsOpen && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setTagsOpen(false)} />
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 z-50 border border-white/20" style={{ backgroundColor: 'var(--blue-deep)' }}>
-                  {tags.map((tag) => (
-                    <Link
-                      key={tag.slug}
-                      href={`/tags/${tag.slug}`}
-                      onClick={closeAll}
-                      className="block px-4 py-3 text-xs font-bold uppercase tracking-wider hover:bg-white/10 border-b border-white/10 last:border-0 transition-colors text-white"
-                    >
-                      {tag.label}
-                    </Link>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
 
           <Link href="/tallas" className={pathname === '/tallas' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Tallas
@@ -136,6 +103,9 @@ export default function Navbar({ categories, tags }: NavbarProps) {
           <Link href="/" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
             Home
           </Link>
+          <Link href="/camisas" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
+            Camisas
+          </Link>
 
           <div className="border-b border-white/10">
             <p className="px-4 py-3 text-xs font-black uppercase tracking-widest text-white/40">Colecciones</p>
@@ -151,20 +121,6 @@ export default function Navbar({ categories, tags }: NavbarProps) {
             ))}
           </div>
 
-          {/* Tags en mobile */}
-          <div className="border-b border-white/10">
-            <p className="px-4 py-3 text-xs font-black uppercase tracking-widest text-white/40">Tipo</p>
-            {tags.map((tag) => (
-              <Link
-                key={tag.slug}
-                href={`/tags/${tag.slug}`}
-                onClick={closeAll}
-                className="block px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-white/10 transition-colors text-white"
-              >
-                {tag.label}
-              </Link>
-            ))}
-          </div>
 
           <Link href="/tallas" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
             Tallas

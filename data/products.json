@@ -332,10 +332,10 @@
   {
     "id": "33",
     "slug": "1998-99-season-chelsey-away-black",
-    "name": "1998 99 Season Chelsey Away Black",
+    "name": "1998 99 Season Chelsea Away Black",
     "price": 1193,
-    "category": "otros",
-    "club": "otros",
+    "category": "premier-league",
+    "club": "chelsea",
     "sizes": [
       "S",
       "M",
@@ -876,10 +876,10 @@
   {
     "id": "102",
     "slug": "club-amricaanniversary-editionhomeretro-yellow-5a",
-    "name": "Club AméricaAnniversary EditionHomeRetro Yellow",
+    "name": "Club América Anniversary EditionHomeRetro Yellow",
     "price": 1099,
-    "category": "otros",
-    "club": "otros",
+    "category": "liga-mx",
+    "club": "america",
     "sizes": [
       "S",
       "M",
@@ -899,7 +899,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612326/jerseys/retro/club-amricaanniversary-editionhomeretro-yellow-5a/006.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1772612327/jerseys/retro/club-amricaanniversary-editionhomeretro-yellow-5a/007.jpg"
     ],
-    "tags": []
+    "tags": [
+      "destacado"
+    ]
   },
   {
     "id": "106",
@@ -4253,10 +4255,10 @@
   {
     "id": "359",
     "slug": "sin-identificar-2018-season-homeretro-8a",
-    "name": "2018 Season HomeRetro 8A",
-    "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "name": "2018 Season HomeRetro Brasil",
+    "price": 800,
+    "category": "selecciones",
+    "club": "brazil",
     "sizes": [
       "S",
       "M",
@@ -4277,7 +4279,9 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773261026/jerseys/otros/sin-identificar/sin-identificar-2018-season-homeretro-8a/007.jpg",
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773261026/jerseys/otros/sin-identificar/sin-identificar-2018-season-homeretro-8a/008.jpg"
     ],
-    "tags": []
+    "tags": [
+      "destacado"
+    ]
   },
   {
     "id": "362",
@@ -4943,8 +4947,8 @@
     "slug": "sin-identificar-25-26-cf-monterey-second-away-jersey-s-4xl",
     "name": "25 26 CF Monterey Second Away Jersey S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "monterrey",
     "sizes": [
       "S",
       "M",
@@ -5436,8 +5440,8 @@
     "slug": "sin-identificar-2526-blue-cross-special-edition-player-s-4xl",
     "name": "2526 Blue Cross Special Edition Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "cruz-azul",
     "sizes": [
       "S",
       "M",
@@ -5458,8 +5462,8 @@
     "slug": "sin-identificar-2526-cross-goalkeeper-black-player-s-4xl",
     "name": "2526 Cross Goalkeeper Black Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "cruz-azul",
     "sizes": [
       "S",
       "M",
@@ -5480,8 +5484,8 @@
     "slug": "sin-identificar-2526-cross-goalkeeper-red-player-s-4xl",
     "name": "2526 Cross Goalkeeper Red Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "cruz-azul",
     "sizes": [
       "S",
       "M",
@@ -5502,8 +5506,8 @@
     "slug": "sin-identificar-2526-leon-erke-player-s-4xl",
     "name": "2526 Leon Erke Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "leon",
     "sizes": [
       "S",
       "M",
@@ -5524,8 +5528,8 @@
     "slug": "sin-identificar-2526-puma-second-guest-player-s-4xl",
     "name": "2526 Puma Second Guest Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "pumas",
     "sizes": [
       "S",
       "M",
@@ -5546,8 +5550,8 @@
     "slug": "sin-identificar-2526-santos-second-guest-player-s-4xl",
     "name": "2526 Santos Second Guest Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "leon",
     "sizes": [
       "S",
       "M",
@@ -5568,8 +5572,8 @@
     "slug": "sin-identificar-2526-tiger-erke-womens-s-2xl",
     "name": "2526 Tiger Erke Women's S 2XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "tigres",
     "sizes": [
       "S",
       "M",
@@ -5588,10 +5592,10 @@
   {
     "id": "431",
     "slug": "sin-identificar-2526-yellow-tiger-retro-commemorative-edition-womens-player-s-2xl",
-    "name": "2526 Yellow Tiger Retro Commemorative Edition Women's Player S 2XL",
+    "name": "2526 Yellow Tiger Retro Commemorative Edition Women's Player",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "tigres",
     "sizes": [
       "S",
       "M",
@@ -5610,10 +5614,10 @@
   {
     "id": "435",
     "slug": "sin-identificar-2526monterey-home-player-s-4xl",
-    "name": "2526Monterey Home Player S 4XL",
-    "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "name": "2526 Monterrey Home Player S 4XL",
+    "price": 800,
+    "category": "liga-mx",
+    "club": "monterrey",
     "sizes": [
       "S",
       "M",
@@ -5634,8 +5638,8 @@
     "slug": "sin-identificar-2526puebla-player-s-4xl",
     "name": "2526Puebla Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "puebla",
     "sizes": [
       "S",
       "M",
@@ -5656,8 +5660,8 @@
     "slug": "sin-identificar-2627-yellow-tiger-unsponsored-player-s-4xl",
     "name": "2627 Yellow Tiger Unsponsored Player S 4XL",
     "price": 1050,
-    "category": "otros",
-    "club": "sin-identificar",
+    "category": "liga-mx",
+    "club": "tigres",
     "sizes": [
       "S",
       "M",
@@ -5672,5 +5676,128 @@
       "https://res.cloudinary.com/dsdg9rgi3/image/upload/v1773627819/jerseys/otros/sin-identificar/sin-identificar-2627-yellow-tiger-unsponsored-player-s-4xl/001.jpg"
     ],
     "tags": []
+  },
+  {
+    "id": "438",
+    "slug": "toluca-2526-toluca-new-balance-home-player",
+    "name": "2526 Toluca New Balance Home Player",
+    "price": 800,
+    "category": "liga-mx",
+    "club": "toluca",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Este modelo destaca por un patrón de líneas circulares en marca de agua que emanan desde el escudo del club, dándole un aspecto moderno y dinámico. Conserva el patrocinador principal Roshfrans en el pecho y los clásicos detalles en blanco en el cuello y las mangas.",
+    "images": [
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/placeholder.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/001.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/002.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/003.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/004.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/005.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/006.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/007.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/008.jpeg",
+      "/api/db-image/liga-mx/toluca/toluca-2526-toluca-new-balance-home-player/009.jpeg"
+    ],
+    "tags": [
+      "destacado"
+    ]
+  },
+  {
+    "id": "439",
+    "slug": "2425-jamaica-adidas-x-wales-bonner-home",
+    "name": "24/25 Jamaica Adidas x Wales Bonner Home",
+    "price": 800,
+    "category": "selecciones",
+    "club": "algeria",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Este jersey es una pieza de colección diseñada por la británica-jamaicana Grace Wales Bonner. Destaca por su estética retro inspirada en la cultura caribeña de los años 80 y 90",
+    "images": [
+      "/api/db-image/selecciones/jamaica/2425-jamaica-adidas-x-wales-bonner-home/placeholder.jpeg",
+      "/api/db-image/selecciones/jamaica/2425-jamaica-adidas-x-wales-bonner-home/001.jpeg",
+      "/api/db-image/selecciones/jamaica/2425-jamaica-adidas-x-wales-bonner-home/002.jpeg",
+      "/api/db-image/selecciones/jamaica/2425-jamaica-adidas-x-wales-bonner-home/003.jpeg",
+      "/api/db-image/selecciones/jamaica/2425-jamaica-adidas-x-wales-bonner-home/004.jpeg"
+    ],
+    "tags": [
+      "destacado"
+    ]
+  },
+  {
+    "id": "440",
+    "slug": "napoli-1991-93-season-napolihome-5a",
+    "name": "1991 93 Season NapoliHome 5A",
+    "price": 800,
+    "category": "serie-a",
+    "club": "napoli",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/placeholder.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/001.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/002.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/003.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/004.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/005.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/006.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/007.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/008.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/009.jpg",
+      "/api/db-image/serie-a/napoli/napoli-1991-93-season-napolihome-5a/010.jpg"
+    ],
+    "tags": [
+      "retro",
+      "destacado"
+    ]
+  },
+  {
+    "id": "441",
+    "slug": "long-sleeve-celtichome1-38a-nniversary-edition-3b",
+    "name": "Long Sleeve CelticHome1 38A nniversary Edition 3B",
+    "price": 800,
+    "category": "serie-a",
+    "club": "celtic",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "",
+    "images": [
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/placeholder.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/001.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/002.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/003.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/004.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/005.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/006.jpg",
+      "/api/db-image/serie-a/celtic/long-sleeve-celtichome1-38a-nniversary-edition-3b/007.jpg"
+    ],
+    "tags": [
+      "destacado"
+    ]
   }
 ]

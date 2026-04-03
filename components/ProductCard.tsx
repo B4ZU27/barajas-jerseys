@@ -33,16 +33,25 @@ export default function ProductCard({ product }: ProductCardProps) {
             onLoad={handleImageLoad}
           />
         )}
+
+        {/* Badge retro — posicionado sobre la imagen con margen fijo desde el borde */}
         {product.tags?.includes('retro') && (
-          <span className="absolute top-2 left-2 z-10 bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+          <span
+            className="z-10 bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5"
+            style={{ position: 'absolute', top: 8, left: 8 }}
+          >
             RETRO
           </span>
         )}
         {product.tags?.includes('mundialista') && (
-          <span className="absolute top-2 left-2 z-10 bg-green-500 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+          <span
+            className="z-10 bg-green-500 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5"
+            style={{ position: 'absolute', top: 8, left: 8 }}
+          >
             MUNDIAL
           </span>
         )}
+
         {!product.available && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <span className="text-white text-sm font-bold tracking-widest uppercase">

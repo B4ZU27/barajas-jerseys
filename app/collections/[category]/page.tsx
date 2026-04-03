@@ -26,7 +26,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
     <div className="max-w-6xl mx-auto px-4 py-10">
       {/* Breadcrumb */}
       <p className="text-xs text-gray-400 uppercase tracking-widest mb-6">
-        Camisas / {label}
+        <a href="/camisas" className="hover:text-black transition-colors">Camisas</a> / {label}
       </p>
 
       {/* Header */}
