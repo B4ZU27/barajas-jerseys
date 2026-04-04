@@ -1,41 +1,32 @@
 import Link from 'next/link'
 import CollectionCard from '@/components/CollectionCard'
 import ProductCard from '@/components/ProductCard'
+import HeroCarousel from '@/components/HeroCarousel'
 import { getActiveCategories, getProductsByTag, getAllProducts } from '@/lib/products'
 
 export default function HomePage() {
   const collections = getActiveCategories()
-  const destacados = getProductsByTag('destacado')
-  const featured = destacados.length >= 4
+  const retros      = getProductsByTag('retro').slice(0, 10)
+  const destacados  = getProductsByTag('destacado')
+  const featured    = destacados.length >= 4
     ? destacados.slice(0, 8)
     : getAllProducts().slice(0, 8)
 
   return (
     <div>
-      {/* Hero */}
-      <section
-        className="relative h-[90vw] max-h-[560px] md:h-[560px] bg-cover bg-top"
-        style={{ backgroundImage: "url('/hero_002.png')" }}
-      >
-        {/* Gradiente solo en la parte inferior para leer el texto */}
-        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 to-transparent" />
-
-        {/* Texto al pie de la imagen */}
-        <div className="absolute inset-x-0 bottom-0 px-5 pb-7 text-white">
-          <h1 className="text-3xl md:text-4xl uppercase leading-tight [font-family:var(--font-bebas)]">
-            Jerseys Retro<br />y Mundialistas
-          </h1>
-        </div>
-      </section>
+      {/* Hero carousel — camisas retro */}
+      <HeroCarousel products={retros} />
 
       {/* Colecciones */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section className="max-w-6xl mx-auto px-4 py-12 md:py-16">
         <div className="flex items-baseline gap-4 mb-1">
           <h2 className="text-[42px] md:text-[56px] uppercase leading-none [font-family:var(--font-bebas)]">Colecciones</h2>
           <span className="text-xs uppercase tracking-widest text-gray-400 pb-1">— elige tu liga</span>
         </div>
-        <div className="border-t-2 border-black mb-0" />
-        <div className="flex flex-col">
+        <div className="border-t-2 border-black mb-3" />
+
+        {/* Grid 2 cols en mobile, lista en desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-0">
           {collections.map((col, i) => (
             <CollectionCard
               key={col.slug}
@@ -51,7 +42,7 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 pb-16">
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="text-xs uppercase tracking-widest text-gray-500">Destacados</h2>
-          <Link href="/collections/selecciones" className="text-xs uppercase tracking-widest underline underline-offset-4">
+          <Link href="/camisas" className="text-xs uppercase tracking-widest underline underline-offset-4">
             Ver todo
           </Link>
         </div>

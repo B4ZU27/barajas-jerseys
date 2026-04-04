@@ -26,8 +26,16 @@ export default function Navbar({ categories, tags }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
 
         {/* Logo */}
-        <Link href="/" onClick={closeAll} className="text-2xl tracking-tight uppercase [font-family:var(--font-bebas)]">
-          Archivo de Cancha
+        <Link href="/" onClick={closeAll} className="flex items-center gap-3">
+          <img
+            src="/logo AC.png"
+            alt="Archivo de Cancha"
+            className="h-12 w-auto"
+            style={{ maskImage: 'radial-gradient(ellipse 70% 70% at center, black 40%, transparent 100%)', WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at center, black 40%, transparent 100%)' }}
+          />
+          <span className="text-2xl tracking-tight uppercase [font-family:var(--font-bebas)]">
+            Archivo de Cancha
+          </span>
         </Link>
 
         {/* Links desktop */}
