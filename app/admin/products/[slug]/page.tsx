@@ -36,6 +36,7 @@ const ALL_TAGS  = [
   { slug: 'retro',       label: 'Retro' },
   { slug: 'mundialista', label: 'Mundialista' },
   { slug: 'destacado',   label: 'Destacado' },
+  { slug: 'video-only',  label: 'Solo video' },
 ]
 
 // ── Tipos ─────────────────────────────────────────────────────────────────────
@@ -43,10 +44,11 @@ const ALL_TAGS  = [
 interface Product {
   id: string; slug: string; name: string; price: number
   category: string; club: string; sizes: string[]; available: boolean
-  description: string; images: string[]; tags: string[]
+  description: string; images: string[]; tags: string[]; videos?: string[]
 }
 
 interface NewImage { file: File; preview: string }
+interface NewVideo { file: File; preview: string }
 
 type Status = { type: 'idle' } | { type: 'loading' } | { type: 'success' } | { type: 'error'; message: string }
 
@@ -89,6 +91,13 @@ function EditForm({ original }: { original: Product }) {
 
   // Nuevas imágenes a agregar
   const [newImages, setNewImages] = useState<NewImage[]>([])
+
+  // Videos existentes
+  const [existingVideos, setExistingVideos]     = useState<string[]>(original.videos ?? [])
+  const [removedVideoIdxs, setRemovedVideoIdxs] = useState<number[]>([])
+  const [newVideos, setNewVideos]               = useState<NewVideo[]>([])
+  const videoInputRef                           = useRef<HTMLInputElement>(null)
+
   const [status, setStatus]       = useState<Status>({ type: 'idle' })
   const [dragging, setDragging]   = useState(false)
   const fileInputRef              = useRef<HTMLInputElement>(null)
@@ -119,6 +128,35 @@ function EditForm({ original }: { original: Product }) {
     })
   }
 
+  // ── Videos ──────────────────────────────────────────────────────────────────
+
+  const addVideoFiles = useCallback((files: FileList | File[]) => {
+    const arr = Array.from(files).filter(f => f.type.startsWith('video/'))
+    setNewVideos(prev => [...prev, ...arr.map(f => ({ file: f, preview: URL.createObjectURL(f) }))])
+  }, [])
+
+  const toggleRemoveVideo = (idx: number) => {
+    setRemovedVideoIdxs(prev =>
+      prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]
+    )
+  }
+
+  const removeNewVideo = (idx: number) => {
+    setNewVideos(prev => {
+      URL.revokeObjectURL(prev[idx].preview)
+      return prev.filter((_, i) => i !== idx)
+    })
+  }
+
+  function getCloudinaryPoster(videoUrl: string): string {
+    if (videoUrl.includes('cloudinary.com') && videoUrl.includes('/video/upload/')) {
+      return videoUrl
+        .replace('/video/upload/', '/video/upload/so_0,w_128/')
+        .replace(/\.(mp4|mov|webm)$/i, '.jpg')
+    }
+    return ''
+  }
+
   // ── Toggles ──────────────────────────────────────────────────────────────────
 
   const toggleSize = (s: string) =>
@@ -145,6 +183,8 @@ function EditForm({ original }: { original: Product }) {
     fd.append('tags', JSON.stringify(tags))
     if (removedIdxs.length > 0) fd.append('removeImages', removedIdxs.join(','))
     newImages.forEach(img => fd.append('newImages', img.file))
+    if (removedVideoIdxs.length > 0) fd.append('removeVideos', removedVideoIdxs.join(','))
+    newVideos.forEach(v => fd.append('newVideos', v.file))
 
     try {
       const res  = await fetch('/api/admin/update-product', { method: 'PATCH', body: fd })
@@ -153,6 +193,8 @@ function EditForm({ original }: { original: Product }) {
       setStatus({ type: 'success' })
       setRemovedIdxs([])
       setNewImages([])
+      setRemovedVideoIdxs([])
+      setNewVideos([])
       // Volver a la lista después de 800ms
       setTimeout(() => router.push('/admin/products'), 800)
     } catch (err) {
@@ -347,6 +389,69 @@ function EditForm({ original }: { original: Product }) {
                     <span className="absolute top-1 left-1 bg-blue-600 text-white text-[9px] font-bold px-1 py-0.5 uppercase">Nueva</span>
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <button type="button" onClick={() => removeNew(idx)}
+                        className="bg-red-600 text-white text-xs font-bold px-2 py-1">✕</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </Section>
+
+          {/* ── Videos ──────────────────────────────────────────────────────── */}
+          {existingVideos.length > 0 && (
+            <Section title={`Videos actuales (${existingVideos.length})`}>
+              <div className="grid grid-cols-3 gap-2">
+                {existingVideos.map((url, idx) => {
+                  const removed = removedVideoIdxs.includes(idx)
+                  const poster  = getCloudinaryPoster(url)
+                  return (
+                    <div key={idx} className={`relative group aspect-square bg-black transition-opacity ${removed ? 'opacity-30' : ''}`}>
+                      {poster ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={poster} alt={`video-${idx}`} className="w-full h-full object-cover" />
+                      ) : (
+                        <video src={url} className="w-full h-full object-cover" muted playsInline preload="metadata" />
+                      )}
+                      <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ opacity: 0.7 }}>
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </span>
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button type="button" onClick={() => toggleRemoveVideo(idx)}
+                          className={`text-xs font-bold px-2 py-1 ${removed ? 'bg-green-500 text-white' : 'bg-red-600 text-white'}`}>
+                          {removed ? '↩ Restaurar' : '✕ Quitar'}
+                        </button>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+              {removedVideoIdxs.length > 0 && (
+                <p className="text-xs text-red-500 font-bold">{removedVideoIdxs.length} video(s) se eliminarán al guardar</p>
+              )}
+            </Section>
+          )}
+
+          <Section title="Agregar videos">
+            <div
+              onClick={() => videoInputRef.current?.click()}
+              className="border-2 border-dashed border-gray-300 hover:border-gray-400 rounded cursor-pointer transition-colors py-6 px-4 text-center"
+            >
+              <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">MP4 · Arrastra o haz click</p>
+              <p className="text-xs text-gray-400 mt-1">Se suben a Cloudinary automáticamente</p>
+            </div>
+            <input ref={videoInputRef} type="file" accept="video/mp4,video/quicktime,video/webm" multiple className="hidden"
+              onChange={e => e.target.files && addVideoFiles(e.target.files)} />
+
+            {newVideos.length > 0 && (
+              <div className="grid grid-cols-3 gap-2 mt-2">
+                {newVideos.map((v, idx) => (
+                  <div key={idx} className="relative group aspect-square bg-black">
+                    <video src={v.preview} className="w-full h-full object-cover" muted playsInline preload="metadata" />
+                    <span className="absolute top-1 left-1 bg-purple-600 text-white text-[9px] font-bold px-1 py-0.5 uppercase">Nuevo</span>
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <button type="button" onClick={() => removeNewVideo(idx)}
                         className="bg-red-600 text-white text-xs font-bold px-2 py-1">✕</button>
                     </div>
                   </div>

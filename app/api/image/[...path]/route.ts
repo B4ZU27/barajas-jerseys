@@ -59,6 +59,13 @@ export async function GET(
   const slug = pathSegments[0]
   const filename = pathSegments.slice(1).join('/')
 
+  // Solo extensiones de imagen permitidas
+  const ext = filename.split('.').pop()?.toLowerCase() ?? ''
+  const allowedExts = ['jpg', 'jpeg', 'png', 'webp']
+  if (!allowedExts.includes(ext)) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  }
+
   const folderMap = await getFolderMap()
   const actualFolderName = folderMap[slug]
 
@@ -69,14 +76,13 @@ export async function GET(
     )
   }
 
-  const filePath = path.join(
-    process.cwd(),
-    '..',
-    'DATA',
-    'retro',
-    actualFolderName,
-    filename
-  )
+  const BASE_DIR = path.resolve(process.cwd(), '..', 'DATA', 'retro')
+  const filePath = path.resolve(BASE_DIR, actualFolderName, filename)
+
+  // Prevenir path traversal
+  if (!filePath.startsWith(BASE_DIR + path.sep)) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  }
 
   try {
     const data = await readFile(filePath)

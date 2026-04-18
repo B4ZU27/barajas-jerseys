@@ -1,6 +1,13 @@
 import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path'
 import { NextRequest, NextResponse } from 'next/server'
+import { v2 as cloudinary } from 'cloudinary'
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME ?? 'dsdg9rgi3',
+  api_key:    process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+})
 
 function toSlug(str: string): string {
   return str
@@ -13,7 +20,15 @@ function toSlug(str: string): string {
     .replace(/^-|-$/g, '')
 }
 
+function isAuthorized(): boolean {
+  return !!process.env.ADMIN_SECRET
+}
+
 export async function POST(request: NextRequest) {
+  if (!isAuthorized()) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  }
+
   try {
     const formData = await request.formData()
 
@@ -26,7 +41,8 @@ export async function POST(request: NextRequest) {
     const tags        = JSON.parse(formData.get('tags')   as string) as string[]
     const available   = formData.get('available') === 'true'
     const slug        = (formData.get('slug') as string) || `${club}-${toSlug(name)}`
-    const images      = formData.getAll('images') as File[]
+    const images      = formData.getAll('images')    as File[]
+    const newVideos   = formData.getAll('newVideos') as File[]
 
     if (!name || !category || !club || !slug) {
       return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 })
@@ -51,16 +67,47 @@ export async function POST(request: NextRequest) {
 
     // ── Leer y actualizar products.json ────────────────────────────────────────
     const productsPath = path.join(process.cwd(), 'data', 'products.json')
-    const productsJson = JSON.parse(await readFile(productsPath, 'utf8')) as Array<{ id: string; slug: string }>
+    const productsJson = JSON.parse(await readFile(productsPath, 'utf8')) as Array<Record<string, unknown>>
 
     // Verificar slug duplicado
-    if (productsJson.some(p => p.slug === slug)) {
+    if (productsJson.some(p => p['slug'] === slug)) {
       return NextResponse.json({ error: `El slug "${slug}" ya existe` }, { status: 409 })
     }
 
-    const maxId = productsJson.reduce((max, p) => Math.max(max, Number(p.id) || 0), 0)
+    const maxId = productsJson.reduce((max, p) => Math.max(max, Number(p['id']) || 0), 0)
 
-    const newProduct = {
+    // ── Videos: guardar backup local + subir a Cloudinary ─────────────────────
+    const videoPaths: string[] = []
+
+    if (newVideos.length > 0) {
+      const videoDir = path.join(process.cwd(), '..', 'DATA', 'DB_jerseys', category, club, slug, 'videos')
+      await mkdir(videoDir, { recursive: true })
+
+      for (let i = 0; i < newVideos.length; i++) {
+        const file = newVideos[i]
+        if (!file || file.size === 0) continue
+        const ext      = file.name.split('.').pop()?.toLowerCase() ?? 'mp4'
+        const filename = `${String(i + 1).padStart(3, '0')}.${ext}`
+        const buffer   = Buffer.from(await file.arrayBuffer())
+
+        // 1. Guardar local (backup)
+        await writeFile(path.join(videoDir, filename), buffer)
+
+        // 2. Subir a Cloudinary
+        const result = await new Promise<{ secure_url: string }>((resolve, reject) => {
+          const stream = cloudinary.uploader.upload_stream(
+            { resource_type: 'video', folder: `jerseys/${slug}/videos`, public_id: filename.replace(/\.[^.]+$/, ''), overwrite: true },
+            (err, res) => err ? reject(err) : resolve(res as { secure_url: string })
+          )
+          stream.end(buffer)
+        })
+
+        // 3. Guardar URL de Cloudinary en products.json
+        videoPaths.push(result.secure_url)
+      }
+    }
+
+    const newProduct: Record<string, unknown> = {
       id:          String(maxId + 1),
       slug,
       name,
@@ -73,6 +120,8 @@ export async function POST(request: NextRequest) {
       images:      imagePaths,
       tags,
     }
+
+    if (videoPaths.length > 0) newProduct.videos = videoPaths
 
     productsJson.push(newProduct)
     await writeFile(productsPath, JSON.stringify(productsJson, null, 2), 'utf8')

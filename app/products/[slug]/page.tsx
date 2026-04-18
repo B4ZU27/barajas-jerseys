@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getProductBySlug, getAllSlugs, getPromotions, CATEGORY_LABELS } from '@/lib/products'
 import ImageCarousel from '@/components/ImageCarousel'
+import VideoCarousel from '@/components/VideoCarousel'
 import ProductActions from '@/components/ProductActions'
 
 export async function generateStaticParams() {
@@ -38,8 +39,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       {/* Layout producto */}
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
-        {/* Columna izquierda — imágenes */}
-        <ImageCarousel images={product.images} alt={product.name} />
+        {/* Columna izquierda — imágenes y videos */}
+        <div>
+          <ImageCarousel images={product.images} alt={product.name} />
+          {product.videos && product.videos.length > 0 && (
+            <VideoCarousel videos={product.videos} alt={product.name} />
+          )}
+        </div>
 
         {/* Columna derecha — info */}
         <div className="flex flex-col gap-6">

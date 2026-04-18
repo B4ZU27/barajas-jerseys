@@ -2,20 +2,25 @@ import Link from 'next/link'
 import CollectionCard from '@/components/CollectionCard'
 import ProductCard from '@/components/ProductCard'
 import HeroCarousel from '@/components/HeroCarousel'
-import { getActiveCategories, getProductsByTag, getAllProducts } from '@/lib/products'
+import VideoStrip from '@/components/VideoStrip'
+import { getActiveCategories, getProductsByTag, getCatalogProducts, getProductsWithVideos } from '@/lib/products'
 
 export default function HomePage() {
-  const collections = getActiveCategories()
-  const retros      = getProductsByTag('retro').slice(0, 10)
-  const destacados  = getProductsByTag('destacado')
-  const featured    = destacados.length >= 4
+  const collections  = getActiveCategories()
+  const retros       = getProductsByTag('retro').slice(0, 10)
+  const withVideos   = getProductsWithVideos()
+  const destacados   = getProductsByTag('destacado')
+  const featured     = destacados.length >= 4
     ? destacados.slice(0, 8)
-    : getAllProducts().slice(0, 8)
+    : getCatalogProducts().slice(0, 8)
 
   return (
     <div>
       {/* Hero carousel — camisas retro */}
       <HeroCarousel products={retros} />
+
+      {/* Strip de videos — solo aparece si hay productos con video */}
+      <VideoStrip products={withVideos} />
 
       {/* Colecciones */}
       <section className="max-w-6xl mx-auto px-4 py-12 md:py-16">

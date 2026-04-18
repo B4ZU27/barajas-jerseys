@@ -2,27 +2,32 @@ import { readFile } from 'fs/promises'
 import path from 'path'
 import { NextRequest, NextResponse } from 'next/server'
 
-/**
- * GET /api/db-image/[category]/[club]/[slug]/[filename]
- * Sirve imágenes locales desde DATA/DB_jerseys — solo para uso en desarrollo.
- */
+const BASE_DIR = path.resolve(process.cwd(), '..', 'DATA', 'DB_jerseys')
+
 export async function GET(
   _req: NextRequest,
   { params }: { params: Promise<{ path: string[] }> }
 ) {
   const { path: segments } = await params
-  const filePath = path.join(process.cwd(), '..', 'DATA', 'DB_jerseys', ...segments)
+
+  // Prevenir path traversal: resolver y verificar que sigue dentro de BASE_DIR
+  const filePath = path.resolve(BASE_DIR, ...segments)
+  if (!filePath.startsWith(BASE_DIR + path.sep) && filePath !== BASE_DIR) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  }
+
+  const ext = segments[segments.length - 1].split('.').pop()?.toLowerCase() ?? ''
+  const mime: Record<string, string> = {
+    jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp',
+    mp4: 'video/mp4', mov: 'video/quicktime', webm: 'video/webm',
+  }
+  if (!mime[ext]) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
   try {
     const data = await readFile(filePath)
-    const ext = segments[segments.length - 1].split('.').pop()?.toLowerCase() ?? ''
-    const mime: Record<string, string> = {
-      jpg: 'image/jpeg', jpeg: 'image/jpeg',
-      png: 'image/png',  webp: 'image/webp',
-    }
     return new NextResponse(data, {
       headers: {
-        'Content-Type': mime[ext] ?? 'application/octet-stream',
+        'Content-Type': mime[ext],
         'Cache-Control': 'no-cache',
       },
     })

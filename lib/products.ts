@@ -26,6 +26,7 @@ export interface Product {
   description: string
   images: string[]
   tags: string[]
+  videos?: string[]
 }
 
 export interface Deal {
@@ -45,6 +46,12 @@ export const TAG_LABELS: Record<string, string> = {
   'retro':       'Retro',
   'mundialista': 'Mundialistas',
   'destacado':   'Destacados',
+  'video-only':  'Solo video',
+}
+
+/** Productos que no deben aparecer en el catálogo (solo video, sin foto) */
+function forCatalog(list: Product[]): Product[] {
+  return list.filter(p => !p.tags?.includes('video-only'))
 }
 
 // ─── Etiquetas de categorías — fuente de verdad para orden y nombres ──────────
@@ -65,9 +72,14 @@ export const CATEGORY_LABELS: Record<string, string> = {
 
 const products: Product[] = productsData as Product[]
 
-/** Devuelve todos los productos del catálogo */
+/** Devuelve todos los productos sin excepción (admin, scripts, etc.) */
 export function getAllProducts(): Product[] {
   return products
+}
+
+/** Devuelve todos los productos visibles en el catálogo (excluye video-only) */
+export function getCatalogProducts(): Product[] {
+  return forCatalog(products)
 }
 
 /** Devuelve un producto por su slug, o undefined si no existe */
@@ -75,24 +87,29 @@ export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug)
 }
 
-/** Devuelve todos los productos de una categoría */
+/** Devuelve todos los productos de una categoría visibles en el catálogo */
 export function getProductsByCategory(category: string): Product[] {
-  return products.filter((p) => p.category === category)
+  return forCatalog(products.filter((p) => p.category === category))
 }
 
 /** Devuelve productos filtrados por club y tag */
 export function getProductsByClubAndTag(club: string, tag: string): Product[] {
-  return products.filter((p) => p.club === club && p.tags?.includes(tag))
+  return forCatalog(products.filter((p) => p.club === club && p.tags?.includes(tag)))
 }
 
-/** Devuelve todos los productos que tienen un tag específico */
+/** Devuelve todos los productos que tienen un tag específico (excluye video-only del catálogo) */
 export function getProductsByTag(tag: string): Product[] {
-  return products.filter((p) => p.tags?.includes(tag))
+  return forCatalog(products.filter((p) => p.tags?.includes(tag)))
 }
 
 /** Devuelve todos los slugs — necesario para generateStaticParams en Next.js */
 export function getAllSlugs(): string[] {
   return products.map((p) => p.slug)
+}
+
+/** Devuelve productos que tienen al menos un video */
+export function getProductsWithVideos(): Product[] {
+  return products.filter((p) => p.videos && p.videos.length > 0)
 }
 
 /**

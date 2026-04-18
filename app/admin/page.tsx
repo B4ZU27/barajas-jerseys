@@ -35,6 +35,7 @@ const ALL_TAGS  = [
   { slug: 'retro',       label: 'Retro' },
   { slug: 'mundialista', label: 'Mundialista' },
   { slug: 'destacado',   label: 'Destacado' },
+  { slug: 'video-only',  label: 'Solo video' },
 ]
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -56,6 +57,11 @@ interface ImageFile {
   preview: string
 }
 
+interface VideoFile {
+  file: File
+  preview: string
+}
+
 type Status = { type: 'idle' } | { type: 'loading' } | { type: 'success'; slug: string } | { type: 'error'; message: string }
 
 // ── Componente principal ───────────────────────────────────────────────────────
@@ -67,17 +73,19 @@ export default function AdminPage() {
   const [slugEdited, setSlugEdited]   = useState(false)
   const [price, setPrice]             = useState('')
   const [category, setCategory]       = useState('selecciones')
-  const [club, setClub]               = useState('argentina')
+  const [club, setClub]               = useState('')
   const [description, setDescription] = useState('')
   const [sizes, setSizes]             = useState<string[]>(['S', 'M', 'L', 'XL', '2XL'])
   const [tags, setTags]               = useState<string[]>([])
   const [available, setAvailable]     = useState(true)
   const [images, setImages]           = useState<ImageFile[]>([])
+  const [videos, setVideos]           = useState<VideoFile[]>([])
   const [status, setStatus]           = useState<Status>({ type: 'idle' })
   const [dragging, setDragging]       = useState(false)
 
-  const fileInputRef = useRef<HTMLInputElement>(null)
-  const dropZoneRef  = useRef<HTMLDivElement>(null)
+  const fileInputRef  = useRef<HTMLInputElement>(null)
+  const dropZoneRef   = useRef<HTMLDivElement>(null)
+  const videoInputRef = useRef<HTMLInputElement>(null)
 
   // Clubs sugeridos: los que ya existen en products.json para esta categoría
   const suggestedClubs = useMemo(() => {
@@ -87,8 +95,8 @@ export default function AdminPage() {
 
   // Auto-generar slug cuando cambia name o club
   useEffect(() => {
-    if (!slugEdited && club && name) {
-      setSlug(`${club}-${toSlug(name)}`)
+    if (!slugEdited && name) {
+      setSlug(club ? `${club}-${toSlug(name)}` : toSlug(name))
     }
   }, [name, club, slugEdited])
 
@@ -116,6 +124,18 @@ export default function AdminPage() {
     })
   }
 
+  const addVideoFiles = useCallback((files: FileList | File[]) => {
+    const arr = Array.from(files).filter(f => f.type.startsWith('video/'))
+    setVideos(prev => [...prev, ...arr.map(f => ({ file: f, preview: URL.createObjectURL(f) }))])
+  }, [])
+
+  const removeVideo = (idx: number) => {
+    setVideos(prev => {
+      URL.revokeObjectURL(prev[idx].preview)
+      return prev.filter((_, i) => i !== idx)
+    })
+  }
+
   // Drag & drop en la zona
   const onDrop = (e: React.DragEvent) => {
     e.preventDefault()
@@ -139,8 +159,8 @@ export default function AdminPage() {
       setStatus({ type: 'error', message: 'Nombre, precio, club y slug son requeridos.' })
       return
     }
-    if (images.length === 0) {
-      setStatus({ type: 'error', message: 'Agrega al menos una imagen.' })
+    if (images.length === 0 && videos.length === 0) {
+      setStatus({ type: 'error', message: 'Agrega al menos una imagen o un video.' })
       return
     }
 
@@ -157,6 +177,7 @@ export default function AdminPage() {
     fd.append('tags', JSON.stringify(tags))
     fd.append('available', String(available))
     images.forEach(img => fd.append('images', img.file))
+    videos.forEach(v => fd.append('newVideos', v.file))
 
     try {
       const res  = await fetch('/api/admin/add-product', { method: 'POST', body: fd })
@@ -172,7 +193,7 @@ export default function AdminPage() {
   const resetForm = () => {
     setName(''); setSlug(''); setSlugEdited(false); setPrice('')
     setDescription(''); setSizes(['S', 'M', 'L', 'XL', '2XL']); setTags([])
-    setAvailable(true); setImages([])
+    setAvailable(true); setImages([]); setVideos([])
   }
 
   // ── UI helpers ───────────────────────────────────────────────────────────────
@@ -455,6 +476,42 @@ export default function AdminPage() {
                           →
                         </button>
                       )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </Section>
+
+          {/* Sección: Videos */}
+          <Section title="Videos (opcional)">
+            <div
+              onClick={() => videoInputRef.current?.click()}
+              className="border-2 border-dashed border-gray-300 hover:border-gray-400 rounded cursor-pointer transition-colors py-6 px-4 text-center"
+            >
+              <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">MP4 · Arrastra o haz click</p>
+              <p className="text-xs text-gray-400 mt-1">Se suben a Cloudinary automáticamente</p>
+            </div>
+            <input
+              ref={videoInputRef}
+              type="file"
+              accept="video/mp4,video/quicktime,video/webm"
+              multiple
+              className="hidden"
+              onChange={e => e.target.files && addVideoFiles(e.target.files)}
+            />
+
+            {videos.length > 0 && (
+              <div className="grid grid-cols-3 gap-2 mt-2">
+                {videos.map((v, idx) => (
+                  <div key={idx} className="relative group aspect-square bg-black">
+                    <video src={v.preview} className="w-full h-full object-cover" muted playsInline preload="metadata" />
+                    <span className="absolute top-1 left-1 bg-purple-600 text-white text-[9px] font-bold px-1 py-0.5 uppercase">
+                      {idx + 1}
+                    </span>
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <button type="button" onClick={() => removeVideo(idx)}
+                        className="bg-red-600 text-white text-xs font-bold px-2 py-1">✕</button>
                     </div>
                   </div>
                 ))}

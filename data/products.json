@@ -5799,5 +5799,197 @@
     "tags": [
       "destacado"
     ]
+  },
+  {
+    "id": "442",
+    "slug": "chelsea-chelsea-201112-home-drogba-11",
+    "name": "Chelsea 2011/12 Home - Drogba #11",
+    "price": 800,
+    "category": "premier-league",
+    "club": "chelsea",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Esta es, probablemente, la playera más sagrada para cualquier fan de los Blues. Es el jersey con el que Didier Drogba se convirtió en leyenda eterna en Munich. El detalle del parche de la Champions League y el sponsor de \"Right To Play\" en la espalda la hacen una pieza de museo. Es el año en que \"La Bestia\" marfileña decidió cargar al equipo y darles su primera Orejona.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776549842/jerseys/chelsea-chelsea-201112-home-drogba-11/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "443",
+    "slug": "atletico-madrid-atletico-de-madrid-202425-home-julian-alvarez-19",
+    "name": "Atlético de Madrid 2024/25 Home - Julián Álvarez #19",
+    "price": 900,
+    "category": "la-liga",
+    "club": "atletico-madrid",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "El \"Araña\" aterrizó en el Metropolitano y esta es la piel que marca el inicio de su era en Madrid. Lo que la hace especial es el regreso del escudo clásico del Atleti (el que la afición tanto pidió de vuelta) y las franjas con ese efecto de relieve moderno. Lleva el patrocinio de \"Visit Rwanda\" y el parche de la Liga, representando la gran apuesta del Cholo para volver a pelear todo.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550140/jerseys/atletico-madrid-atletico-de-madrid-202425-home-julian-alvarez-19/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "444",
+    "slug": "brazil-brasil-2006-world-cup-home-ronaldinho-10",
+    "name": "Brasil 2006 World Cup Home - Ronaldinho #10",
+    "price": 899,
+    "category": "selecciones",
+    "club": "brazil",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "El \"Joga Bonito\" en su máxima expresión. Este jersey de la marca del Swoosh para el Mundial de Alemania 2006 es minimalista pero icónica por el cuello tipo Mao verde. Ver ese #10 de Ronaldinho es recordar la magia, las elásticas y la sonrisa del tipo que hizo que todo el mundo amara este deporte. El parche del Mundial en la manga es el toque final de autenticidad.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550282/jerseys/brazil-brasil-2006-world-cup-home-ronaldinho-10/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "445",
+    "slug": "portugal-2024-away-ronaldo-7",
+    "name": "Portugal 2024 Away - Ronaldo #7",
+    "price": 900,
+    "category": "selecciones",
+    "club": "portugal",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Un diseño que rompe con lo tradicional. Portugal dejó atrás los colores sólidos para meter este patrón tipo \"azulejo\" que rinde homenaje a la arquitectura y cultura del país. Con el nombre de Cristiano Ronaldo, esta prenda representa el último baile del \"Bicho\" en escenarios europeos. Es una mezcla de orgullo nacional y diseño disruptivo.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550392/jerseys/portugal-2024-away-ronaldo-7/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "446",
+    "slug": "germany-alemania-2024-away-wirtz-17",
+    "name": "Alemania 2024 Away - Wirtz #17",
+    "price": 850,
+    "category": "selecciones",
+    "club": "germany",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "sta es la famosa playera \"Pink & Purple\" que causó un revuelo total en Alemania. Al principio muchos se pusieron intensos con el cambio de colores, pero terminó siendo la más vendida en la historia de las equipaciones visitantes de la Mannschaft.\r\n\r\nEl diseño con ese degradado de diamantes está inspirado en la nueva generación del fútbol alemán, y llevar el nombre de Florian Wirtz con el #17 le da todo el sentido: representa el renacimiento de Alemania de la mano de sus \"joyas\" jóvenes. Es una pieza que grita modernidad y que se volvió un ícono instantáneo del streetwear por esos tonos vibrantes que se ven increíbles fuera de la cancha.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550510/jerseys/germany-alemania-2024-away-wirtz-17/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "447",
+    "slug": "france-francia-2006-world-cup-away-zidane-10",
+    "name": "Francia 2006 World Cup Away - Zidane #10",
+    "price": 900,
+    "category": "selecciones",
+    "club": "france",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Piel de gallina. Esta es la playera del último partido de Zinedine Zidane. El diseño blanco con el degradado azul y rojo en el pecho es de una elegancia absoluta, digna de un director de orquesta. Es el jersey de la final en Berlín; una pieza cargada de melancolía y clase que marca el fin de una de las carreras más brillantes de la historia.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550636/jerseys/france-francia-2006-world-cup-away-zidane-10/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "448",
+    "slug": "psg-psg-202425-fourth-kvaratskhelia-7",
+    "name": "PSG 2024/25 Fourth - Kvaratskhelia #7",
+    "price": 850,
+    "category": "ligue-1",
+    "club": "psg",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Es una colaboración que sigue la línea de Jordan, pero con ese patrón de \"pintura chorreada\" en amarillo y negro que parece sacado de una pasarela de moda. Con el nombre del georgiano, representa ese aire de renovación total que busca el club parisino: puro talento joven con una estética urbana agresiva.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550822/jerseys/psg-psg-202425-fourth-kvaratskhelia-7/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "449",
+    "slug": "manchester-united-manchester-united-x-adidas-humanrace-special-edition",
+    "name": "Manchester United x Adidas \"Humanrace\" (Special Edition)",
+    "price": 899,
+    "category": "premier-league",
+    "club": "manchester-united",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Esta es una pieza de diseño conceptual. No es para jugar, es para la calle. Pharrell Williams reinterpretó la mítica \"Snowflake\" de los 90 del United con un efecto de dibujo a mano alzada. Es la unión perfecta entre el archivo histórico del fútbol y la moda contemporánea.",
+    "images": [],
+    "tags": [
+      "video-only"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550874/jerseys/manchester-united-manchester-united-x-adidas-humanrace-special-edition/videos/001.mp4"
+    ]
   }
 ]
