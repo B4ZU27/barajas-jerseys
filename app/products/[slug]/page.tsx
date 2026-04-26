@@ -29,7 +29,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       {/* Breadcrumb */}
-      <p className="text-xs text-gray-400 uppercase tracking-widest mb-8">
+      <p className="text-xs text-gray-400 uppercase tracking-widest mb-4">
         <Link href={`/collections/${product.category}`} className="hover:text-black transition-colors">
           {categoryLabel}
         </Link>
@@ -40,7 +40,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       {/* Layout producto */}
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
         {/* Columna izquierda — imágenes y videos */}
-        <div>
+        <div className="min-w-0">
           <ImageCarousel images={product.images} alt={product.name} />
           {product.videos && product.videos.length > 0 && (
             <VideoCarousel videos={product.videos} alt={product.name} />

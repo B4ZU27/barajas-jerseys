@@ -160,7 +160,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
   return (
     <>
-      <div className="w-full md:w-auto md:max-w-md mx-auto md:mx-0 overflow-hidden">
+      <div className="w-full md:w-auto md:max-w-md mx-auto md:mx-0">
 
         {/* Imagen principal */}
         <div

@@ -5991,5 +5991,77 @@
     "videos": [
       "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1776550874/jerseys/manchester-united-manchester-united-x-adidas-humanrace-special-edition/videos/001.mp4"
     ]
+  },
+  {
+    "id": "450",
+    "slug": "argentina-argentina-2026-world-cup-away-messi-10",
+    "name": "Argentina 2026 World Cup Away - Messi #10",
+    "price": 800,
+    "category": "selecciones",
+    "club": "argentina",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Esta pieza corresponde a la indumentaria oficial de visitante de la selección argentina para la Copa del Mundo 2026. El diseño marca el regreso del logotipo Trefoil de Adidas a los escenarios mundialistas, integrando una estética que combina el archivo histórico de los años 90 con elementos contemporáneos.",
+    "images": [],
+    "tags": [
+      "mundialista"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1777228500/jerseys/argentina-argentina-2026-world-cup-away-messi-10/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "451",
+    "slug": "japan-japon-2026-world-cup-away-colors-special-edition",
+    "name": "Japón 2026 World Cup Away - \"Colors\" Special Edition",
+    "price": 800,
+    "category": "selecciones",
+    "club": "japan",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Esta prenda es el uniforme oficial de visitante de la selección nacional de Japón para la Copa del Mundo 2026. El diseño, presentado en marzo de 2026, marca un hito histórico al reintroducir el logotipo Trefoil de Adidas en un kit de juego de la JFA por primera vez desde 1995.",
+    "images": [],
+    "tags": [
+      "mundialista"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1777228688/jerseys/japan-japon-2026-world-cup-away-colors-special-edition/videos/001.mp4"
+    ]
+  },
+  {
+    "id": "452",
+    "slug": "brazil-brasil-2026-world-cup-away-ronaldinho-10",
+    "name": "Brasil 2026 World Cup Away - Ronaldinho #10",
+    "price": 800,
+    "category": "selecciones",
+    "club": "brazil",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "available": true,
+    "description": "Esta prenda es el uniforme oficial de visitante de la selección de Brasil para la Copa del Mundo 2026. El diseño marca un distanciamiento del azul real tradicional, adoptando una base en color negro profundo combinada con detalles en un tono denominado \"Geode Teal\" (azul verdoso oscuro).",
+    "images": [],
+    "tags": [
+      "mundialista"
+    ],
+    "videos": [
+      "https://res.cloudinary.com/dsdg9rgi3/video/upload/v1777228830/jerseys/brazil-brasil-2026-world-cup-away-ronaldinho-10/videos/001.mp4"
+    ]
   }
 ]
