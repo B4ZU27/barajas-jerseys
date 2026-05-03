@@ -51,6 +51,7 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
               alt=""
               fill
               className="object-cover blur-xl scale-110 opacity-30"
+              sizes="100vw"
               priority={i === 0}
             />
           </div>
@@ -68,7 +69,9 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
                 alt={p.name}
                 fill
                 className="object-contain drop-shadow-2xl"
+                sizes="(max-width: 768px) 35vw, 320px"
                 priority={i === 0}
+                loading={i === 0 ? 'eager' : 'lazy'}
               />
             </div>
 

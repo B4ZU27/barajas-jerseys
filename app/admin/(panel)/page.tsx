@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import Image from 'next/image'
-import productsData from '@/data/products.json'
+import { uploadFiles } from '@/lib/cloudinary-upload'
 
 // ── Datos del catálogo ─────────────────────────────────────────────────────────
 
@@ -62,7 +62,7 @@ interface VideoFile {
   preview: string
 }
 
-type Status = { type: 'idle' } | { type: 'loading' } | { type: 'success'; slug: string } | { type: 'error'; message: string }
+type Status = { type: 'idle' } | { type: 'uploading'; label: string } | { type: 'saving' } | { type: 'success'; slug: string } | { type: 'error'; message: string }
 
 // ── Componente principal ───────────────────────────────────────────────────────
 
@@ -87,10 +87,9 @@ export default function AdminPage() {
   const dropZoneRef   = useRef<HTMLDivElement>(null)
   const videoInputRef = useRef<HTMLInputElement>(null)
 
-  // Clubs sugeridos: los que ya existen en products.json para esta categoría
+  // Clubs sugeridos desde el mapa estático por categoría
   const suggestedClubs = useMemo(() => {
-    const all = (productsData as { category: string; club: string }[])
-    return [...new Set(all.filter(p => p.category === category).map(p => p.club))].sort()
+    return (CLUBS_BY_CATEGORY[category] ?? []).slice().sort()
   }, [category])
 
   // Auto-generar slug cuando cambia name o club
@@ -164,25 +163,37 @@ export default function AdminPage() {
       return
     }
 
-    setStatus({ type: 'loading' })
-
-    const fd = new FormData()
-    fd.append('name', name)
-    fd.append('price', price)
-    fd.append('category', category)
-    fd.append('club', club)
-    fd.append('description', description)
-    fd.append('slug', slug)
-    fd.append('sizes', JSON.stringify(sizes))
-    fd.append('tags', JSON.stringify(tags))
-    fd.append('available', String(available))
-    images.forEach(img => fd.append('images', img.file))
-    videos.forEach(v => fd.append('newVideos', v.file))
-
     try {
-      const res  = await fetch('/api/admin/add-product', { method: 'POST', body: fd })
+      // 1. Subir imágenes directo a Cloudinary
+      let imageUrls: string[] = []
+      if (images.length > 0) {
+        setStatus({ type: 'uploading', label: `Subiendo imagen 1 de ${images.length}…` })
+        imageUrls = await uploadFiles(
+          images.map(i => i.file),
+          (done, total) => setStatus({ type: 'uploading', label: `Subiendo imagen ${done} de ${total}…` })
+        )
+      }
+
+      // 2. Subir videos directo a Cloudinary
+      let videoUrls: string[] = []
+      if (videos.length > 0) {
+        setStatus({ type: 'uploading', label: `Subiendo video 1 de ${videos.length}…` })
+        videoUrls = await uploadFiles(
+          videos.map(v => v.file),
+          (done, total) => setStatus({ type: 'uploading', label: `Subiendo video ${done} de ${total}…` })
+        )
+      }
+
+      // 3. Guardar en Supabase vía API route
+      setStatus({ type: 'saving' })
+      const res  = await fetch('/api/admin/add-product', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, slug, price, category, club, description, sizes, tags, images: imageUrls, videos: videoUrls }),
+      })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Error desconocido')
+
       setStatus({ type: 'success', slug: data.product.slug })
       resetForm()
     } catch (err) {
@@ -388,11 +399,13 @@ export default function AdminPage() {
           {/* Botón submit */}
           <button
             type="submit"
-            disabled={status.type === 'loading'}
+            disabled={status.type === 'uploading' || status.type === 'saving'}
             className="w-full py-4 text-sm font-black uppercase tracking-widest text-white transition-opacity disabled:opacity-50"
             style={{ backgroundColor: 'var(--blue-primary)' }}
           >
-            {status.type === 'loading' ? 'Guardando…' : 'Guardar producto'}
+            {status.type === 'uploading' ? status.label
+              : status.type === 'saving' ? 'Guardando…'
+              : 'Guardar producto'}
           </button>
         </div>
 

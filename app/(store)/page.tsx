@@ -5,19 +5,21 @@ import HeroCarousel from '@/components/HeroCarousel'
 import VideoStrip from '@/components/VideoStrip'
 import { getActiveCategories, getProductsByTag, getCatalogProducts, getProductsWithVideos } from '@/lib/products'
 
-export default function HomePage() {
-  const collections  = getActiveCategories()
-  const retros       = getProductsByTag('retro').slice(0, 10)
-  const withVideos   = getProductsWithVideos()
-  const destacados   = getProductsByTag('destacado')
-  const featured     = destacados.length >= 4
-    ? destacados.slice(0, 8)
-    : getCatalogProducts().slice(0, 8)
+export default async function HomePage() {
+  const [collections, retros, withVideos, destacados, catalog] = await Promise.all([
+    getActiveCategories(),
+    getProductsByTag('retro'),
+    getProductsWithVideos(),
+    getProductsByTag('destacado'),
+    getCatalogProducts(),
+  ])
+  const featured = destacados.length >= 4 ? destacados.slice(0, 8) : catalog.slice(0, 8)
+  const retrosSliced = retros.slice(0, 10)
 
   return (
     <div>
       {/* Hero carousel — camisas retro */}
-      <HeroCarousel products={retros} />
+      <HeroCarousel products={retrosSliced} />
 
       {/* Strip de videos — solo aparece si hay productos con video */}
       <VideoStrip products={withVideos} />

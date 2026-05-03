@@ -1,35 +1,27 @@
 'use client'
 
-import { useState, useRef, useCallback, useEffect, useMemo, use } from 'react'
+import { useState, useRef, useCallback, useMemo } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import productsData from '@/data/products.json'
+import { uploadFiles } from '@/lib/cloudinary-upload'
 
-// ── Catálogo ──────────────────────────────────────────────────────────────────
+// ── Tipos ─────────────────────────────────────────────────────────────────────
 
-const CATEGORIES = [
-  { slug: 'selecciones',    label: 'Selecciones' },
-  { slug: 'premier-league', label: 'Premier League' },
-  { slug: 'la-liga',        label: 'La Liga' },
-  { slug: 'serie-a',        label: 'Serie A' },
-  { slug: 'bundesliga',     label: 'Bundesliga' },
-  { slug: 'ligue-1',        label: 'Ligue 1' },
-  { slug: 'liga-mx',        label: 'Liga MX' },
-  { slug: 'mls',            label: 'MLS' },
-  { slug: 'otros',          label: 'Otros' },
-]
-
-const CLUBS_BY_CATEGORY: Record<string, string[]> = {
-  'selecciones':    ['algeria','argentina','belgium','brazil','canada','colombia','croatia','england','france','germany','italy','japan','mexico','morocco','netherlands','norway','portugal','scotland','senegal','spain','switzerland','uruguay'],
-  'premier-league': ['arsenal','chelsea','leeds','liverpool','manchester-united','tottenham'],
-  'la-liga':        ['atletico-madrid','barcelona','real-betis','real-madrid','valencia'],
-  'serie-a':        ['ac-milan','fiorentina','inter-milan','juventus','lazio','napoli','roma'],
-  'bundesliga':     ['bayer-leverkusen','bayern-munich','borussia-dortmund'],
-  'ligue-1':        ['lyon','marseille','psg'],
-  'liga-mx':        ['america','atlas','chivas','cruz-azul','monterrey','necaxa','pachuca','pumas','tigres','toluca'],
-  'mls':            ['dc-united','la-galaxy','seattle-sounders'],
-  'otros':          ['otros','sin-identificar'],
+export interface AdminProduct {
+  id: string; slug: string; name: string; price: number
+  category: string; club: string; sizes: string[]
+  description: string; images: string[]; tags: string[]; videos: string[]
 }
+
+export interface League { id: string; slug: string; name: string }
+export interface Club   { slug: string; name: string; leagueId: string | null }
+
+interface NewImage { file: File; preview: string }
+interface NewVideo { file: File; preview: string }
+type Status       = { type: 'idle' } | { type: 'uploading'; label: string } | { type: 'saving' } | { type: 'success' } | { type: 'error'; message: string }
+type DeleteStatus = 'idle' | 'confirm' | 'deleting'
+
+// ── Constantes ────────────────────────────────────────────────────────────────
 
 const ALL_SIZES = ['XS','S','M','L','XL','2XL','3XL','4XL']
 const ALL_TAGS  = [
@@ -39,41 +31,17 @@ const ALL_TAGS  = [
   { slug: 'video-only',  label: 'Solo video' },
 ]
 
-// ── Tipos ─────────────────────────────────────────────────────────────────────
+// ── Componente ────────────────────────────────────────────────────────────────
 
-interface Product {
-  id: string; slug: string; name: string; price: number
-  category: string; club: string; sizes: string[]; available: boolean
-  description: string; images: string[]; tags: string[]; videos?: string[]
-}
-
-interface NewImage { file: File; preview: string }
-interface NewVideo { file: File; preview: string }
-
-type Status = { type: 'idle' } | { type: 'loading' } | { type: 'success' } | { type: 'error'; message: string }
-
-// ── Página ────────────────────────────────────────────────────────────────────
-
-export default function EditProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug: paramSlug } = use(params)
-  const router = useRouter()
-  const original = (productsData as Product[]).find(p => p.slug === paramSlug)
-
-  if (!original) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-gray-500 font-bold">Producto no encontrado</p>
-          <button onClick={() => router.back()} className="mt-4 text-xs text-blue-600 underline">Volver</button>
-        </div>
-      </div>
-    )
-  }
-
-  return <EditForm original={original} />
-}
-
-function EditForm({ original }: { original: Product }) {
+export default function EditForm({
+  original,
+  leagues,
+  clubs,
+}: {
+  original: AdminProduct
+  leagues:  League[]
+  clubs:    Club[]
+}) {
   const router = useRouter()
 
   const [name, setName]               = useState(original.name)
@@ -83,81 +51,63 @@ function EditForm({ original }: { original: Product }) {
   const [description, setDescription] = useState(original.description ?? '')
   const [sizes, setSizes]             = useState<string[]>(original.sizes)
   const [tags, setTags]               = useState<string[]>(original.tags ?? [])
-  const [available, setAvailable]     = useState(original.available)
 
-  // Imágenes existentes (las que vienen del producto)
   const [existingImages, setExistingImages] = useState<string[]>(original.images)
   const [removedIdxs, setRemovedIdxs]       = useState<number[]>([])
+  const [newImages, setNewImages]           = useState<NewImage[]>([])
 
-  // Nuevas imágenes a agregar
-  const [newImages, setNewImages] = useState<NewImage[]>([])
-
-  // Videos existentes
   const [existingVideos, setExistingVideos]     = useState<string[]>(original.videos ?? [])
   const [removedVideoIdxs, setRemovedVideoIdxs] = useState<number[]>([])
   const [newVideos, setNewVideos]               = useState<NewVideo[]>([])
-  const videoInputRef                           = useRef<HTMLInputElement>(null)
 
-  const [status, setStatus]       = useState<Status>({ type: 'idle' })
-  const [dragging, setDragging]   = useState(false)
-  const fileInputRef              = useRef<HTMLInputElement>(null)
+  const [status, setStatus]             = useState<Status>({ type: 'idle' })
+  const [deleteStatus, setDeleteStatus] = useState<DeleteStatus>('idle')
+  const [dragging, setDragging]         = useState(false)
 
-  // Clubs sugeridos desde products.json para esta categoría
+  const fileInputRef  = useRef<HTMLInputElement>(null)
+  const videoInputRef = useRef<HTMLInputElement>(null)
+
+  // Clubs filtrados por la liga seleccionada
   const suggestedClubs = useMemo(() => {
-    const all = productsData as { category: string; club: string }[]
-    return [...new Set(all.filter(p => p.category === category).map(p => p.club))].sort()
-  }, [category])
+    const league = leagues.find(l => l.slug === category)
+    if (!league) return clubs.map(c => c.slug).sort()
+    return clubs.filter(c => c.leagueId === league.id).map(c => c.slug).sort()
+  }, [category, leagues, clubs])
 
-  // ── Imágenes ────────────────────────────────────────────────────────────────
+  // ── Imágenes ─────────────────────────────────────────────────────────────────
 
   const addFiles = useCallback((files: FileList | File[]) => {
     const arr = Array.from(files).filter(f => f.type.startsWith('image/'))
     setNewImages(prev => [...prev, ...arr.map(f => ({ file: f, preview: URL.createObjectURL(f) }))])
   }, [])
 
-  const toggleRemoveExisting = (idx: number) => {
-    setRemovedIdxs(prev =>
-      prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]
-    )
-  }
+  const toggleRemoveExisting = (idx: number) =>
+    setRemovedIdxs(prev => prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx])
 
-  const removeNew = (idx: number) => {
-    setNewImages(prev => {
-      URL.revokeObjectURL(prev[idx].preview)
-      return prev.filter((_, i) => i !== idx)
-    })
-  }
+  const removeNew = (idx: number) =>
+    setNewImages(prev => { URL.revokeObjectURL(prev[idx].preview); return prev.filter((_, i) => i !== idx) })
 
-  // ── Videos ──────────────────────────────────────────────────────────────────
+  // ── Videos ───────────────────────────────────────────────────────────────────
 
   const addVideoFiles = useCallback((files: FileList | File[]) => {
     const arr = Array.from(files).filter(f => f.type.startsWith('video/'))
     setNewVideos(prev => [...prev, ...arr.map(f => ({ file: f, preview: URL.createObjectURL(f) }))])
   }, [])
 
-  const toggleRemoveVideo = (idx: number) => {
-    setRemovedVideoIdxs(prev =>
-      prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]
-    )
-  }
+  const toggleRemoveVideo = (idx: number) =>
+    setRemovedVideoIdxs(prev => prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx])
 
-  const removeNewVideo = (idx: number) => {
-    setNewVideos(prev => {
-      URL.revokeObjectURL(prev[idx].preview)
-      return prev.filter((_, i) => i !== idx)
-    })
-  }
+  const removeNewVideo = (idx: number) =>
+    setNewVideos(prev => { URL.revokeObjectURL(prev[idx].preview); return prev.filter((_, i) => i !== idx) })
 
-  function getCloudinaryPoster(videoUrl: string): string {
-    if (videoUrl.includes('cloudinary.com') && videoUrl.includes('/video/upload/')) {
-      return videoUrl
-        .replace('/video/upload/', '/video/upload/so_0,w_128/')
-        .replace(/\.(mp4|mov|webm)$/i, '.jpg')
+  function getCloudinaryPoster(url: string): string {
+    if (url.includes('cloudinary.com') && url.includes('/video/upload/')) {
+      return url.replace('/video/upload/', '/video/upload/so_0,w_128/').replace(/\.(mp4|mov|webm)$/i, '.jpg')
     }
     return ''
   }
 
-  // ── Toggles ──────────────────────────────────────────────────────────────────
+  // ── Toggles ───────────────────────────────────────────────────────────────────
 
   const toggleSize = (s: string) =>
     setSizes(prev => prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s])
@@ -169,38 +119,77 @@ function EditForm({ original }: { original: Product }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus({ type: 'loading' })
-
-    const fd = new FormData()
-    fd.append('originalSlug', original.slug)
-    fd.append('name', name)
-    fd.append('price', price)
-    fd.append('category', category)
-    fd.append('club', club)
-    fd.append('description', description)
-    fd.append('available', String(available))
-    fd.append('sizes', JSON.stringify(sizes))
-    fd.append('tags', JSON.stringify(tags))
-    if (removedIdxs.length > 0) fd.append('removeImages', removedIdxs.join(','))
-    newImages.forEach(img => fd.append('newImages', img.file))
-    if (removedVideoIdxs.length > 0) fd.append('removeVideos', removedVideoIdxs.join(','))
-    newVideos.forEach(v => fd.append('newVideos', v.file))
 
     try {
-      const res  = await fetch('/api/admin/update-product', { method: 'PATCH', body: fd })
+      // Imágenes que quedan de las existentes
+      const keptImages = existingImages.filter((_, i) => !removedIdxs.includes(i))
+
+      // Subir nuevas imágenes a Cloudinary
+      let newImageUrls: string[] = []
+      if (newImages.length > 0) {
+        setStatus({ type: 'uploading', label: `Subiendo imagen 1 de ${newImages.length}…` })
+        newImageUrls = await uploadFiles(
+          newImages.map(i => i.file),
+          (done, total) => setStatus({ type: 'uploading', label: `Subiendo imagen ${done} de ${total}…` })
+        )
+      }
+
+      // Videos que quedan + nuevos videos subidos
+      const keptVideos = existingVideos.filter((_, i) => !removedVideoIdxs.includes(i))
+      let newVideoUrls: string[] = []
+      if (newVideos.length > 0) {
+        setStatus({ type: 'uploading', label: `Subiendo video 1 de ${newVideos.length}…` })
+        newVideoUrls = await uploadFiles(
+          newVideos.map(v => v.file),
+          (done, total) => setStatus({ type: 'uploading', label: `Subiendo video ${done} de ${total}…` })
+        )
+      }
+
+      const finalImages = [...keptImages, ...newImageUrls]
+      const finalVideos = [...keptVideos, ...newVideoUrls]
+
+      setStatus({ type: 'saving' })
+      const res = await fetch('/api/admin/update-product', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          originalSlug: original.slug,
+          name, price, category, club, description, sizes, tags,
+          images: finalImages,
+          videos: finalVideos,
+        }),
+      })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Error')
+
       setStatus({ type: 'success' })
       setRemovedIdxs([])
       setNewImages([])
       setRemovedVideoIdxs([])
       setNewVideos([])
-      // Volver a la lista después de 800ms
       setTimeout(() => router.push('/admin/products'), 800)
     } catch (err) {
       setStatus({ type: 'error', message: (err as Error).message })
     }
   }
+
+  const handleDelete = async () => {
+    setDeleteStatus('deleting')
+    try {
+      const res = await fetch('/api/admin/delete-product', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug: original.slug }),
+      })
+      if (!res.ok) { const d = await res.json(); throw new Error(d.error ?? 'Error al eliminar') }
+      router.push('/admin/products')
+    } catch (err) {
+      setStatus({ type: 'error', message: (err as Error).message })
+      setDeleteStatus('idle')
+    }
+  }
+
+  // ── Render ────────────────────────────────────────────────────────────────────
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -214,10 +203,12 @@ function EditForm({ original }: { original: Product }) {
           <p className="text-xs text-gray-400 mt-0.5 font-mono">{original.slug}</p>
         </div>
         <div className="flex items-center gap-4">
-          <button onClick={() => router.back()} className="text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-black transition-colors">
+          <button onClick={() => router.back()}
+            className="text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-black transition-colors">
             ← Volver
           </button>
-          <a href={`/products/${original.slug}`} target="_blank" className="text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-black transition-colors">
+          <a href={`/products/${original.slug}`} target="_blank"
+            className="text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-black transition-colors">
             Ver en catálogo ↗
           </a>
         </div>
@@ -236,45 +227,33 @@ function EditForm({ original }: { original: Product }) {
 
       <form onSubmit={handleSubmit} className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8">
 
-        {/* ── Izquierda ──────────────────────────────────────────────────────── */}
+        {/* ── Izquierda ────────────────────────────────────────────────────────── */}
         <div className="space-y-6">
 
           <Section title="Información básica">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="sm:col-span-2">
                 <Label>Nombre *</Label>
-                <input type="text" value={name} onChange={e => setName(e.target.value)}
-                  className={inputCls} required />
+                <input type="text" value={name} onChange={e => setName(e.target.value)} className={inputCls} required />
               </div>
               <div>
                 <Label>Precio (MXN) *</Label>
-                <input type="number" value={price} onChange={e => setPrice(e.target.value)}
-                  min={0} className={inputCls} required />
-              </div>
-              <div>
-                <Label>Disponibilidad</Label>
-                <button type="button" onClick={() => setAvailable(v => !v)}
-                  className="flex items-center gap-3 mt-1">
-                  <span className={`relative w-10 h-5 rounded-full transition-colors ${available ? 'bg-green-500' : 'bg-gray-300'}`}>
-                    <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform ${available ? 'translate-x-5' : 'translate-x-0.5'}`} />
-                  </span>
-                  <span className="text-sm font-medium text-gray-700">{available ? 'Disponible' : 'Agotado'}</span>
-                </button>
+                <input type="number" value={price} onChange={e => setPrice(e.target.value)} min={0} className={inputCls} required />
               </div>
             </div>
             <div>
               <Label>Descripción</Label>
-              <textarea value={description} onChange={e => setDescription(e.target.value)}
-                rows={3} className={`${inputCls} resize-none`} />
+              <textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} className={`${inputCls} resize-none`} />
             </div>
           </Section>
 
           <Section title="Clasificación">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <Label>Categoría</Label>
+                <Label>Liga / Categoría</Label>
                 <select value={category} onChange={e => setCategory(e.target.value)} className={inputCls}>
-                  {CATEGORIES.map(c => <option key={c.slug} value={c.slug}>{c.label}</option>)}
+                  {leagues.map(l => <option key={l.slug} value={l.slug}>{l.name}</option>)}
+                  <option value="otros">Otros</option>
                 </select>
               </div>
               <div>
@@ -290,7 +269,6 @@ function EditForm({ original }: { original: Product }) {
                 <datalist id="clubs-list-edit">
                   {suggestedClubs.map(c => <option key={c} value={c} />)}
                 </datalist>
-                <p className="text-xs text-gray-400 mt-1">Escribe o elige uno existente</p>
               </div>
             </div>
             <div>
@@ -323,17 +301,45 @@ function EditForm({ original }: { original: Product }) {
             </div>
           </Section>
 
-          <button type="submit" disabled={status.type === 'loading'}
-            className="w-full py-4 text-sm font-black uppercase tracking-widest text-white transition-opacity disabled:opacity-50"
-            style={{ backgroundColor: 'var(--blue-primary)' }}>
-            {status.type === 'loading' ? 'Guardando…' : 'Guardar cambios'}
-          </button>
+          {/* Botones guardar / eliminar */}
+          <div className="flex gap-3">
+            <button type="submit" disabled={status.type === 'uploading' || status.type === 'saving'}
+              className="flex-1 py-4 text-sm font-black uppercase tracking-widest text-white transition-opacity disabled:opacity-50"
+              style={{ backgroundColor: 'var(--blue-primary)' }}>
+              {status.type === 'uploading' ? status.label
+                : status.type === 'saving' ? 'Guardando…'
+                : 'Guardar cambios'}
+            </button>
+
+            {deleteStatus === 'idle' && (
+              <button type="button" onClick={() => setDeleteStatus('confirm')}
+                className="px-5 py-4 text-sm font-black uppercase tracking-widest text-red-600 border border-red-300 hover:bg-red-50 transition-colors">
+                Eliminar
+              </button>
+            )}
+            {deleteStatus === 'confirm' && (
+              <div className="flex gap-2">
+                <button type="button" onClick={() => setDeleteStatus('idle')}
+                  className="px-4 py-4 text-sm font-black uppercase tracking-widest border border-gray-300 text-gray-500 hover:border-gray-500 transition-colors">
+                  No
+                </button>
+                <button type="button" onClick={handleDelete}
+                  className="px-4 py-4 text-sm font-black uppercase tracking-widest bg-red-600 text-white hover:bg-red-700 transition-colors">
+                  ¿Seguro?
+                </button>
+              </div>
+            )}
+            {deleteStatus === 'deleting' && (
+              <div className="px-5 py-4 text-sm font-black uppercase tracking-widest text-red-400 border border-red-200">
+                Eliminando…
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* ── Derecha: imágenes ───────────────────────────────────────────── */}
+        {/* ── Derecha: imágenes y videos ───────────────────────────────────────── */}
         <div className="space-y-4">
 
-          {/* Imágenes existentes */}
           <Section title={`Imágenes actuales (${existingImages.length})`}>
             {existingImages.length === 0 ? (
               <p className="text-xs text-gray-400">Sin imágenes</p>
@@ -343,7 +349,7 @@ function EditForm({ original }: { original: Product }) {
                   const removed = removedIdxs.includes(idx)
                   return (
                     <div key={idx} className="relative group aspect-square bg-gray-100">
-                      <Image src={src} alt={`img-${idx}`} fill className={`object-cover transition-opacity ${removed ? 'opacity-30' : ''}`} />
+                      <Image src={src} alt={`img-${idx}`} fill sizes="128px" className={`object-cover transition-opacity ${removed ? 'opacity-30' : ''}`} />
                       {idx === 0 && !removed && (
                         <span className="absolute top-1 left-1 bg-black text-white text-[9px] font-bold px-1 py-0.5 uppercase">Cover</span>
                       )}
@@ -363,7 +369,6 @@ function EditForm({ original }: { original: Product }) {
             )}
           </Section>
 
-          {/* Agregar nuevas */}
           <Section title="Agregar imágenes">
             <div
               onClick={() => fileInputRef.current?.click()}
@@ -385,7 +390,7 @@ function EditForm({ original }: { original: Product }) {
               <div className="grid grid-cols-3 gap-2 mt-2">
                 {newImages.map((img, idx) => (
                   <div key={idx} className="relative group aspect-square bg-gray-100">
-                    <Image src={img.preview} alt={`new-${idx}`} fill className="object-cover" />
+                    <Image src={img.preview} alt={`new-${idx}`} fill sizes="128px" className="object-cover" />
                     <span className="absolute top-1 left-1 bg-blue-600 text-white text-[9px] font-bold px-1 py-0.5 uppercase">Nueva</span>
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <button type="button" onClick={() => removeNew(idx)}
@@ -397,7 +402,6 @@ function EditForm({ original }: { original: Product }) {
             )}
           </Section>
 
-          {/* ── Videos ──────────────────────────────────────────────────────── */}
           {existingVideos.length > 0 && (
             <Section title={`Videos actuales (${existingVideos.length})`}>
               <div className="grid grid-cols-3 gap-2">
@@ -406,16 +410,13 @@ function EditForm({ original }: { original: Product }) {
                   const poster  = getCloudinaryPoster(url)
                   return (
                     <div key={idx} className={`relative group aspect-square bg-black transition-opacity ${removed ? 'opacity-30' : ''}`}>
-                      {poster ? (
+                      {poster
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={poster} alt={`video-${idx}`} className="w-full h-full object-cover" />
-                      ) : (
-                        <video src={url} className="w-full h-full object-cover" muted playsInline preload="metadata" />
-                      )}
+                        ? <img src={poster} alt={`video-${idx}`} className="w-full h-full object-cover" />
+                        : <video src={url} className="w-full h-full object-cover" muted playsInline preload="metadata" />
+                      }
                       <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ opacity: 0.7 }}>
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ opacity: 0.7 }}><path d="M8 5v14l11-7z"/></svg>
                       </span>
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <button type="button" onClick={() => toggleRemoveVideo(idx)}
@@ -434,12 +435,9 @@ function EditForm({ original }: { original: Product }) {
           )}
 
           <Section title="Agregar videos">
-            <div
-              onClick={() => videoInputRef.current?.click()}
-              className="border-2 border-dashed border-gray-300 hover:border-gray-400 rounded cursor-pointer transition-colors py-6 px-4 text-center"
-            >
+            <div onClick={() => videoInputRef.current?.click()}
+              className="border-2 border-dashed border-gray-300 hover:border-gray-400 rounded cursor-pointer transition-colors py-6 px-4 text-center">
               <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">MP4 · Arrastra o haz click</p>
-              <p className="text-xs text-gray-400 mt-1">Se suben a Cloudinary automáticamente</p>
             </div>
             <input ref={videoInputRef} type="file" accept="video/mp4,video/quicktime,video/webm" multiple className="hidden"
               onChange={e => e.target.files && addVideoFiles(e.target.files)} />
@@ -481,4 +479,4 @@ function Label({ children }: { children: React.ReactNode }) {
   return <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">{children}</label>
 }
 
-const inputCls = 'w-full border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:border-blue-500 bg-white'
+const inputCls = 'w-full border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:border-black bg-white'

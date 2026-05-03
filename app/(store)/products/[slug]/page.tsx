@@ -6,12 +6,13 @@ import VideoCarousel from '@/components/VideoCarousel'
 import ProductActions from '@/components/ProductActions'
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }))
+  const slugs = await getAllSlugs()
+  return slugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const product = getProductBySlug(slug)
+  const product = await getProductBySlug(slug)
   return {
     title: product ? `${product.name} | Jerseys` : 'Producto | Jerseys',
   }
@@ -19,11 +20,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const product = getProductBySlug(slug)
+  const [product, promos] = await Promise.all([
+    getProductBySlug(slug),
+    getPromotions(),
+  ])
 
   if (!product) notFound()
-
-  const promos = getPromotions()
   const categoryLabel = CATEGORY_LABELS[product.category] ?? product.category
 
   return (

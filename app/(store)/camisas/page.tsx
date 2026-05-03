@@ -1,10 +1,10 @@
-import { getAllProducts } from '@/lib/products'
+import { getCatalogProducts } from '@/lib/products'
 import ProductGrid from '@/components/ProductGrid'
 
 export const metadata = { title: 'Camisas | Archivo de Cancha' }
 
-export default function CamisasPage() {
-  const products = getAllProducts()
+export default async function CamisasPage() {
+  const products = await getCatalogProducts()
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
