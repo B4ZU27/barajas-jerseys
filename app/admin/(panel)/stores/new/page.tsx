@@ -1,11 +1,31 @@
-export default function NewStorePage() {
-  return (
-    <div className="p-8">
-      <h1 className="text-xl font-black uppercase tracking-widest mb-1" style={{ color: 'var(--blue-deep)' }}>
-        Crear tienda
-      </h1>
-      <p className="text-xs text-gray-400">Registra una nueva tienda en el catálogo compartido.</p>
-      <div className="mt-8 text-sm text-gray-400">Próximamente…</div>
-    </div>
-  )
+import { createStaticClient } from '@/lib/supabase/server'
+import NewStoreWizard from './NewStoreWizard'
+
+async function getLeaguesAndTags() {
+  const db = createStaticClient()
+  const [{ data: leagues }, { data: products }] = await Promise.all([
+    db.from('leagues').select('id, slug, name').order('sort_order'),
+    db.from('products').select('tags, league_id'),
+  ])
+
+  const allTags = [...new Set((products ?? []).flatMap(p => p.tags ?? []))]
+  const usedLeagueIds = new Set((products ?? []).map(p => p.league_id).filter(Boolean))
+  const activeLeagues = (leagues ?? []).filter(l => usedLeagueIds.has(l.id))
+
+  const counts = {
+    all: (products ?? []).length,
+    byLeague: Object.fromEntries(
+      activeLeagues.map(l => [l.id, (products ?? []).filter(p => p.league_id === l.id).length])
+    ),
+    byTag: Object.fromEntries(
+      allTags.map(t => [t, (products ?? []).filter(p => p.tags?.includes(t)).length])
+    ),
+  }
+
+  return { leagues: activeLeagues, tags: allTags, counts }
+}
+
+export default async function NewStorePage() {
+  const { leagues, tags, counts } = await getLeaguesAndTags()
+  return <NewStoreWizard leagues={leagues} tags={tags} counts={counts} />
 }

@@ -1,0 +1,42 @@
+import { notFound } from 'next/navigation'
+import { getProductsByTag, TAG_LABELS } from '@/lib/products'
+import ProductGrid from '@/components/ProductGrid'
+
+export async function generateMetadata({ params }: { params: Promise<{ tag: string }> }) {
+  const { tag } = await params
+  const label = TAG_LABELS[tag]
+  return {
+    title: label ? `${label} | Jerseys` : 'Colección | Jerseys',
+  }
+}
+
+export default async function TagPage({
+  params,
+}: {
+  params: Promise<{ storecode: string; tag: string }>
+}) {
+  const { storecode, tag } = await params
+  const label = TAG_LABELS[tag]
+  if (!label) notFound()
+
+  const products = await getProductsByTag(tag)
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      <p className="text-xs text-gray-400 uppercase tracking-widest mb-6">Camisas / {label}</p>
+
+      <div className="flex items-baseline justify-between mb-8">
+        <h1 className="text-2xl font-black uppercase">{label}</h1>
+        <span className="text-xs text-gray-400">{products.length} productos</span>
+      </div>
+
+      {products.length === 0 ? (
+        <p className="text-gray-400 text-sm py-20 text-center">
+          No hay productos con este tag todavía.
+        </p>
+      ) : (
+        <ProductGrid products={products} storecode={storecode} />
+      )}
+    </div>
+  )
+}

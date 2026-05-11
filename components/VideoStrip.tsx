@@ -5,9 +5,10 @@ import { Product } from '@/lib/products'
 
 interface VideoStripProps {
   products: Product[]
+  storecode: string
 }
 
-export default function VideoStrip({ products }: VideoStripProps) {
+export default function VideoStrip({ products, storecode }: VideoStripProps) {
   if (!products || products.length === 0) return null
 
   return (
@@ -36,7 +37,7 @@ export default function VideoStrip({ products }: VideoStripProps) {
         {products.map((product) => (
           <Link
             key={product.slug}
-            href={`/products/${product.slug}`}
+            href={`/${storecode}/products/${product.slug}`}
             className="relative shrink-0 overflow-hidden bg-neutral-900 group"
             style={{ width: 'clamp(150px, 38vw, 240px)', aspectRatio: '3/4' }}
           >

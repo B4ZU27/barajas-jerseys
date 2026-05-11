@@ -195,14 +195,14 @@ export async function getActiveTags(): Promise<{ slug: string; label: string }[]
     .map(([slug, label]) => ({ slug, label }))
 }
 
-export async function getPromotions(): Promise<Promotions> {
-  const storeId = process.env.NEXT_PUBLIC_STORE_ID
-  if (!storeId) return { active: false, banner: '', deals: [] }
-  const supabase = await createClient()
+export async function getPromotions(storeId?: string): Promise<Promotions> {
+  const id = storeId ?? process.env.NEXT_PUBLIC_STORE_ID
+  if (!id) return { active: false, banner: '', deals: [] }
+  const supabase = createStaticClient()
   const { data, error } = await supabase
     .from('promotions')
     .select('*')
-    .eq('store_id', storeId)
+    .eq('store_id', id)
     .single()
   if (error || !data) return { active: false, banner: '', deals: [] }
   return {

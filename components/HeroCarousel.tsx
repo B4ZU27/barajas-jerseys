@@ -7,9 +7,10 @@ import { Product } from '@/lib/products'
 
 interface HeroCarouselProps {
   products: Product[]
+  storecode: string
 }
 
-export default function HeroCarousel({ products }: HeroCarouselProps) {
+export default function HeroCarousel({ products, storecode }: HeroCarouselProps) {
   const [current, setCurrent] = useState(0)
   const [paused, setPaused] = useState(false)
 
@@ -90,7 +91,7 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
                 {p.category} · {p.club}
               </p>
               <Link
-                href={`/products/${p.slug}`}
+                href={`/${storecode}/products/${p.slug}`}
                 className="inline-block border border-white text-white text-xs font-black uppercase tracking-widest px-5 py-3 hover:bg-white hover:text-black transition-colors duration-200"
               >
                 Ver camisa →

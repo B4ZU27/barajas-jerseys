@@ -1,19 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 
 export default function LoginPage() {
-  const [email, setEmail]         = useState('')
+  const [identifier, setIdentifier] = useState('')
   const [password, setPassword]   = useState('')
   const [showPassword, setShow]   = useState(false)
   const [error, setError]         = useState('')
   const [loading, setLoading]     = useState(false)
   const [attempts, setAttempts]   = useState(0)
   const [lockedUntil, setLocked]  = useState<number | null>(null)
-  const router = useRouter()
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -26,6 +23,9 @@ export default function LoginPage() {
 
     setLoading(true)
     setError('')
+
+    // If identifier has no "@" it's a storecode (store owner) — construct internal email
+    const email = identifier.includes('@') ? identifier : `${identifier}@owner.local`
 
     const supabase = createClient()
     const { error } = await supabase.auth.signInWithPassword({ email, password })
@@ -45,8 +45,15 @@ export default function LoginPage() {
       }
       setLoading(false)
     } else {
-      router.push('/admin')
-      router.refresh()
+      // Detect role and redirect to the correct panel
+      // Use window.location for a hard navigation — avoids router state race conditions
+      const res  = await fetch('/api/admin/my-role')
+      const data = await res.json()
+      if (data.role === 'store_owner') {
+        window.location.href = '/admin/my-store'
+      } else {
+        window.location.href = '/admin'
+      }
     }
   }
 
@@ -59,15 +66,17 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">
-              Email
+              Usuario o email
             </label>
             <input
-              type="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
+              type="text"
+              value={identifier}
+              onChange={e => setIdentifier(e.target.value)}
+              placeholder="storecode o admin@email.com"
               className="w-full border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:border-black"
               required
               autoFocus
+              autoComplete="username"
             />
           </div>
 

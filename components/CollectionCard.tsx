@@ -5,14 +5,15 @@ interface CollectionCardProps {
   category: string
   label: string
   index?: number
+  storecode: string
 }
 
-export default function CollectionCard({ category, label, index = 0 }: CollectionCardProps) {
+export default function CollectionCard({ category, label, index = 0, storecode }: CollectionCardProps) {
   const bg = CATEGORY_COLORS[category] ?? '#1433b8'
 
   return (
     <Link
-      href={`/collections/${category}`}
+      href={`/${storecode}/collections/${category}`}
       className="group relative flex flex-col justify-between p-4 overflow-hidden transition-opacity hover:opacity-90 active:opacity-75"
       style={{ backgroundColor: bg, color: '#ffffff', minHeight: '110px' }}
     >

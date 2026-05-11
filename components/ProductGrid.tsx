@@ -6,6 +6,7 @@ import { Product } from '@/lib/products'
 
 interface ProductGridProps {
   products: Product[]
+  storecode: string
 }
 
 const PAGE_SIZE = 20
@@ -16,7 +17,7 @@ function toLabel(str: string) {
     .replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
-export default function ProductGrid({ products }: ProductGridProps) {
+export default function ProductGrid({ products, storecode }: ProductGridProps) {
   const [page, setPage]             = useState(1)
   const [activeClub, setActiveClub] = useState<string | null>(null)
   const [activeTags, setActiveTags] = useState<string[]>([])
@@ -180,7 +181,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
           {visible.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} storecode={storecode} />
           ))}
         </div>
       )}

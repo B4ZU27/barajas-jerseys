@@ -7,13 +7,15 @@ import { usePathname } from 'next/navigation'
 interface NavbarProps {
   categories: { slug: string; label: string }[]
   tags: { slug: string; label: string }[]
+  storecode: string
 }
 
-export default function Navbar({ categories, tags }: NavbarProps) {
+export default function Navbar({ categories, tags, storecode }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [tagsOpen, setTagsOpen] = useState(false)
   const pathname = usePathname()
+  const base = `/${storecode}`
 
   function closeAll() {
     setMenuOpen(false)
@@ -26,7 +28,7 @@ export default function Navbar({ categories, tags }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
 
         {/* Logo */}
-        <Link href="/" onClick={closeAll} className="flex items-center gap-3">
+        <Link href={base} onClick={closeAll} className="flex items-center gap-3">
           <img
             src="/logo AC.png"
             alt="Archivo de Cancha"
@@ -40,10 +42,10 @@ export default function Navbar({ categories, tags }: NavbarProps) {
 
         {/* Links desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wider">
-          <Link href="/" className={pathname === '/' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
+          <Link href={base} className={pathname === base ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Home
           </Link>
-          <Link href="/camisas" className={pathname === '/camisas' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
+          <Link href={`${base}/camisas`} className={pathname === `${base}/camisas` ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Camisas
           </Link>
 
@@ -69,7 +71,7 @@ export default function Navbar({ categories, tags }: NavbarProps) {
                   {categories.map((cat) => (
                     <Link
                       key={cat.slug}
-                      href={`/collections/${cat.slug}`}
+                      href={`${base}/collections/${cat.slug}`}
                       onClick={closeAll}
                       className="block px-4 py-3 text-xs font-bold uppercase tracking-wider hover:bg-white/10 border-b border-white/10 last:border-0 transition-colors text-white"
                     >
@@ -82,13 +84,13 @@ export default function Navbar({ categories, tags }: NavbarProps) {
           </div>
 
 
-          <Link href="/tallas" className={pathname === '/tallas' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
+          <Link href={`${base}/tallas`} className={pathname === `${base}/tallas` ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Tallas
           </Link>
-          <Link href="/nosotros" className={pathname === '/nosotros' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
+          <Link href={`${base}/nosotros`} className={pathname === `${base}/nosotros` ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Nosotros
           </Link>
-          <Link href="/contacto" className={pathname === '/contacto' ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
+          <Link href={`${base}/contacto`} className={pathname === `${base}/contacto` ? 'border-b-2 border-white pb-0.5' : 'hover:opacity-70 transition-opacity'}>
             Contacto
           </Link>
         </div>
@@ -108,10 +110,10 @@ export default function Navbar({ categories, tags }: NavbarProps) {
       {/* Menú mobile */}
       {menuOpen && (
         <div className="md:hidden border-t border-white/20" style={{ backgroundColor: 'var(--blue-deep)' }}>
-          <Link href="/" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
+          <Link href={base} onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
             Home
           </Link>
-          <Link href="/camisas" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
+          <Link href={`${base}/camisas`} onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
             Camisas
           </Link>
 
@@ -120,7 +122,7 @@ export default function Navbar({ categories, tags }: NavbarProps) {
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
-                href={`/collections/${cat.slug}`}
+                href={`${base}/collections/${cat.slug}`}
                 onClick={closeAll}
                 className="block px-6 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-white/10 transition-colors text-white"
               >
@@ -129,14 +131,13 @@ export default function Navbar({ categories, tags }: NavbarProps) {
             ))}
           </div>
 
-
-          <Link href="/tallas" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
+          <Link href={`${base}/tallas`} onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
             Tallas
           </Link>
-          <Link href="/nosotros" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
+          <Link href={`${base}/nosotros`} onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider border-b border-white/10 text-white hover:bg-white/10 transition-colors">
             Nosotros
           </Link>
-          <Link href="/contacto" onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-white/10 transition-colors">
+          <Link href={`${base}/contacto`} onClick={closeAll} className="block px-4 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-white/10 transition-colors">
             Contacto
           </Link>
         </div>

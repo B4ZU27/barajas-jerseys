@@ -7,9 +7,10 @@ import { Product } from '@/lib/products'
 
 interface ProductCardProps {
   product: Product
+  storecode: string
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, storecode }: ProductCardProps) {
   const [aspectRatio, setAspectRatio] = useState<string | null>(null)
 
   function handleImageLoad(result: any) {
@@ -18,7 +19,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <Link href={`/products/${product.slug}`} className="group block">
+    <Link href={`/${storecode}/products/${product.slug}`} className="group block">
       <div
         className="relative overflow-hidden bg-white"
         style={aspectRatio ? { aspectRatio } : { aspectRatio: '0.75' }}

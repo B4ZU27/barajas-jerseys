@@ -19,12 +19,6 @@ const NAV = [
       { label: '+ Crear tienda', href: '/admin/stores/new' },
     ],
   },
-  {
-    section: 'Usuarios',
-    items: [
-      { label: 'Store Owners', href: '/admin/store-owners' },
-    ],
-  },
 ]
 
 export default function AdminSidebar() {

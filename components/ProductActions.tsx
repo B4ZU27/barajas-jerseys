@@ -3,26 +3,25 @@
 import { useState } from 'react'
 import SizeSelector from '@/components/SizeSelector'
 import { Product } from '@/lib/products'
-import contact from '@/data/contact.json'
-
-const WHATSAPP_NUMBER = contact.whatsapp
 
 interface ProductActionsProps {
   product: Product
+  whatsapp: string
+  storecode: string
 }
 
-export default function ProductActions({ product }: ProductActionsProps) {
+export default function ProductActions({ product, whatsapp, storecode }: ProductActionsProps) {
   const [selectedSize, setSelectedSize] = useState<string | null>(null)
 
   const productUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}/products/${product.slug}`
-    : `/products/${product.slug}`
+    ? `${window.location.origin}/${storecode}/products/${product.slug}`
+    : `/${storecode}/products/${product.slug}`
 
   const message = selectedSize
     ? `Hola, me interesa la camisa *${product.name}* en talla *${selectedSize}*. ¿Está disponible?\n${productUrl}`
     : `Hola, me interesa la camisa *${product.name}*. ¿Está disponible?\n${productUrl}`
 
-  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  const waUrl = `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`
 
   return (
     <div className="space-y-6">
