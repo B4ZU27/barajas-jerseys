@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export function StoreLinkCard({ slug }: { slug: string }) {
   const [copied, setCopied] = useState(false)
-  const url = typeof window !== 'undefined'
-    ? `${window.location.origin}/${slug}`
-    : `/${slug}`
+  const [origin, setOrigin] = useState('')
+  useEffect(() => { setOrigin(window.location.origin) }, [])
+  const url = origin ? `${origin}/${slug}` : `/${slug}`
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(url)
@@ -43,6 +43,7 @@ export function StoreLinkCard({ slug }: { slug: string }) {
 interface Store {
   slug: string
   whatsapp: string | null
+  email: string | null
   show_prices: boolean
 }
 
@@ -59,6 +60,7 @@ export function StoreSettingsForm({ store }: { store: Store }) {
   const router = useRouter()
   const [slug,       setSlug]       = useState(store.slug)
   const [whatsapp,   setWhatsapp]   = useState(store.whatsapp ?? '')
+  const [email, setEmail] = useState(store.email ?? '')
   const [showPrices, setShowPrices] = useState(store.show_prices)
   const [saving,     setSaving]     = useState(false)
   const [message,    setMessage]    = useState<{ ok: boolean; text: string } | null>(null)
@@ -69,7 +71,7 @@ export function StoreSettingsForm({ store }: { store: Store }) {
     const res = await fetch('/api/admin/my-store/settings', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug, whatsapp, show_prices: showPrices }),
+      body: JSON.stringify({ slug, whatsapp, email, show_prices: showPrices }),
     })
     const json = await res.json()
     setSaving(false)
@@ -95,6 +97,20 @@ export function StoreSettingsForm({ store }: { store: Store }) {
           value={whatsapp}
           onChange={e => setWhatsapp(e.target.value)}
           placeholder="521XXXXXXXXXX"
+          className="w-full border border-gray-200 px-3 py-2 text-xs focus:outline-none focus:border-black"
+        />
+      </div>
+
+      {/* Email */}
+      <div className="mb-4">
+        <label className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">
+          Email de contacto
+        </label>
+        <input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          placeholder="contacto@tutienda.com"
           className="w-full border border-gray-200 px-3 py-2 text-xs focus:outline-none focus:border-black"
         />
       </div>

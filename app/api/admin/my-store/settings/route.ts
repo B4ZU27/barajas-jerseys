@@ -5,7 +5,7 @@ export async function PATCH(request: NextRequest) {
   const auth = await requireStoreOwner()
   if (!auth.ok) return auth.response
 
-  const { slug, whatsapp, show_prices } = await request.json()
+  const { slug, whatsapp, email, show_prices } = await request.json()
 
   const db = serviceClient()
 
@@ -25,6 +25,7 @@ export async function PATCH(request: NextRequest) {
   const updates: Record<string, unknown> = {}
   if (slug        !== undefined) updates.slug        = slug
   if (whatsapp    !== undefined) updates.whatsapp    = whatsapp
+  if (email !== undefined) updates.email = email
   if (show_prices !== undefined) updates.show_prices = show_prices
 
   const { error } = await db.from('stores').update(updates).eq('id', auth.storeId)

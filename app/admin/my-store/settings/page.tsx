@@ -20,7 +20,7 @@ export default async function MySettingsPage() {
 
   const { data: store } = await db
     .from('stores')
-    .select('slug, whatsapp, show_prices')
+    .select('slug, whatsapp, email, show_prices')
     .eq('id', ownership.store_id)
     .single()
 
