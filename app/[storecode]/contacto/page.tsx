@@ -59,7 +59,7 @@ export default async function ContactoPage({
           </a>
         )}
 
-        {!store.whatsapp && !store.instagram && !store.email && (
+        {!store.whatsapp && !store.email && (
           <p className="text-sm text-gray-400">No hay información de contacto disponible.</p>
         )}
       </div>
