@@ -10,13 +10,14 @@ export async function uploadFile(file: File): Promise<string> {
     body: JSON.stringify({}),
   })
   if (!sigRes.ok) throw new Error('Error obteniendo firma de Cloudinary')
-  const { signature, timestamp, folder, apiKey, cloudName } = await sigRes.json()
+  const { signature, timestamp, folder, allowedFormats, apiKey, cloudName } = await sigRes.json()
 
   // 2. Subir directo a Cloudinary (browser → Cloudinary)
   const fd = new FormData()
   fd.append('file', file)
   fd.append('timestamp', String(timestamp))
   fd.append('folder', folder)
+  fd.append('allowed_formats', allowedFormats)
   fd.append('signature', signature)
   fd.append('api_key', apiKey)
 

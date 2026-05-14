@@ -28,8 +28,9 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({
     signature,
     timestamp,
-    folder:    paramsToSign.folder,
-    apiKey:    process.env.CLOUDINARY_API_KEY,
-    cloudName: process.env.CLOUDINARY_CLOUD_NAME ?? 'dsdg9rgi3',
+    folder:         paramsToSign.folder,
+    allowedFormats: paramsToSign.allowed_formats,
+    apiKey:         process.env.CLOUDINARY_API_KEY,
+    cloudName:      process.env.CLOUDINARY_CLOUD_NAME ?? 'dsdg9rgi3',
   })
 }
