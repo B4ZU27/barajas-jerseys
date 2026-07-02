@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const product = await getProductBySlug(slug)
   return {
-    title: product ? `${product.name} | Jerseys` : 'Producto | Jerseys',
+    title: product ? `${product.name} | Archivo de Cancha` : 'Producto | Archivo de Cancha',
   }
 }
 
@@ -32,67 +32,140 @@ export default async function ProductPage({
   const categoryLabel = CATEGORY_LABELS[product.category] ?? product.category
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div>
+
       {/* Breadcrumb */}
-      <p className="text-xs text-gray-400 uppercase tracking-widest mb-4">
-        <Link href={`/${storecode}/collections/${product.category}`} className="hover:text-black transition-colors">
-          {categoryLabel}
-        </Link>
-        {' / '}
-        {product.name}
-      </p>
+      <div className="px-4 py-3 border-retro-b">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-black/40">
+          <Link href={`/${storecode}/camisas`} className="hover:text-black transition-colors">
+            Meus Jerseys
+          </Link>
+          <span className="mx-2">—</span>
+          <Link href={`/${storecode}/collections/${product.category}`} className="hover:text-black transition-colors">
+            {categoryLabel}
+          </Link>
+          <span className="mx-2">—</span>
+          <span className="text-black">{product.name}</span>
+        </p>
+      </div>
 
       {/* Layout producto */}
-      <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
-        {/* Columna izquierda — imágenes y videos */}
-        <div className="min-w-0">
+      <div className="grid md:grid-cols-2 md:border-retro-b">
+
+        {/* Columna izquierda — imágenes */}
+        <div className="min-w-0 md:border-r md:border-black">
           <ImageCarousel images={product.images} alt={product.name} />
           {product.videos && product.videos.length > 0 && (
-            <VideoCarousel videos={product.videos} alt={product.name} />
+            <div className="border-retro-top">
+              <VideoCarousel videos={product.videos} alt={product.name} />
+            </div>
           )}
         </div>
 
         {/* Columna derecha — info */}
-        <div className="flex flex-col gap-6">
+        <div className="px-4 py-6 flex flex-col gap-5">
+
+          {/* Nombre y badges */}
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <p className="text-xs uppercase tracking-widest text-gray-400">{product.club}</p>
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-black/40">
+                {product.club} · {categoryLabel}
+              </p>
               {product.tags?.includes('retro') && (
-                <span className="bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+                <span className="border-retro-thin font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
                   RETRO
                 </span>
               )}
+              {product.tags?.includes('mundialista') && (
+                <span className="border-retro-thin font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+                  MUNDIAL
+                </span>
+              )}
+              {/* Año si tiene */}
+              {product.year && (
+                <span className="font-mono text-[9px] uppercase tracking-widest text-black/40">
+                  {product.year}
+                </span>
+              )}
             </div>
-            <h1 className="text-2xl font-black uppercase leading-tight">{product.name}</h1>
+            <h1
+              className="[font-family:var(--font-bebas)] uppercase leading-none"
+              style={{ fontSize: 'clamp(28px, 6vw, 52px)' }}
+            >
+              {product.name}
+            </h1>
+            {product.price > 0 && (
+              <p className="font-mono text-xl font-bold mt-2">
+                ${product.price.toLocaleString('es-MX')}
+              </p>
+            )}
           </div>
 
-          {product.description && (
-            <p className="text-sm text-gray-600 leading-relaxed">{product.description}</p>
+          {/* Historia — si tiene story (El Archivo) */}
+          {product.story && (
+            <div className="border-retro p-4">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-black/40 mb-2">
+                Historia
+              </p>
+              <p className="text-sm text-black/70 leading-relaxed">
+                {product.story}
+              </p>
+            </div>
           )}
 
+          {/* Descripción */}
+          {product.description && (
+            <p className="text-sm text-black/60 leading-relaxed border-retro-top pt-4">
+              {product.description}
+            </p>
+          )}
+
+          {/* Link a guía de tallas */}
           <Link
             href={`/${storecode}/tallas`}
-            className="text-xs uppercase tracking-widest underline underline-offset-4 text-gray-400 hover:text-black transition-colors"
+            className="font-mono text-[10px] uppercase tracking-widest text-black/40 hover:text-black transition-colors"
           >
             Ver guía de tallas →
           </Link>
 
-          <ProductActions product={product} whatsapp={store.whatsapp ?? ''} storecode={storecode} />
+          {/* Selector de tallas + botón WhatsApp */}
+          <ProductActions
+            product={product}
+            whatsapp={store.whatsapp ?? ''}
+            storecode={storecode}
+          />
 
-          {/* Deals de promoción */}
-          {promos.active && (
-            <div className="border border-gray-200 p-4">
-              <p className="text-xs font-bold uppercase tracking-widest mb-3">Promociones</p>
-              <ul className="space-y-2">
+          {/* Promociones */}
+          {promos.active && promos.deals.length > 0 && (
+            <div className="border-retro p-4">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-black/40 mb-3">
+                Promociones activas
+              </p>
+              <div className="space-y-2">
                 {promos.deals.map((deal) => (
-                  <li key={deal.quantity} className="text-sm flex justify-between">
-                    <span className="text-gray-600">{deal.quantity} camisas</span>
-                    <span className="font-bold">${deal.total.toLocaleString('es-MX')}</span>
-                  </li>
+                  <div key={deal.quantity} className="flex justify-between items-baseline">
+                    <span className="font-mono text-xs text-black/60">
+                      {deal.quantity} camisas
+                    </span>
+                    <span className="font-mono text-sm font-bold">
+                      ${deal.total.toLocaleString('es-MX')}
+                    </span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           )}
+
+          {/* Link al archivo si tiene año */}
+          {product.year && product.club && (
+            <Link
+              href={`/${storecode}/archivo/${product.club}`}
+              className="font-mono text-[10px] uppercase tracking-widest text-black/40 hover:text-black transition-colors border-retro-top pt-4"
+            >
+              Ver historia de {product.club.replace(/-/g, ' ')} en El Archivo →
+            </Link>
+          )}
+
         </div>
       </div>
     </div>

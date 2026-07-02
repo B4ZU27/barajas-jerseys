@@ -1,9 +1,19 @@
 'use client'
 
+/*
+  CLIENT COMPONENT — solo por la detección del aspect-ratio de imagen.
+  Si en el futuro se elimina esa lógica puede volverse Server Component.
+
+  Actualizado en Fase 5:
+  - Caption estilo museo (mono gris + Bebas para nombre)
+  - Badges con borde cuadrado retro
+  - Sin grises genéricos — usa black/opacity
+*/
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Product } from '@/lib/products'
+import type { Product } from '@/lib/products'
 
 interface ProductCardProps {
   product: Product
@@ -13,13 +23,10 @@ interface ProductCardProps {
 export default function ProductCard({ product, storecode }: ProductCardProps) {
   const [aspectRatio, setAspectRatio] = useState<string | null>(null)
 
-  function handleImageLoad(result: any) {
-    const ratio = (result.naturalWidth / result.naturalHeight).toFixed(4)
-    setAspectRatio(ratio)
-  }
-
   return (
     <Link href={`/${storecode}/products/${product.slug}`} className="group block">
+
+      {/* Imagen */}
       <div
         className="relative overflow-hidden bg-white"
         style={aspectRatio ? { aspectRatio } : { aspectRatio: '0.75' }}
@@ -29,42 +36,54 @@ export default function ProductCard({ product, storecode }: ProductCardProps) {
             src={product.images[0]}
             alt={product.name}
             fill
-            className="object-contain transition-transform duration-300 group-hover:scale-105"
+            className="object-contain transition-transform duration-300 group-hover:scale-[1.04]"
             sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 20vw"
-            onLoad={handleImageLoad}
+            onLoad={e => {
+              const img = e.currentTarget as HTMLImageElement
+              if (img.naturalWidth && img.naturalHeight) {
+                setAspectRatio((img.naturalWidth / img.naturalHeight).toFixed(4))
+              }
+            }}
           />
         )}
 
-        {/* Badge retro — posicionado sobre la imagen con margen fijo desde el borde */}
-        {product.tags?.includes('retro') && (
-          <span
-            className="z-10 bg-purple-700 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5"
-            style={{ position: 'absolute', top: 8, left: 8 }}
-          >
-            RETRO
-          </span>
-        )}
-        {product.tags?.includes('mundialista') && (
-          <span
-            className="z-10 bg-green-500 text-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5"
-            style={{ position: 'absolute', top: 8, left: 8 }}
-          >
-            MUNDIAL
-          </span>
-        )}
+        {/* Badges — cuadrados, borde fino */}
+        <div className="absolute top-2 left-2 flex flex-col gap-1">
+          {product.tags?.includes('retro') && (
+            <span className="border-retro-thin bg-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+              RETRO
+            </span>
+          )}
+          {product.tags?.includes('mundialista') && (
+            <span className="border-retro-thin bg-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
+              MUNDIAL
+            </span>
+          )}
+        </div>
 
+        {/* Agotado */}
         {!product.available && (
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <span className="text-white text-sm font-bold tracking-widest uppercase">
+          <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+            <span className="border border-white text-white font-mono text-[10px] tracking-widest uppercase px-2 py-0.5">
               Agotado
             </span>
           </div>
         )}
       </div>
 
-      <div className="mt-2 px-1">
-        <p className="text-xs text-gray-500 uppercase tracking-wider">{product.club}</p>
-        <h3 className="font-bold text-sm leading-tight mt-0.5">{product.name}</h3>
+      {/* Caption estilo museo */}
+      <div className="pt-2 pb-3 px-1">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-black/40">
+          {product.club}
+        </p>
+        <h3 className="[font-family:var(--font-bebas)] text-lg uppercase leading-tight mt-0.5">
+          {product.name}
+        </h3>
+        {product.price > 0 && (
+          <p className="font-mono text-xs font-bold mt-0.5">
+            ${product.price.toLocaleString('es-MX')}
+          </p>
+        )}
       </div>
     </Link>
   )

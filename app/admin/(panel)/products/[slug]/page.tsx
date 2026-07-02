@@ -10,7 +10,7 @@ export default async function EditProductPage({ params }: { params: Promise<{ sl
     supabase
       .from('products')
       .select(`
-        id, slug, name, price_default, sizes, description, images, tags, videos,
+        id, slug, name, price_default, sizes, description, images, tags, videos, metadata,
         league:leagues!league_id (id, slug, name),
         club:clubs!club_id (id, slug, name)
       `)
@@ -44,6 +44,7 @@ export default async function EditProductPage({ params }: { params: Promise<{ sl
     images:      row.images ?? [],
     tags:        row.tags ?? [],
     videos:      row.videos ?? [],
+    metadata:    row.metadata ?? {},
   }
 
   const leagues = (leaguesRes.data ?? []).map((l: any) => ({

@@ -1,4 +1,5 @@
-import { createClient, createStaticClient } from '@/lib/supabase/server'
+import { createStaticClient } from '@/lib/supabase/server'
+import { CATEGORY_LABELS, TAG_LABELS } from './constants'
 
 // ─── Tipos ────────────────────────────────────────────────────────────────────
 
@@ -15,6 +16,17 @@ export interface Product {
   images: string[]
   tags: string[]
   videos?: string[]
+  year?: number      // extraído de metadata.year
+  story?: string     // extraído de metadata.story
+  metadata?: Record<string, unknown>   // campo libre JSONB para cualquier dato extra
+}
+
+export interface ArchiveClub {
+  slug: string
+  count: number
+  minYear: number
+  maxYear: number
+  coverImage?: string
 }
 
 export interface Deal {
@@ -28,32 +40,15 @@ export interface Promotions {
   deals: Deal[]
 }
 
-// ─── Etiquetas ────────────────────────────────────────────────────────────────
-
-export const CATEGORY_LABELS: Record<string, string> = {
-  'selecciones':    'Selecciones',
-  'premier-league': 'Premier League',
-  'la-liga':        'La Liga',
-  'serie-a':        'Serie A',
-  'bundesliga':     'Bundesliga',
-  'ligue-1':        'Ligue 1',
-  'mls':            'MLS',
-  'liga-mx':        'Liga MX',
-  'otros':          'Otros',
-}
-
-export const TAG_LABELS: Record<string, string> = {
-  'retro':       'Retro',
-  'mundialista': 'Mundialistas',
-  'destacado':   'Destacados',
-  'video-only':  'Solo video',
-}
+// ─── Etiquetas (re-exportadas desde lib/constants para uso en Server Components) ─
+export { CATEGORY_LABELS, TAG_LABELS } from './constants'
 
 // ─── Helpers internos ─────────────────────────────────────────────────────────
 
 // Convierte una fila de Supabase al formato Product que usa el frontend
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function mapRow(row: any): Product {
+  const meta = row.metadata ?? {}
   return {
     id:          row.id,
     slug:        row.slug,
@@ -67,11 +62,14 @@ function mapRow(row: any): Product {
     images:      row.images        ?? [],
     tags:        row.tags          ?? [],
     videos:      row.videos?.length > 0 ? row.videos : undefined,
+    year:        meta.year         ?? undefined,
+    story:       meta.story        ?? undefined,
+    metadata:    meta,
   }
 }
 
 const SELECT = `
-  id, slug, name, price_default, sizes, description, images, tags, videos,
+  id, slug, name, price_default, sizes, description, images, tags, videos, metadata,
   league:leagues!league_id (slug),
   club:clubs!club_id (slug)
 `
@@ -80,12 +78,17 @@ function forCatalog(list: Product[]): Product[] {
   return list.filter(p => !p.tags?.includes('video-only'))
 }
 
+function logError(fn: string, error: unknown) {
+  const e = error as { message?: string; code?: string; details?: string }
+  console.error(`[products.ts / ${fn}]`, e?.message ?? e?.code ?? JSON.stringify(error))
+}
+
 // ─── Funciones públicas ───────────────────────────────────────────────────────
 
 export async function getAllProducts(): Promise<Product[]> {
-  const supabase = await createClient()
+  const supabase = createStaticClient()
   const { data, error } = await supabase.from('products').select(SELECT)
-  if (error) { console.error(error); return [] }
+  if (error) { logError('getAllProducts', error); return [] }
   return (data ?? []).map(mapRow)
 }
 
@@ -95,7 +98,7 @@ export async function getCatalogProducts(): Promise<Product[]> {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | undefined> {
-  const supabase = await createClient()
+  const supabase = createStaticClient()
   const { data, error } = await supabase
     .from('products')
     .select(SELECT)
@@ -106,7 +109,7 @@ export async function getProductBySlug(slug: string): Promise<Product | undefine
 }
 
 export async function getProductsByCategory(category: string): Promise<Product[]> {
-  const supabase = await createClient()
+  const supabase = createStaticClient()
   const { data: league } = await supabase
     .from('leagues')
     .select('id')
@@ -117,22 +120,22 @@ export async function getProductsByCategory(category: string): Promise<Product[]
     .from('products')
     .select(SELECT)
     .eq('league_id', league.id)
-  if (error) { console.error(error); return [] }
+  if (error) { logError('query', error); return [] }
   return forCatalog((data ?? []).map(mapRow))
 }
 
 export async function getProductsByTag(tag: string): Promise<Product[]> {
-  const supabase = await createClient()
+  const supabase = createStaticClient()
   const { data, error } = await supabase
     .from('products')
     .select(SELECT)
     .contains('tags', [tag])
-  if (error) { console.error(error); return [] }
+  if (error) { logError('query', error); return [] }
   return forCatalog((data ?? []).map(mapRow))
 }
 
 export async function getProductsByClubAndTag(club: string, tag: string): Promise<Product[]> {
-  const supabase = await createClient()
+  const supabase = createStaticClient()
   const { data: clubRow } = await supabase
     .from('clubs')
     .select('id')
@@ -144,24 +147,24 @@ export async function getProductsByClubAndTag(club: string, tag: string): Promis
     .select(SELECT)
     .eq('club_id', clubRow.id)
     .contains('tags', [tag])
-  if (error) { console.error(error); return [] }
+  if (error) { logError('query', error); return [] }
   return forCatalog((data ?? []).map(mapRow))
 }
 
 export async function getAllSlugs(): Promise<string[]> {
   const supabase = createStaticClient()
   const { data, error } = await supabase.from('products').select('slug')
-  if (error) { console.error(error); return [] }
+  if (error) { logError('query', error); return [] }
   return (data ?? []).map(r => r.slug)
 }
 
 export async function getProductsWithVideos(): Promise<Product[]> {
-  const supabase = await createClient()
+  const supabase = createStaticClient()
   const { data, error } = await supabase
     .from('products')
     .select(SELECT)
     .not('videos', 'eq', '{}')
-  if (error) { console.error(error); return [] }
+  if (error) { logError('getProductsWithVideos', error); return [] }
   return (data ?? []).map(mapRow).filter(p => p.videos && p.videos.length > 0)
 }
 
@@ -179,7 +182,7 @@ export async function getActiveCategories(): Promise<{ slug: string; label: stri
     .from('leagues')
     .select('id, slug, name')
     .order('sort_order')
-  if (error) { console.error(error); return [] }
+  if (error) { logError('query', error); return [] }
 
   return (data ?? [])
     .filter(l => usedIds.has(l.id))
@@ -193,6 +196,71 @@ export async function getActiveTags(): Promise<{ slug: string; label: string }[]
   return Object.entries(TAG_LABELS)
     .filter(([slug]) => present.has(slug))
     .map(([slug, label]) => ({ slug, label }))
+}
+
+// ─── El Archivo ───────────────────────────────────────────────────────────────
+
+/*
+  Devuelve todos los clubes que tienen al menos 1 producto con año registrado.
+  Agrupa en JavaScript porque Supabase SDK no hace GROUP BY nativo.
+  Ordenado por cantidad de camisas (los más ricos primero).
+*/
+export async function getArchiveClubs(): Promise<ArchiveClub[]> {
+  const supabase = createStaticClient()
+  const { data } = await supabase
+    .from('products')
+    .select('metadata, images, club:clubs!club_id(slug)')
+    .not('metadata->>year', 'is', null)
+
+  if (!data || data.length === 0) return []
+
+  const map = new Map<string, { count: number; years: number[]; cover?: string }>()
+  for (const row of data) {
+    const slug = (row.club as any)?.slug ?? 'otros'
+    const year = Number((row.metadata as any)?.year)
+    if (!year) continue
+    if (!map.has(slug)) map.set(slug, { count: 0, years: [] })
+    const entry = map.get(slug)!
+    entry.count++
+    entry.years.push(year)
+    if (!entry.cover) entry.cover = (row.images as string[])?.[0]
+  }
+
+  return Array.from(map.entries())
+    .map(([slug, { count, years, cover }]) => ({
+      slug,
+      count,
+      minYear: Math.min(...years),
+      maxYear: Math.max(...years),
+      coverImage: cover,
+    }))
+    .sort((a, b) => b.count - a.count)
+}
+
+/*
+  Devuelve los productos de un club que tienen año registrado,
+  ordenados de más antiguo a más reciente.
+  Para la vista de timeline de El Archivo.
+*/
+export async function getProductsByClubForArchive(clubSlug: string): Promise<Product[]> {
+  const supabase = createStaticClient()
+
+  const { data: clubRow } = await supabase
+    .from('clubs')
+    .select('id')
+    .eq('slug', clubSlug)
+    .maybeSingle()
+
+  if (!clubRow) return []
+
+  const { data, error } = await supabase
+    .from('products')
+    .select(SELECT)
+    .eq('club_id', clubRow.id)
+    .not('metadata->>year', 'is', null)
+
+  if (error) { logError('getProductsByClubForArchive', error); return [] }
+  return (data ?? []).map(mapRow).sort((a, b) => (a.year ?? 0) - (b.year ?? 0))
 }
 
 export async function getPromotions(storeId?: string): Promise<Promotions> {

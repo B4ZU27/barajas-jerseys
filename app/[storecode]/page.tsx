@@ -1,63 +1,63 @@
-import Link from 'next/link'
-import CollectionCard from '@/components/CollectionCard'
-import ProductCard from '@/components/ProductCard'
-import HeroCarousel from '@/components/HeroCarousel'
-import VideoStrip from '@/components/VideoStrip'
-import { getActiveCategories, getProductsByTag, getCatalogProducts, getProductsWithVideos } from '@/lib/products'
+/*
+  SERVER COMPONENT — page.tsx siempre es Server por default en Next.js 14+.
 
-export default async function HomePage({ params }: { params: Promise<{ storecode: string }> }) {
+  Esta función recibe 'params' con los valores de la URL dinámica.
+  [storecode] en el nombre de carpeta → params.storecode en el código.
+
+  Como es async, puede esperar llamadas a la base de datos directamente.
+  Next.js corre esto en el servidor y manda el HTML listo al browser.
+*/
+
+import MuseumHeader from '@/components/MuseumHeader'
+import VideoStrip from '@/components/VideoStrip'
+import JerseyFeed from '@/components/JerseyFeed'
+import { getCatalogProducts, getActiveCategories, getProductsWithVideos } from '@/lib/products'
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ storecode: string }>
+}) {
   const { storecode } = await params
 
-  const [collections, retros, withVideos, destacados, catalog] = await Promise.all([
-    getActiveCategories(),
-    getProductsByTag('retro'),
-    getProductsWithVideos(),
-    getProductsByTag('destacado'),
-    getCatalogProducts(),
+  /*
+    Promise.all — lanza las tres consultas A LA VEZ en paralelo.
+    Si las hicieras en secuencia (await una, await otra, await otra)
+    tardaría 3x más. Así tardan lo que tarde la más lenta.
+  */
+  const [products, leagues, withVideos] = await Promise.all([
+    getCatalogProducts(),      // todos los productos (sin video-only)
+    getActiveCategories(),     // ligas con productos activos
+    getProductsWithVideos(),   // para la sección "en movimiento"
   ])
-
-  const featured = destacados.length >= 4 ? destacados.slice(0, 8) : catalog.slice(0, 8)
-  const retrosSliced = retros.slice(0, 10)
 
   return (
     <div>
-      <HeroCarousel products={retrosSliced} storecode={storecode} />
-      <VideoStrip products={withVideos} storecode={storecode} />
+      {/*
+        MuseumHeader, ArchiveBlock y VideoStrip son Server Components:
+        se renderizan en el servidor y llegan al browser como HTML puro.
 
-      {/* Colecciones */}
-      <section className="max-w-6xl mx-auto px-4 py-12 md:py-16">
-        <div className="flex items-baseline gap-4 mb-1">
-          <h2 className="text-[42px] md:text-[56px] uppercase leading-none [font-family:var(--font-bebas)]">Colecciones</h2>
-          <span className="text-xs uppercase tracking-widest text-gray-400 pb-1">— elige tu liga</span>
-        </div>
-        <div className="border-t-2 border-black mb-3" />
-        <div className="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-0">
-          {collections.map((col, i) => (
-            <CollectionCard
-              key={col.slug}
-              category={col.slug}
-              label={col.label}
-              index={i}
-              storecode={storecode}
-            />
-          ))}
-        </div>
-      </section>
+        JerseyFeed es Client Component: el HTML inicial viene del servidor
+        (Next.js hace SSR del cliente también), pero se "hidrata" en el browser
+        para activar el estado, clicks y shuffle.
+      */}
 
-      {/* Destacados */}
-      <section className="max-w-6xl mx-auto px-4 pb-16">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="text-xs uppercase tracking-widest text-gray-500">Destacados</h2>
-          <Link href={`/${storecode}/camisas`} className="text-xs uppercase tracking-widest underline underline-offset-4">
-            Ver todo
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8">
-          {featured.map((product) => (
-            <ProductCard key={product.id} product={product} storecode={storecode} />
-          ))}
-        </div>
-      </section>
+      <MuseumHeader totalProducts={products.length} storecode={storecode} />
+
+      {withVideos.length > 0 && (
+        <VideoStrip products={withVideos} storecode={storecode} />
+      )}
+
+      {/*
+        JerseyFeed recibe todos los productos como prop.
+        Dentro del componente, el cliente maneja filtros y shuffle
+        sin volver a llamar a la base de datos.
+      */}
+      <JerseyFeed
+        products={products}
+        leagues={leagues}
+        storecode={storecode}
+      />
     </div>
   )
 }

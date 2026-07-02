@@ -75,6 +75,8 @@ export default function AdminPage() {
   const [category, setCategory]       = useState('selecciones')
   const [club, setClub]               = useState('')
   const [description, setDescription] = useState('')
+  const [year, setYear]               = useState('')
+  const [story, setStory]             = useState('')
   const [sizes, setSizes]             = useState<string[]>(['S', 'M', 'L', 'XL', '2XL'])
   const [tags, setTags]               = useState<string[]>([])
   const [available, setAvailable]     = useState(true)
@@ -189,7 +191,14 @@ export default function AdminPage() {
       const res  = await fetch('/api/admin/add-product', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, slug, price, category, club, description, sizes, tags, images: imageUrls, videos: videoUrls }),
+        body: JSON.stringify({
+        name, slug, price, category, club, description, sizes, tags,
+        images: imageUrls, videos: videoUrls,
+        metadata: {
+          ...(year  ? { year: Number(year) }  : {}),
+          ...(story ? { story: story.trim() } : {}),
+        },
+      }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Error desconocido')
@@ -203,7 +212,8 @@ export default function AdminPage() {
 
   const resetForm = () => {
     setName(''); setSlug(''); setSlugEdited(false); setPrice('')
-    setDescription(''); setSizes(['S', 'M', 'L', 'XL', '2XL']); setTags([])
+    setDescription(''); setYear(''); setStory('')
+    setSizes(['S', 'M', 'L', 'XL', '2XL']); setTags([])
     setAvailable(true); setImages([]); setVideos([])
   }
 
@@ -335,6 +345,37 @@ export default function AdminPage() {
                 </datalist>
                 <p className="text-xs text-gray-400 mt-1">Escribe o elige uno existente</p>
               </div>
+            </div>
+
+            {/* Año y Historia — para El Archivo */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <Label>Año de temporada <span className="text-gray-400 font-normal normal-case tracking-normal">(El Archivo)</span></Label>
+                <input
+                  type="number"
+                  value={year}
+                  onChange={e => setYear(e.target.value)}
+                  placeholder="1986"
+                  min={1900}
+                  max={2030}
+                  className={inputCls}
+                />
+                <p className="text-xs text-gray-400 mt-1">Ej: 1994, 2006, 2024</p>
+              </div>
+              <div className="sm:col-span-1" />
+            </div>
+
+            <div>
+              <Label>Historia <span className="text-gray-400 font-normal normal-case tracking-normal">(opcional · aparece en El Archivo)</span></Label>
+              <textarea
+                value={story}
+                onChange={e => setStory(e.target.value)}
+                placeholder="La camisa del Mundial de México 86. Maradona marcó el Gol del Siglo con esta versión..."
+                rows={3}
+                maxLength={500}
+                className={`${inputCls} resize-none`}
+              />
+              <p className="text-xs text-gray-400 mt-1">{story.length}/500 caracteres</p>
             </div>
 
             <div>

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Product } from '@/lib/products'
+import type { Product } from '@/lib/products'
 
 interface HeroCarouselProps {
   products: Product[]

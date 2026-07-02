@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from 'react'
 import ProductCard from '@/components/ProductCard'
-import { Product } from '@/lib/products'
+import type { Product } from '@/lib/products'
+import { CATEGORY_LABELS } from '@/lib/constants'
 
 interface ProductGridProps {
   products: Product[]
@@ -18,33 +19,44 @@ function toLabel(str: string) {
 }
 
 export default function ProductGrid({ products, storecode }: ProductGridProps) {
-  const [page, setPage]             = useState(1)
-  const [activeClub, setActiveClub] = useState<string | null>(null)
-  const [activeTags, setActiveTags] = useState<string[]>([])
-  const [clubDropdown, setClubDropdown] = useState(false)
+  const [page, setPage]                   = useState(1)
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [activeClub, setActiveClub]         = useState<string | null>(null)
+  const [activeTags, setActiveTags]         = useState<string[]>([])
+  const [clubDropdown, setClubDropdown]     = useState(false)
 
   // Opciones disponibles derivadas de los productos
-  const clubs = useMemo(() => {
-    const set = new Set(products.map((p) => p.club).filter(Boolean))
+  const categories = useMemo(() => {
+    const set = new Set(products.map((p) => p.category).filter(Boolean))
     return Array.from(set).sort()
   }, [products])
+
+  const clubs = useMemo(() => {
+    const base = activeCategory
+      ? products.filter(p => p.category === activeCategory)
+      : products
+    const set = new Set(base.map((p) => p.club).filter(Boolean))
+    return Array.from(set).sort()
+  }, [products, activeCategory])
 
   const tags = useMemo(() => {
     const set = new Set(products.flatMap((p) => p.tags ?? []).filter(Boolean))
     return Array.from(set).sort()
   }, [products])
 
-  const hasFilters = activeClub !== null || activeTags.length > 0
+  const hasFilters = activeCategory !== null || activeClub !== null || activeTags.length > 0
+  const showCategories = categories.length > 1
   const showFilters = clubs.length > 1 || tags.length > 0
 
   // Filtrado
   const filtered = useMemo(() => {
     return products.filter((p) => {
+      if (activeCategory && p.category !== activeCategory) return false
       if (activeClub && p.club !== activeClub) return false
       if (activeTags.length > 0 && !activeTags.every((t) => p.tags?.includes(t))) return false
       return true
     })
-  }, [products, activeClub, activeTags])
+  }, [products, activeCategory, activeClub, activeTags])
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const start   = (page - 1) * PAGE_SIZE
@@ -53,6 +65,12 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
   function goTo(n: number) {
     setPage(n)
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  function toggleCategory(cat: string) {
+    setActiveCategory((prev) => (prev === cat ? null : cat))
+    setActiveClub(null)  // reset club al cambiar de liga
+    setPage(1)
   }
 
   function toggleClub(club: string) {
@@ -68,6 +86,7 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
   }
 
   function clearAll() {
+    setActiveCategory(null)
     setActiveClub(null)
     setActiveTags([])
     setPage(1)
@@ -77,24 +96,38 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
   return (
     <div>
       {/* ── Filtros ── */}
-      {showFilters && (
+      {(showCategories || showFilters) && (
         <div className="mb-8 space-y-3">
+
+          {/* Ligas / Categorías */}
+          {showCategories && (
+            <div className="flex flex-wrap gap-2 items-center">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-black/40 w-10 shrink-0">
+                Liga
+              </span>
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => toggleCategory(cat)}
+                  className={`pill-retro ${activeCategory === cat ? 'active' : ''}`}
+                >
+                  {CATEGORY_LABELS[cat] ?? toLabel(cat)}
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Tags */}
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-[10px] uppercase tracking-widest text-gray-400 w-10 shrink-0">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-black/40 w-10 shrink-0">
                 Tag
               </span>
               {tags.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => toggleTag(tag)}
-                  className={`px-3 py-1 text-xs font-bold uppercase tracking-wide border transition-colors ${
-                    activeTags.includes(tag)
-                      ? 'bg-black text-white border-black'
-                      : 'border-gray-300 text-gray-600 hover:border-black hover:text-black'
-                  }`}
+                  className={`pill-retro ${activeTags.includes(tag) ? 'active' : ''}`}
                 >
                   {toLabel(tag)}
                 </button>
@@ -105,17 +138,13 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
           {/* Clubs */}
           {clubs.length > 1 && (
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-[10px] uppercase tracking-widest text-gray-400 w-10 shrink-0">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-black/40 w-10 shrink-0">
                 Club
               </span>
               <div className="relative">
                 <button
                   onClick={() => setClubDropdown((v) => !v)}
-                  className={`flex items-center gap-2 px-3 py-1 text-xs font-bold uppercase tracking-wide border transition-colors ${
-                    activeClub
-                      ? 'bg-black text-white border-black'
-                      : 'border-gray-300 text-gray-600 hover:border-black hover:text-black'
-                  }`}
+                  className={`pill-retro flex items-center gap-2 ${activeClub ? 'active' : ''}`}
                 >
                   {activeClub ? toLabel(activeClub) : 'Todos los clubes'}
                   <svg
@@ -129,11 +158,11 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
                 {clubDropdown && (
                   <>
                     <div className="fixed inset-0 z-10" onClick={() => setClubDropdown(false)} />
-                    <div className="absolute top-full left-0 mt-1 z-20 bg-white border border-gray-200 shadow-sm min-w-[180px] max-h-64 overflow-y-auto">
+                    <div className="absolute top-full left-0 mt-0 z-20 bg-white border-retro min-w-[180px] max-h-64 overflow-y-auto">
                       <button
                         onClick={() => { toggleClub(activeClub ?? ''); setClubDropdown(false) }}
-                        className={`w-full text-left px-4 py-2.5 text-xs font-bold uppercase tracking-wide border-b border-gray-100 hover:bg-gray-50 transition-colors ${
-                          !activeClub ? 'text-black' : 'text-gray-400'
+                        className={`w-full text-left px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-wide border-retro-b hover:bg-black hover:text-white transition-colors ${
+                          !activeClub ? 'text-black' : 'text-black/40'
                         }`}
                       >
                         Todos
@@ -142,8 +171,8 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
                         <button
                           key={club}
                           onClick={() => { toggleClub(club); setClubDropdown(false) }}
-                          className={`w-full text-left px-4 py-2.5 text-xs font-bold uppercase tracking-wide border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors ${
-                            activeClub === club ? 'text-black' : 'text-gray-500'
+                          className={`w-full text-left px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-wide border-retro-b last:border-0 hover:bg-black hover:text-white transition-colors ${
+                            activeClub === club ? 'bg-black text-white' : 'text-black'
                           }`}
                         >
                           {toLabel(club)}
@@ -159,14 +188,14 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
           {/* Limpiar */}
           {hasFilters && (
             <div className="flex items-center gap-3 pt-1">
-              <span className="text-xs text-gray-500">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-black/40">
                 {filtered.length} resultado{filtered.length !== 1 ? 's' : ''}
               </span>
               <button
                 onClick={clearAll}
-                className="text-xs underline text-gray-400 hover:text-black transition-colors"
+                className="font-mono text-[10px] uppercase tracking-widest underline underline-offset-2 text-black/40 hover:text-black transition-colors"
               >
-                Limpiar filtros
+                Limpiar
               </button>
             </div>
           )}
@@ -175,24 +204,26 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
 
       {/* ── Grid ── */}
       {filtered.length === 0 ? (
-        <p className="text-gray-400 text-sm py-20 text-center">
-          No hay productos con estos filtros.
+        <p className="font-mono text-[11px] uppercase tracking-widest text-black/30 py-20 text-center">
+          Sin resultados con estos filtros.
         </p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-black/10">
           {visible.map((product) => (
-            <ProductCard key={product.id} product={product} storecode={storecode} />
+            <div key={product.id} className="bg-white">
+              <ProductCard product={product} storecode={storecode} />
+            </div>
           ))}
         </div>
       )}
 
       {/* ── Paginación ── */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-1 mt-12">
+        <div className="flex items-center justify-center gap-0 mt-8 border-retro">
           <button
             onClick={() => goTo(page - 1)}
             disabled={page === 1}
-            className="w-9 h-9 border border-gray-300 text-sm font-bold hover:border-black disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+            className="w-10 h-10 border-r border-black font-bold text-sm hover:bg-black hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
           >
             ‹
           </button>
@@ -206,17 +237,17 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
             }, [])
             .map((n, i) =>
               n === '...' ? (
-                <span key={`dots-${i}`} className="w-9 h-9 flex items-center justify-center text-gray-400 text-sm">
+                <span key={`dots-${i}`} className="w-10 h-10 flex items-center justify-center text-black/30 font-mono text-xs border-r border-black">
                   …
                 </span>
               ) : (
                 <button
                   key={n}
                   onClick={() => goTo(n as number)}
-                  className={`w-9 h-9 border text-sm font-bold transition-colors ${
+                  className={`w-10 h-10 border-r border-black font-mono text-xs font-bold transition-colors ${
                     n === page
-                      ? 'bg-black text-white border-black'
-                      : 'border-gray-300 hover:border-black'
+                      ? 'bg-black text-white'
+                      : 'hover:bg-black hover:text-white'
                   }`}
                 >
                   {n}
@@ -227,7 +258,7 @@ export default function ProductGrid({ products, storecode }: ProductGridProps) {
           <button
             onClick={() => goTo(page + 1)}
             disabled={page === totalPages}
-            className="w-9 h-9 border border-gray-300 text-sm font-bold hover:border-black disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+            className="w-10 h-10 font-bold text-sm hover:bg-black hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
           >
             ›
           </button>

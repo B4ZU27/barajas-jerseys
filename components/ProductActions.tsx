@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import SizeSelector from '@/components/SizeSelector'
-import { Product } from '@/lib/products'
+import type { Product } from '@/lib/products'
 
 interface ProductActionsProps {
   product: Product

@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category } = await params
   const label = CATEGORY_LABELS[category]
   return {
-    title: label ? `${label} | Jerseys` : 'Colección | Jerseys',
+    title: label ? `${label} | Archivo de Cancha` : 'Colección | Archivo de Cancha',
   }
 }
 
@@ -23,26 +23,46 @@ export default async function CollectionPage({
   const products = await getProductsByCategory(category)
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <p className="text-xs text-gray-400 uppercase tracking-widest mb-6">
-        <Link href={`/${storecode}/camisas`} className="hover:text-black transition-colors">
-          Camisas
-        </Link>{' '}
-        / {label}
-      </p>
+    <div>
 
-      <div className="flex items-baseline justify-between mb-8">
-        <h1 className="text-2xl font-black uppercase">{label}</h1>
-        <span className="text-xs text-gray-400">{products.length} productos</span>
+      {/* Encabezado de colección */}
+      <div className="px-4 pt-8 pb-6 border-retro-b">
+
+        {/* Breadcrumb retro */}
+        <p className="font-mono text-[10px] uppercase tracking-widest text-black/40 mb-4">
+          <Link href={`/${storecode}/camisas`} className="hover:text-black transition-colors">
+            Meus Jerseys
+          </Link>
+          <span className="mx-2">—</span>
+          {label}
+        </p>
+
+        <div className="flex items-end justify-between">
+          <h1
+            className="[font-family:var(--font-bebas)] uppercase leading-none"
+            style={{ fontSize: 'clamp(40px, 10vw, 80px)' }}
+          >
+            {label}
+          </h1>
+          <span className="font-mono text-xs text-black/40 mb-1">
+            {products.length} piezas
+          </span>
+        </div>
       </div>
 
+      {/* Grid de productos */}
       {products.length === 0 ? (
-        <p className="text-gray-400 text-sm py-20 text-center">
-          No hay productos en esta categoría todavía.
-        </p>
+        <div className="px-4 py-20 text-center">
+          <p className="font-mono text-[11px] uppercase tracking-widest text-black/30">
+            Sin camisas en esta colección todavía.
+          </p>
+        </div>
       ) : (
-        <ProductGrid products={products} storecode={storecode} />
+        <div className="px-4 py-8">
+          <ProductGrid products={products} storecode={storecode} />
+        </div>
       )}
+
     </div>
   )
 }

@@ -18,7 +18,7 @@ export async function PATCH(request: NextRequest) {
   if (!auth.ok) return auth.response
 
   const body = await request.json()
-  const { originalSlug, name, price, category, club, description, sizes, tags, images, videos } = body
+  const { originalSlug, name, price, category, club, description, metadata, sizes, tags, images, videos } = body
 
   if (!originalSlug) {
     return NextResponse.json({ error: 'originalSlug es requerido' }, { status: 400 })
@@ -61,6 +61,7 @@ export async function PATCH(request: NextRequest) {
       league_id:     leagueId,
       club_id:       clubRow?.id ?? null,
       description:   description ?? '',
+      metadata:      metadata ?? {},
       sizes:         sizes ?? [],
       tags:          tags ?? [],
       images:        images ?? [],

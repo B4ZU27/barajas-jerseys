@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
   if (!auth.ok) return auth.response
 
   const body = await request.json()
-  const { name, slug, price, category, club, description, sizes, tags, images, videos } = body
+  const { name, slug, price, category, club, description, metadata, sizes, tags, images, videos } = body
 
   if (!name || !slug) {
     return NextResponse.json({ error: 'name y slug son requeridos' }, { status: 400 })
@@ -62,6 +62,7 @@ export async function POST(request: NextRequest) {
       league_id:     leagueId,
       club_id:       clubRow?.id ?? null,
       description:   description ?? '',
+      metadata:      metadata ?? {},
       sizes:         sizes ?? [],
       tags:          tags ?? [],
       images:        images ?? [],

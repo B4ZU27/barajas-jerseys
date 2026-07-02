@@ -11,6 +11,7 @@ export interface AdminProduct {
   id: string; slug: string; name: string; price: number
   category: string; club: string; sizes: string[]
   description: string; images: string[]; tags: string[]; videos: string[]
+  metadata: Record<string, unknown>
 }
 
 export interface League { id: string; slug: string; name: string }
@@ -49,6 +50,8 @@ export default function EditForm({
   const [category, setCategory]       = useState(original.category)
   const [club, setClub]               = useState(original.club)
   const [description, setDescription] = useState(original.description ?? '')
+  const [year, setYear]               = useState(String(original.metadata?.year ?? ''))
+  const [story, setStory]             = useState(String(original.metadata?.story ?? ''))
   const [sizes, setSizes]             = useState<string[]>(original.sizes)
   const [tags, setTags]               = useState<string[]>(original.tags ?? [])
 
@@ -157,6 +160,11 @@ export default function EditForm({
           name, price, category, club, description, sizes, tags,
           images: finalImages,
           videos: finalVideos,
+          metadata: {
+            ...original.metadata,
+            ...(year  ? { year: Number(year) }  : { year: undefined }),
+            ...(story ? { story: story.trim() } : { story: undefined }),
+          },
         }),
       })
       const data = await res.json()
@@ -271,6 +279,50 @@ export default function EditForm({
                 </datalist>
               </div>
             </div>
+
+            {/* ── El Archivo: año e historia ─────────────────────── */}
+            <div className="border-t border-gray-100 pt-4 space-y-4">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                El Archivo — metadata histórica
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <Label>Año de temporada</Label>
+                  <input
+                    type="number"
+                    value={year}
+                    onChange={e => setYear(e.target.value)}
+                    placeholder="1986"
+                    min={1900}
+                    max={2030}
+                    className={inputCls}
+                  />
+                  <p className="text-xs text-gray-400 mt-1">Ej: 1986, 2002, 2024</p>
+                </div>
+                <div className="flex items-end">
+                  {year && (
+                    <p className="text-xs text-gray-500 pb-2">
+                      Aparecerá en el timeline de <span className="font-bold">{club || 'este equipo'}</span>
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <Label>Historia / contexto</Label>
+                <textarea
+                  value={story}
+                  onChange={e => setStory(e.target.value)}
+                  placeholder="La camisa del Mundial de México 86. Maradona marcó el Gol del Siglo con esta versión..."
+                  rows={4}
+                  maxLength={500}
+                  className={`${inputCls} resize-none`}
+                />
+                <p className="text-xs text-gray-400 mt-1">{story.length}/500</p>
+              </div>
+            </div>
+
             <div>
               <Label>Tags</Label>
               <div className="flex flex-wrap gap-2 mt-1">

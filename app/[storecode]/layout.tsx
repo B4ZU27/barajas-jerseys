@@ -44,7 +44,7 @@ export default async function StorecodeLayout({
       )}
 
       <Navbar categories={categories} tags={tags} storecode={storecode} />
-      <main className="min-h-screen">{children}</main>
+      <main className="min-h-screen overflow-x-hidden">{children}</main>
       <div className="grainy-bottom" />
     </>
   )

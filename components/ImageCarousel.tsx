@@ -160,12 +160,12 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
   return (
     <>
-      <div className="w-full md:w-auto md:max-w-md mx-auto md:mx-0">
+      <div className="w-full min-w-0 max-w-full md:w-auto md:max-w-md mx-auto md:mx-0 overflow-hidden">
 
         {/* Imagen principal */}
         <div
           ref={imgRef}
-          className={`relative aspect-[3/4] overflow-hidden bg-white ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+          className={`relative aspect-square md:aspect-[3/4] overflow-hidden bg-white ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
           onClick={handleClick}
           onMouseMove={handleMouseMove}
           onMouseLeave={() => setZoomed(false)}

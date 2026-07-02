@@ -14,6 +14,10 @@ export async function GET(
   _request: NextRequest,
   { params }: { params: Promise<{ path: string[] }> }
 ) {
+  if (process.env.NODE_ENV === 'production') {
+    return new NextResponse('Not found', { status: 404 })
+  }
+
   const { path: segments } = await params
   const filePath = path.resolve(BASE_DIR, ...segments)
 
