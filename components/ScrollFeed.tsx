@@ -1,16 +1,5 @@
 'use client'
 
-/*
-  CLIENT COMPONENT — necesita:
-  - useState + useEffect: para el shuffle inicial y reshuffle
-  - Interacción: botón de nueva colección
-
-  Modo "Scrollear este pedo":
-  Cada camisa ocupa casi toda la pantalla (95svh).
-  El usuario scrollea naturalmente y ve una camisa a la vez.
-  Orden siempre aleatorio — se reshufflea con el botón.
-*/
-
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,73 +22,60 @@ function shuffle<T>(arr: T[]): T[] {
 export default function ScrollFeed({ products, storecode }: ScrollFeedProps) {
   const [list, setList] = useState<Product[]>([])
 
-  /*
-    [] como dependencia = solo corre una vez al montar el componente.
-    Hacemos el shuffle AQUÍ (en el cliente) porque Math.random() en el
-    servidor daría un valor diferente al del cliente → error de hidratación.
-  */
   useEffect(() => {
     setList(shuffle(products))
   }, [products])
 
   if (list.length === 0) return null
 
+  function reshuffle() {
+    setList(shuffle(products))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div>
 
-      {/* Barra superior sticky — debajo del navbar */}
+      {/* Barra sticky */}
       <div
         className="flex items-center justify-between px-4 py-3 bg-white border-retro-b"
         style={{ position: 'sticky', top: 'var(--navbar-height, 56px)', zIndex: 20 }}
       >
         <span className="font-mono text-[10px] uppercase tracking-widest text-black/40">
-          {list.length} camisas · orden aleatorio
+          {list.length} piezas · aleatorio
         </span>
-        <button
-          onClick={() => {
-            setList(shuffle(products))
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-          }}
-          className="btn-retro"
-          style={{ fontSize: '10px', padding: '6px 12px' }}
-        >
-          ↺ Nueva colección
+        <button onClick={reshuffle} className="btn-retro" style={{ fontSize: '10px', padding: '6px 12px' }}>
+          ↺ Mezclar
         </button>
       </div>
 
-      {/* Cards — cada una ocupa ~95% de la pantalla */}
+      {/* Cards */}
       {list.map((product, i) => (
-        <div
+        <Link
           key={product.id}
-          className="flex flex-col border-retro-b"
-          style={{ minHeight: '95svh' }}
+          href={`/${storecode}/products/${product.slug}`}
+          className="group flex flex-col border-retro-b"
+          style={{ minHeight: '100svh' }}
         >
 
-          {/* Imagen — ocupa la mayor parte */}
-          <div className="relative bg-white border-retro-b" style={{ flex: '1 1 0', minHeight: '55svh' }}>
+          {/* Imagen — 70% de la pantalla */}
+          <div
+            className="relative w-full bg-white overflow-hidden"
+            style={{ flex: '0 0 70svh' }}
+          >
             {product.images[0] && (
               <Image
                 src={product.images[0]}
                 alt={product.name}
                 fill
-                className="object-contain p-6"
+                className="object-contain p-3 transition-transform duration-700 group-hover:scale-[1.03]"
                 sizes="100vw"
-                /*
-                  Las primeras 2 imágenes cargan inmediato (eager).
-                  El resto carga cuando se acercan al viewport (lazy).
-                  next/image maneja esto automáticamente con loading=lazy.
-                */
                 loading={i < 2 ? 'eager' : 'lazy'}
               />
             )}
 
-            {/* Número de catálogo */}
-            <span className="absolute top-3 left-3 font-mono text-[10px] text-black/20 select-none">
-              #{String(i + 1).padStart(3, '0')}
-            </span>
-
-            {/* Badges */}
-            <div className="absolute top-3 right-3 flex flex-col gap-1 items-end">
+            {/* Badges top-right */}
+            <div className="absolute top-4 right-4 flex flex-col gap-1 items-end">
               {product.tags?.includes('retro') && (
                 <span className="border-retro-thin bg-white font-mono text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5">
                   RETRO
@@ -122,55 +98,49 @@ export default function ScrollFeed({ products, storecode }: ScrollFeedProps) {
             )}
           </div>
 
-          {/* Caption de museo — parte inferior */}
-          <div className="p-5 bg-white flex flex-col justify-center gap-3" style={{ minHeight: '28svh' }}>
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-widest text-black/40">
-                {product.category} · {product.club}
-              </p>
-              <h2 className="[font-family:var(--font-bebas)] uppercase leading-none mt-1"
-                style={{ fontSize: 'clamp(28px, 8vw, 48px)' }}>
-                {product.name}
-              </h2>
+          {/* Caption — 30% restante */}
+          <div
+            className="flex flex-col justify-between px-5 py-6 bg-white border-retro-top"
+            style={{ flex: '1 1 0', minHeight: '28svh' }}
+          >
+            {/* Número + meta */}
+            <div className="flex items-start justify-between">
+              <span className="font-mono text-[10px] text-black/25 select-none">
+                #{String(i + 1).padStart(3, '0')}
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-black/40 text-right">
+                {product.club?.replace(/-/g, ' ')}
+              </span>
             </div>
 
-            <div className="flex items-center justify-between">
-              {product.price ? (
-                <span className="font-mono text-base font-bold">
-                  ${product.price.toLocaleString('es-MX')}
-                </span>
-              ) : (
-                <span />
-              )}
+            {/* Nombre grande */}
+            <h2
+              className="[font-family:var(--font-bebas)] uppercase leading-none"
+              style={{ fontSize: 'clamp(36px, 10vw, 60px)' }}
+            >
+              {product.name}
+            </h2>
 
-              {/*
-                Link de Next.js — navegación sin recarga.
-                Se ve como botón retro pero es un <a> internamente.
-              */}
-              <Link
-                href={`/${storecode}/products/${product.slug}`}
-                className="btn-retro"
-              >
+            {/* Liga + CTA */}
+            <div className="flex items-end justify-between">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-black/40">
+                {product.category?.replace(/-/g, ' ')}
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-widest font-bold group-hover:underline underline-offset-4">
                 Ver camisa →
-              </Link>
+              </span>
             </div>
           </div>
 
-        </div>
+        </Link>
       ))}
 
-      {/* Final del feed */}
-      <div className="flex flex-col items-center justify-center gap-4 py-20 border-retro-top mx-4">
+      {/* Final */}
+      <div className="flex flex-col items-center gap-4 py-20 border-retro-top mx-4">
         <p className="font-mono text-[10px] uppercase tracking-widest text-black/30">
           — Fin de la colección —
         </p>
-        <button
-          onClick={() => {
-            setList(shuffle(products))
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-          }}
-          className="btn-retro"
-        >
+        <button onClick={reshuffle} className="btn-retro">
           ↺ Nueva colección aleatoria
         </button>
       </div>

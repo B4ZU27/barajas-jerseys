@@ -36,7 +36,7 @@ export default function NosotrosPage() {
           {
             num: '03',
             title: 'Cómo trabajamos',
-            text: 'Atención personalizada por WhatsApp. Te asesoramos en talla, versión (player vs fan) y disponibilidad. Envíos a toda la república. Tallas de la XS a la 4XL.',
+            text: 'Atención personalizada por WhatsApp. Te asesoramos en talla, versión (player vs fan) y disponibilidad. Tallas de la XS a la 4XL.',
           },
         ].map(item => (
           <div key={item.num} className="border-retro-b py-6">

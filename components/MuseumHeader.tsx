@@ -33,7 +33,6 @@ export default function MuseumHeader({ totalProducts, storecode }: MuseumHeaderP
         {[
           { label: 'Piezas', value: totalProducts.toString() },
           { label: 'Ligas', value: '9' },
-          { label: 'Envío', value: 'Todo México' },
         ].map(stat => (
           <div key={stat.label} className="flex items-baseline gap-1.5">
             <span className="font-mono text-[10px] uppercase tracking-widest text-black/40">

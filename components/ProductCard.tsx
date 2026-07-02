@@ -79,11 +79,6 @@ export default function ProductCard({ product, storecode }: ProductCardProps) {
         <h3 className="[font-family:var(--font-bebas)] text-lg uppercase leading-tight mt-0.5">
           {product.name}
         </h3>
-        {product.price > 0 && (
-          <p className="font-mono text-xs font-bold mt-0.5">
-            ${product.price.toLocaleString('es-MX')}
-          </p>
-        )}
       </div>
     </Link>
   )

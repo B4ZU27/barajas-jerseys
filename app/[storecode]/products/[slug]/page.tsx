@@ -94,11 +94,6 @@ export default async function ProductPage({
             >
               {product.name}
             </h1>
-            {product.price > 0 && (
-              <p className="font-mono text-xl font-bold mt-2">
-                ${product.price.toLocaleString('es-MX')}
-              </p>
-            )}
           </div>
 
           {/* Historia — si tiene story (El Archivo) */}
@@ -135,26 +130,6 @@ export default async function ProductPage({
             storecode={storecode}
           />
 
-          {/* Promociones */}
-          {promos.active && promos.deals.length > 0 && (
-            <div className="border-retro p-4">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-black/40 mb-3">
-                Promociones activas
-              </p>
-              <div className="space-y-2">
-                {promos.deals.map((deal) => (
-                  <div key={deal.quantity} className="flex justify-between items-baseline">
-                    <span className="font-mono text-xs text-black/60">
-                      {deal.quantity} camisas
-                    </span>
-                    <span className="font-mono text-sm font-bold">
-                      ${deal.total.toLocaleString('es-MX')}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Link al archivo si tiene año */}
           {product.year && product.club && (
