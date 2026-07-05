@@ -49,6 +49,7 @@ export default function Navbar({ categories, storecode }: NavbarProps) {
   const navLinks = [
     { href: base,                  label: 'Home',        exact: true  },
     { href: `${base}/camisas`,     label: 'Meus Jerseys', exact: false },
+    { href: `${base}/archivo`,     label: 'Archivo',      exact: false },
     { href: `${base}/tallas`,      label: 'Tallas',       exact: false },
     { href: `${base}/nosotros`,    label: 'Nós',          exact: false },
     { href: `${base}/contacto`,    label: 'Contactinho',  exact: false },

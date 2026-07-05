@@ -23,7 +23,6 @@ export default async function ArchivoClubPage({
 }: {
   params: Promise<{ storecode: string; club: string }>
 }) {
-  notFound()
   const { storecode, club } = await params
 
   /*

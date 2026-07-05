@@ -1,7 +1,8 @@
-import { notFound } from 'next/navigation'
+import { redirect, notFound } from 'next/navigation'
+import { getFirstStore } from '@/lib/stores'
 
-// Root URL has no store — you need the storecode in the URL
-// e.g. archivodecancha.com/barajas
-export default function RootPage() {
-  notFound()
+export default async function RootPage() {
+  const store = await getFirstStore()
+  if (!store) notFound()
+  redirect(`/${store.slug}`)
 }

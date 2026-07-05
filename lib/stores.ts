@@ -28,3 +28,14 @@ export async function getAllStores(): Promise<Store[]> {
     .order('name')
   return data ?? []
 }
+
+export async function getFirstStore(): Promise<Store | null> {
+  const supabase = createStaticClient()
+  const { data } = await supabase
+    .from('stores')
+    .select('id, slug, name, whatsapp, email, show_prices, logo_url')
+    .order('created_at')
+    .limit(1)
+    .maybeSingle()
+  return data ?? null
+}

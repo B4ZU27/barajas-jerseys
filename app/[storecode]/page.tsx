@@ -9,6 +9,7 @@
 */
 
 import MuseumHeader from '@/components/MuseumHeader'
+import ArchiveBlock from '@/components/ArchiveBlock'
 import VideoStrip from '@/components/VideoStrip'
 import JerseyFeed from '@/components/JerseyFeed'
 import { getCatalogProducts, getActiveCategories, getProductsWithVideos } from '@/lib/products'
@@ -47,6 +48,8 @@ export default async function HomePage({
       {withVideos.length > 0 && (
         <VideoStrip products={withVideos} storecode={storecode} />
       )}
+
+      <ArchiveBlock storecode={storecode} />
 
       {/*
         JerseyFeed recibe todos los productos como prop.

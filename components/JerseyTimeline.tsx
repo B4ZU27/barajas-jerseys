@@ -88,22 +88,21 @@ export default function JerseyTimeline({ products, storecode, clubLabel }: Jerse
       {/* ── Contenido principal ────────────────────────────────────── */}
       <div className="flex-1 flex flex-col">
 
-        {/* Navegación ↑ — anterior (año más antiguo) */}
-        <div className="flex justify-center py-3 border-retro-b">
-          <button
-            onClick={() => hasPrev && goTo(index - 1)}
-            disabled={!hasPrev}
-            className="flex flex-col items-center gap-1 disabled:opacity-20 transition-opacity group"
-            aria-label="Camisa anterior"
-          >
-            <span className="text-xl leading-none group-hover:-translate-y-0.5 transition-transform">↑</span>
-            {hasPrev && (
+        {/* Navegación ↑ — solo aparece si hay camisa anterior */}
+        {hasPrev && (
+          <div className="flex justify-center py-3 border-retro-b">
+            <button
+              onClick={() => goTo(index - 1)}
+              className="flex flex-col items-center gap-1 group"
+              aria-label="Camisa anterior"
+            >
+              <span className="text-xl leading-none group-hover:-translate-y-0.5 transition-transform">↑</span>
               <span className="font-mono text-[9px] uppercase tracking-widest text-black/40">
                 {products[index - 1].year}
               </span>
-            )}
-          </button>
-        </div>
+            </button>
+          </div>
+        )}
 
         {/* Imagen + info — con animación fade */}
         <div
@@ -113,8 +112,12 @@ export default function JerseyTimeline({ products, storecode, clubLabel }: Jerse
             transform: visible ? 'translateY(0)' : 'translateY(6px)',
           }}
         >
-          {/* Imagen */}
-          <div className="relative bg-white border-retro-b" style={{ flex: '1 1 0', minHeight: '42svh' }}>
+          {/* Imagen — clic va al detalle */}
+          <Link
+            href={`/${storecode}/products/${product?.slug}`}
+            className="relative bg-white border-retro-b block"
+            style={{ flex: '1 1 0', minHeight: '58svh' }}
+          >
             {product?.images?.[0] && (
               <Image
                 src={product.images[0]}
@@ -151,7 +154,7 @@ export default function JerseyTimeline({ products, storecode, clubLabel }: Jerse
                 </span>
               )}
             </div>
-          </div>
+          </Link>
 
           {/* Caption con año, nombre y story */}
           <div className="px-4 pt-4 pb-2">
@@ -181,39 +184,22 @@ export default function JerseyTimeline({ products, storecode, clubLabel }: Jerse
           </div>
         </div>
 
-        {/* ── Controles inferiores: ↓ siguiente + → detalle ─────── */}
-        <div className="flex items-stretch border-retro-top mt-auto">
-
-          {/* ↓ siguiente año */}
-          <button
-            onClick={() => hasNext && goTo(index + 1)}
-            disabled={!hasNext}
-            className="flex-1 flex flex-col items-center justify-center gap-1 py-4
-              border-r border-black disabled:opacity-20
-              hover:bg-black hover:text-white transition-colors group"
-            aria-label="Camisa siguiente"
-          >
-            <span className="text-xl leading-none group-hover:translate-y-0.5 transition-transform">↓</span>
-            {hasNext && (
+        {/* ── Control inferior: ↓ siguiente ─────────────────────── */}
+        {hasNext && (
+          <div className="border-retro-top mt-auto">
+            <button
+              onClick={() => goTo(index + 1)}
+              className="w-full flex flex-col items-center justify-center gap-1 py-4
+                hover:bg-black hover:text-white transition-colors group"
+              aria-label="Camisa siguiente"
+            >
+              <span className="text-xl leading-none group-hover:translate-y-0.5 transition-transform">↓</span>
               <span className="font-mono text-[9px] uppercase tracking-widest text-black/40 group-hover:text-white/60">
                 {products[index + 1].year}
               </span>
-            )}
-          </button>
-
-          {/* → ver detalle completo */}
-          <Link
-            href={`/${storecode}/products/${product?.slug}`}
-            className="flex-1 flex flex-col items-center justify-center gap-1 py-4
-              hover:bg-black hover:text-white transition-colors group"
-          >
-            <span className="text-xl leading-none group-hover:translate-x-0.5 transition-transform">→</span>
-            <span className="font-mono text-[9px] uppercase tracking-widest text-black/40 group-hover:text-white/60">
-              Ver detalle
-            </span>
-          </Link>
-
-        </div>
+            </button>
+          </div>
+        )}
       </div>
 
     </div>
