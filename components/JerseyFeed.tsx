@@ -13,7 +13,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import FeedCard from '@/components/FeedCard'
-import LeaguePills from '@/components/LeaguePills'
 import type { Product } from '@/lib/products'
 
 interface JerseyFeedProps {
@@ -88,21 +87,41 @@ export default function JerseyFeed({ products, leagues, storecode }: JerseyFeedP
   return (
     <section id="jersey-feed-top">
 
-      {/* Pills de liga — sticky */}
-      <LeaguePills
-        leagues={leagues}
-        active={activeFilter}
-        onSelect={handleFilterChange}
-      />
+      {/* Barra sticky: pills + shuffle en una sola fila */}
+      <div
+        className="sticky z-30 bg-white border-retro-b"
+        style={{ top: 'var(--navbar-height, 56px)' }}
+      >
+        {/* Fila superior — pills scrolleables */}
+        <div className="overflow-x-auto border-b border-black/10" style={{ scrollbarWidth: 'none' }}>
+          <div className="flex min-w-max">
+            {[
+              { slug: 'todo',        label: 'Todo'    },
+              { slug: 'retro',       label: 'Retro'   },
+              { slug: 'mundialista', label: 'Mundial' },
+              ...leagues.map(l => ({ slug: l.slug, label: l.label })),
+            ].map(pill => (
+              <button
+                key={pill.slug}
+                onClick={() => handleFilterChange(pill.slug)}
+                className={`pill-retro border-r border-black/20 last:border-r-0 ${activeFilter === pill.slug ? 'active' : ''}`}
+                style={{ padding: '10px 16px' }}
+              >
+                {pill.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
-      {/* Header del feed con botón shuffle */}
-      <div className="flex items-center justify-between px-4 py-3 border-retro-b">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-black/40">
-          {filtered.length} camisas
-        </span>
-        <button onClick={handleShuffle} className="btn-retro" style={{ fontSize: '10px' }}>
-          ↺ Colección aleatoria
-        </button>
+        {/* Fila inferior — conteo + shuffle */}
+        <div className="flex items-center justify-between px-4 py-2">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-black/40">
+            {filtered.length} camisas
+          </span>
+          <button onClick={handleShuffle} className="btn-retro" style={{ fontSize: '10px', padding: '4px 10px' }}>
+            ↺ Mezclar
+          </button>
+        </div>
       </div>
 
       {/* Grid de camisas */}
